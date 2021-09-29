@@ -1,0 +1,50 @@
+<!doctype html>
+<head>
+    <style>
+        body {
+          background-image: url('../static/background.jpg');
+        }
+        </style>
+</head>
+<body>
+
+    <h1> Hi!! Please click on the widget to access the bot.</h1>
+    <h5>Please don't refresh the page</h5><br><br><br><br><br><br>
+    <h3> {{randomstr}} </h3>
+    <p>Pass the code to the bot when prompted</p>
+    <script>!(function () {
+        let e = document.createElement("script"),
+          t = document.head || document.getElementsByTagName("head")[0];
+        (e.src =
+          "https://cdn.jsdelivr.net/npm/rasa-webchat@1.x.x/lib/index.js"),
+          // Replace 1.x.x with the version that you want
+          (e.async = !0),
+          (e.onload = () => {
+            window.WebChat.default(
+              {
+                customData: { language: "en" },
+                // socketUrl: "http://localhost:5005",
+                socketUrl: "http://localhost:5005",
+                initPayload:'/greet',
+                title: "VWise Bot",
+                subtitle: "Get started!!",
+                onSocketEvent: function(){onChatClose:'/greet'; storage: localStorage.clear()},
+                storage: localStorage.clear(),
+                onChatClose:'/greet'
+                // add other props here
+              },
+              null
+            );
+          }),
+          t.insertBefore(e, t.firstChild);
+
+          // let randomstr=(Math.random() + 1).toString(36).substring(2)
+
+      }
+      )();
+      </script>
+    
+</body>
+        
+
+      

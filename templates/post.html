@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VWise Bot</title>
+        <link rel="stylesheet" href="../static/style.css" type="text/css">
+        <!-- <style>
+          body {
+            background-image: url('../static/background.jpg');
+          }
+          </style> -->
+    </head>
+    <body>
+      
+      <h1 class="heading">
+        Welcome to the Post-Survey! Please go ahead and answer the questions!
+      </h1>
+      <h6> * All fields are mandatory! *</h6>
+      <div class="form1">
+      <form id="form" name=postsurvey action="/thankyou" method="POST" onsubmit="return validateForm()">
+        <div id=form4>
+          <div class="formelement"  id=form1>
+            <label for="pcode">Please provide the pass code</label>
+            <input type="text" name="pcode" id="pcode">
+          </div> 
+       
+        <div  class="formelement"  id=form1>
+          <div class=likertscale>
+            <label class="statement">Vaccines are important for my health</label>
+              <ul class='likert'>
+                <li>
+                  <input type="radio" name="likert11" value="strong_agree">
+                  <label>Strongly agree</label>
+                </li>
+                <li>
+                  <input type="radio" name="likert11" value="agree">
+                  <label>Agree</label>
+                </li>
+                <li>
+                  <input type="radio" name="likert11" value="neutral">
+                  <label>Neutral</label>
+                </li>
+                <li>
+                  <input type="radio" name="likert11" value="disagree">
+                  <label>Disagree</label>
+                </li>
+                <li>
+                  <input type="radio" name="likert11" value="strong_disagree">
+                  <label>Strongly disagree</label>
+                </li>
+              </ul>
+          </div>
+        </div>
+        <div  class="formelement"  id=form1>
+          <div class="likertscale">
+            <label class="statement">Vaccines are effective</label>
+              <ul class='likert'>
+                <li>
+                  <input type="radio" name="likert12" value="strong_agree">
+                  <label>Strongly agree</label>
+                </li>
+                <li>
+                  <input type="radio" name="likert12" value="agree">
+                  <label>Agree</label>
+                </li>
+                <li>
+                  <input type="radio" name="likert12" value="neutral">
+                  <label>Neutral</label>
+                </li>
+                <li>
+                  <input type="radio" name="likert12" value="disagree">
+                  <label>Disagree</label>
+                </li>
+                <li>
+                  <input type="radio" name="likert12" value="strong_disagree">
+                  <label>Strongly disagree</label>
+                </li>
+              </ul>
+          </div>
+        </div>
+        <div  class="formelement"  id=form1>
+          <div class="likertscale">
+            <label class="statement">Being vaccinated is important for the health of others in my community</label>
+              <ul class='likert'>
+                <li>
+                  <input type="radio" name="likert13" value="strong_agree">
+                  <label>Strongly agree</label>
+                </li>
+                <li>
+                  <input type="radio" name="likert13" value="agree">
+                  <label>Agree</label>
+                </li>
+                <li>
+                  <input type="radio" name="likert13" value="neutral">
+                  <label>Neutral</label>
+                </li>
+                <li>
+                  <input type="radio" name="likert13" value="disagree">
+                  <label>Disagree</label>
+                </li>
+                <li>
+                  <input type="radio" name="likert13" value="strong_disagree">
+                  <label>Strongly disagree</label>
+                </li>
+              </ul>
+          </div>
+        </div>
+        <div  class="formelement"  id=form1>
+          <div class="likertscale">
+            <label class="statement">All routine vaccinations recommended by the government are beneficial</label>
+              <ul class='likert'>
+                <li>
+                  <input type="radio" name="likert14" value="strong_agree">
+                  <label>Strongly agree</label>
+                </li>
+                <li>
+                  <input type="radio" name="likert14" value="agree">
+                  <label>Agree</label>
+                </li>
+                <li>
+                  <input type="radio" name="likert14" value="neutral">
+                  <label>Neutral</label>
+                </li>
+                <li>
+                  <input type="radio" name="likert14" value="disagree">
+                  <label>Disagree</label>
+                </li>
+                <li>
+                  <input type="radio" name="likert14" value="strong_disagree">
+                  <label>Strongly disagree</label>
+                </li>
+              </ul>
+          </div>
+        </div>
+        <div  class="formelement"  id=form1>
+          <div class="likertscale">
+            <label class="statement">New vaccines carry more risks than older vaccines</label>
+              <ul class='likert'>
+                <li>
+                  <input type="radio" name="likert15" value="strong_agree">
+                  <label>Strongly agree</label>
+                </li>
+                <li>
+                  <input type="radio" name="likert15" value="agree">
+                  <label>Agree</label>
+                </li>
+                <li>
+                  <input type="radio" name="likert15" value="neutral">
+                  <label>Neutral</label>
+                </li>
+                <li>
+                  <input type="radio" name="likert15" value="disagree">
+                  <label>Disagree</label>
+                </li>
+                <li>
+                  <input type="radio" name="likert15" value="strong_disagree">
+                  <label>Strongly disagree</label>
+                </li>
+              </ul>
+          </div>
+        </div>
+        <div  class="formelement"  id=form1>
+          <div class="likertscale">
+            <label class="statement">The information I receive about vaccines from the government is reliable and trustworthy</label>
+              <ul class='likert'>
+                <li>
+                  <input type="radio" name="likert16" value="strong_agree">
+                  <label>Strongly agree</label>
+                </li>
+                <li>
+                  <input type="radio" name="likert16" value="agree">
+                  <label>Agree</label>
+                </li>
+                <li>
+                  <input type="radio" name="likert16" value="neutral">
+                  <label>Neutral</label>
+                </li>
+                <li>
+                  <input type="radio" name="likert16" value="disagree">
+                  <label>Disagree</label>
+                </li>
+                <li>
+                  <input type="radio" name="likert16" value="strong_disagree">
+                  <label>Strongly disagree</label>
+                </li>
+              </ul>
+          </div>
+        </div>
+        <div  class="formelement"  id=form1>
+          <div class="likertscale">
+            <label class="statement">Getting vaccines is a good way to protect me from disease</label>
+              <ul class='likert'>
+                <li>
+                  <input type="radio" name="likert17" value="strong_agree">
+                  <label>Strongly agree</label>
+                </li>
+                <li>
+                  <input type="radio" name="likert17" value="agree">
+                  <label>Agree</label>
+                </li>
+                <li>
+                  <input type="radio" name="likert17" value="neutral">
+                  <label>Neutral</label>
+                </li>
+                <li>
+                  <input type="radio" name="likert17" value="disagree">
+                  <label>Disagree</label>
+                </li>
+                <li>
+                  <input type="radio" name="likert17" value="strong_disagree">
+                  <label>Strongly disagree</label>
+                </li>
+              </ul>
+          </div>
+        </div>
+        <div  class="formelement"  id=form1>
+          <div class="likertscale">
+            <label class="statement">Generally, I do what my doctor or healthcare provider recommends about vaccines for me</label>
+              <ul class='likert'>
+                <li>
+                  <input type="radio" name="likert18" value="strong_agree">
+                  <label>Strongly agree</label>
+                </li>
+                <li>
+                  <input type="radio" name="likert18" value="agree">
+                  <label>Agree</label>
+                </li>
+                <li>
+                  <input type="radio" name="likert18" value="neutral">
+                  <label>Neutral</label>
+                </li>
+                <li>
+                  <input type="radio" name="likert18" value="disagree">
+                  <label>Disagree</label>
+                </li>
+                <li>
+                  <input type="radio" name="likert18" value="strong_disagree">
+                  <label>Strongly disagree</label>
+                </li>
+              </ul>
+          </div>
+        </div>
+        <div  class="formelement"  id=form1>
+          <div class="likertscale">
+            <label class="statement">I am concerned about serious adverse effects of vaccines</label>
+              <ul class='likert'>
+                <li>
+                  <input type="radio" name="likert19" value="strong_agree">
+                  <label>Strongly agree</label>
+                </li>
+                <li>
+                  <input type="radio" name="likert19" value="agree">
+                  <label>Agree</label>
+                </li>
+                <li>
+                  <input type="radio" name="likert19" value="neutral">
+                  <label>Neutral</label>
+                </li>
+                <li>
+                  <input type="radio" name="likert19" value="disagree">
+                  <label>Disagree</label>
+                </li>
+                <li>
+                  <input type="radio" name="likert19" value="strong_disagree">
+                  <label>Strongly disagree</label>
+                </li>
+              </ul>
+          </div>
+        </div>
+        <div  class="formelement"  id=form1>
+          <div class="likertscale">
+            <label class="statement">I do not need vaccines for diseases that are not common anymore</label>
+              <ul class='likert'>
+                <li>
+                  <input type="radio" name="likert20" value="strong_agree">
+                  <label>Strongly agree</label>
+                </li>
+                <li>
+                  <input type="radio" name="likert20" value="agree">
+                  <label>Agree</label>
+                </li>
+                <li>
+                  <input type="radio" name="likert20" value="neutral">
+                  <label>Neutral</label>
+                </li>
+                <li>
+                  <input type="radio" name="likert20" value="disagree">
+                  <label>Disagree</label>
+                </li>
+                <li>
+                  <input type="radio" name="likert20" value="strong_disagree">
+                  <label>Strongly disagree</label>
+                </li>
+              </ul>
+          </div>
+        </div>
+      </div>
+          <button class="submit" onclick="document.getElementById('form').style.display='none'">Submit the Survey</button>
+
+      </form>
+      </div>
+
+<!-- <img src="https://i.pinimg.com/originals/dd/7a/f3/dd7af32e837d47be5c8d8e8a65b140c2.gif"/> -->
+<script>
+  function validateForm() {
+//   let a = document.forms["survey"]["gendergroup"].value;
+//   let b = document.forms["survey"]["agegroup"].value;
+//   let c = document.forms["survey"]["country"].value;
+  let c=document.forms["postsurvey"]["pcode"].value;
+  let d = document.forms["postsurvey"]["likert11"].value;
+  let e = document.forms["postsurvey"]["likert12"].value;
+  let f = document.forms["postsurvey"]["likert13"].value;
+  let g = document.forms["postsurvey"]["likert14"].value;
+  let h = document.forms["postsurvey"]["likert15"].value;
+  let i = document.forms["postsurvey"]["likert16"].value;
+  let j = document.forms["postsurvey"]["likert17"].value;
+  let k = document.forms["postsurvey"]["likert18"].value;
+  let l = document.forms["postsurvey"]["likert19"].value;
+  let m = document.forms["postsurvey"]["likert20"].value;
+  if ( d == ""||e == ""||f == ""||g == ""||h == ""||i == ""||j == ""||k == ""||l == ""||m == "") {
+    alert("Please fill-up all the entries to proceed");
+    return false;
+  }
+  
+}
+
+
+
+
+</script>
+
+<!-- <script>!(function () {
+    let e = document.createElement("script"),
+      t = document.head || document.getElementsByTagName("head")[0];
+    (e.src =
+      "https://cdn.jsdelivr.net/npm/rasa-webchat@1.x.x/lib/index.js"),
+      // Replace 1.x.x with the version that you want
+      (e.async = !0),
+      (e.onload = () => {
+        window.WebChat.default(
+          {
+            customData: { language: "en" },
+            // socketUrl: "http://localhost:5005",
+            socketUrl: "http://localhost:5005",
+            initPayload:'/greet',
+            title: "VWise Bot",
+            subtitle: "Get started!!",
+            onSocketEvent: function(){onChatClose:'/greet'; storage: localStorage.clear()},
+            storage: localStorage.clear(),
+            onChatClose:'/greet'
+            // add other props here
+          },
+          null
+        );
+      }),
+      t.insertBefore(e, t.firstChild);
+  })();
+  </script> -->
+
+
+    </body>
+</html>
