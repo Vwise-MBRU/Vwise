@@ -1,3 +1,946 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1bb0fb3e54749d30772df32b94b4e5735c3561c5e65ecacd45a08550cbfba58a
-size 31151
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - start
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - hello buddy
+    - hello friend
+    - Hi bro
+    - whatsup
+    - wtsp
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - hallo
+    - yo
+    - yow
+    - hi brother
+    - hi dear
+    - Hello?
+    - HEY
+    - hello are you still there
+    - HI
+    - Hey
+    - Hi
+    - hi!
+    - hi there
+    - Hello
+    - hello its [ella]{"entity":"name","value":"ella"}
+    - Hola.
+    - welcome
+    - howdy
+    - good day
+    - Hello I'm [Susan]{"entity":"name","value":"ella"}
+    - Hai it's [Hari]{"entity":"name","value":"Hari"}
+    - Hello [Chanchal]{"entity":"name","value":"chanchal"} here.
+    - This is me [sara]{"entity":"name","value":"sara"}
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - thank you goodbye
+    - okay thank you goodbye
+    - thank you bye
+    - um okay thank you good bye
+    - thank you
+    - and thats all thank you and good bye
+    - okay thank you
+    - thanks
+    - thanks goodbye
+    - thank you and good bye
+    - Thanks!
+    - Awesome, you are a good bot!
+    - I see, thanks
+    - Oh thats good!
+    - it's good :-)
+    - thnaks
+    - good job bot
+    - thanks for the help
+    - thanks you
+    - thanks!
+    - thankyou
+    - thnks
+    - thx
+    - thanks for your information
+    - thanks f
+    - i'm done
+    - quit
+    - stop
+    - Adios
+    - BYEE
+    - GOODBYE
+    - Thanks a lot. See ya later
+    - have a good day. time to go, bye
+    - ok i gtg
+    - bye bye bot
+    - bye for now
+    - bye udo
+    - bye was nice talking to you
+    - bye!
+    - byee
+    - catch you later
+    - ciao
+    - cya
+    - farewell
+    - good bye
+    - good bye rasa bot!
+    - goodbye.
+    - goodnight
+    - gotta go
+    - Have a great day ahead
+- intent: affirm
+  examples: |
+    - indeed
+    - correct
+    - that sounds good
+    - yes
+    - yess please
+    - of course
+    - yup
+    - yeah
+    - yes please
+    - yes plz
+    - Sure
+    - Ok
+    - sweet
+    - cool,
+    - yes...
+    - y
+    - ok
+    - ye
+    - okay
+    - That would be great
+    - YES
+    - YUP
+    - Yea
+    - Yeah
+    - Yeah sure
+    - Yep
+    - Yep that's fine
+    - Yep!
+    - Yepp
+    - Yes
+    - Yes I do
+    - Yes please
+    - Yes please!
+    - Yes, I accept
+- intent: deny
+  examples: |
+    - not really
+    - no
+    - I don't think so
+    - never
+    - no way
+    - nope
+    - no thanks
+    - I dunno
+    - Nothing!
+    - nevermind
+    - n
+    - nah
+    - niet
+    - i decline
+    - i don not like this
+    - i don't think so
+    - i don't want either of those
+    - i don't want to
+    - i don't want to give you my email
+    - i dont want to
+    - i dont want to accept :P lol
+    - i guess it means - no
+    - i'm afraid not
+    - i'm not sure
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+- intent: random_topic
+  examples: |
+    - what is the square root of 5
+    - what is the meaning of life.
+    - Fridge Isn't Running
+    - my tv isn't working
+    - I want a pizza
+    - my washing machine isn't working
+    - what year is it
+    - order a pizza
+    - I want to order a pizza
+    - Can I get a hamburger?
+    - Can YouTube talk?
+    - Can you call me back ?
+    - Can you give me your datacenter's password
+    - Can you give me your datacenter's password?
+    - Can you make sandwiches?
+    - Can you please send me an uber
+    - ofif fsdfafsfs
+- intent: help
+  examples: |
+    - help
+    - I don't know how to use this bot
+    - I dont know how to start the conversation
+    - I dont know what to do with this
+    - what can you do?
+    - what can I ask you?
+    - what do you do?
+    - what can you help me with?
+    - help me
+    - help, what do you do
+    - how do I use this
+    - how can you help me
+    - What are the things that you can do?
+    - What else can you help me with?
+    - can you do anything else?
+    - can you help me?
+    - come back
+    - cool! can I do something else here?
+    - hello what can you do for me
+    - help please
+    - help pls
+    - help?
+    - hep me
+    - what can u do
+    - what can u help me with
+- intent: human_handoff
+  examples: |
+    - handoff
+    - operator
+    - I want a human
+    - can I speak to an agent
+    - real agent please
+    - real human
+    - chat with a live agent
+    - give me a person please
+    - i want to talk to a human
+    - transfer to a human
+    - Please give me to a human
+    - can I talk to human?
+    - can I talk to human
+    - talk to human
+    - i want human :(
+    - can i talk to human
+    - i want to speak to human
+    - can i talk to a real person?
+    - connect me to a real person
+    - I need a real person
+    - can i took with a real person
+    - let me speak to a real person
+    - let me speak to a real person please
+    - i want to talk to a real person
+- intent: chitchat/weather
+  examples: |
+    - What's the weather outside?
+    - Can you tell me the weather?
+    - What is the weather forecast for tomorrow?
+    - Tell me the weather
+    - What is the weather for tomorrow
+    - May I know the weather?
+    - Will it rain today?
+    - Is it cold or hot outside?
+    - Will it rain?
+- intent: chitchat/bot_challenger
+  examples: |
+    - Am I talking to the chat bot?
+    - Are you a bot or human
+    - I think you are a bot
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - am i speaking to an ai?
+    - are you a human or a bot?
+    - are you real?
+    - are you virtual?
+    - are you an ai?
+    - aren't you a bot
+    - are you a chatbot
+    - are you a rasa bot?
+    - are you a real bot?
+    - are you a robot
+    - are you ai
+    - are you artificial
+    - are you artificial intelligence
+    - are you real
+    - are you really a bot
+    - are you robot
+    - are you sure that you're a bot?
+    - bot?
+    - What is your name?
+    - are u a bot
+- intent: vaccine_slot_booking
+  examples: |
+    - Book me a slot for vaccination
+    - Please help me in getting a slot booked for vaccination
+    - Make a vaccination slot booking
+    - Reserve me a vaccine slot
+    - book me a slot
+    - please book me a vaccine slot
+- intent: faq/side_effects
+  examples: |
+    - What are the side effects of Covid-19 vaccine?
+    - Will the vaccines have some side effects?
+    - Which vaccines are safe to use?
+    - Are vaccines safe to use?
+    - Is it safe to vaccinate?
+    - Is vaccination safe?
+    - Is there side effects to vaccines?
+    - Can you list for me the side effects?
+- intent: faq/chances_covid_after_vaccine
+  examples: |
+    - Is there a chance to get Covid after getting vaccinated?
+    - How much guarantee can be given that we will not get Covid even after getting vaccinated?
+    - Will vaccine prevent us from getting Covid?
+    - Can someone vaccinated against COVID-19 still get infected?
+    - Are vaccines sufficient against covid-19?
+    - Can I still be infected after getting vaccinated?
+    - Can I still get covid-19 even after the vaccination?
+    - Can someone still be infected after being vaccinated against COVID-19?
+    - Is vaccination enough to guarantee a full protection against covid?
+    - Are vaccines 100% effective against covid-19?
+- intent: faq/get_vaccine_after_covid
+  examples: |
+    - Should I get vaccine after getting Covid?
+    - After how many months can I take vaccine after recovering from covid?
+    - Is there a possibility of getting covid the second time?
+    - Why are vaccinated people still getting covid?
+    - Do I need the vaccine if I have already had COVID-19?
+    - Is getting vaccinated after getting covid19 mandatory?
+    - How many months after recovery from covid may I take vaccine?
+    - Can I get covid a second time?
+    - Why people that already took the vaccine still getting covid?
+    - If I already had COVID-19, do I need the vaccine?
+- intent: faq/test_positive_after_vaccine
+  examples: |
+    - Will vaccine test positive to Covid?
+    - Will I be shown positive to covid test after taking vaccine?
+    - Will PCR test show positive results after vaccination?
+    - Will antigen test show positive results after vaccination?
+    - Will I test positive to Covid if I’m vaccinated?
+    - Will I be shown positive to covid if I already got the vaccine?
+    - Can I be positively tested to covid if I’m vaccinated?
+    - Will PCR show me positive after getting the vaccine?
+    - Can I still be positively tested if I’m vaccinated?
+    - Can someone be positively tested to covid after vaccination?
+    - Can COVID-19 vaccine cause a positive test result for a COVID-19 PCR test?
+    - Can COVID-19 vaccine cause a positive test result for an antigen laboratory test?
+    - Can I be positively tested to covid19 because of the vaccine?
+    - Do COVID-19 vaccine cause a positive test result for PCR?
+    - Do COVID-19 vaccine cause a positive test result for antigen laboratory test?
+    - Can vaccination cause a positive test result to covid19?
+    - Is vaccination a cause of a positive PCR test?
+- intent: faq/available_vaccines
+  examples: |
+    - What are the available vaccines in MENA region?
+    - What all vaccines are approved by DHA
+    - List me the available vaccines
+    - What are the vaccines available for novel corona viruses
+    - What are the available vaccines in the EMRO region?
+    - What are the available vaccines?
+    - Is Pfizer the only vaccine available?
+    - What are the vaccines available beside Sinopharm?
+    - Can you list me the available vaccines?
+    - Vaccines available for novel corona viruses
+    - Vaccines?
+    - List of Vaccines available
+    - Which vaccines are available?
+    - Can I know the list of Vaccines available?
+- intent: faq/vaccine_safety
+  examples: |
+    - Considering the speed of vaccine development, how can you ensure the safety of these vaccines?
+    - Is it safe to take vaccines?
+    - is it safe
+    - How can I know that vaccines are safe?
+    - Can you ensure that vaccines are safe?
+    - How safe are those vaccines?
+    - How can you ensure the safety of these vaccines?
+    - Are vaccines safe?
+    - I’m not sure that vaccines are safe
+    - How can I know that vaccines are safe?
+    - Can you tell me if it is safe to vaccinate?
+- intent: faq/vaccine_followup
+  examples: |
+    - Is there any follow up done on the vaccine safety and effectiveness after getting vaccinated?
+    - Are the vaccinated people being tracked on the symptoms?
+    - Does vaccine have long-term side-effects?
+    - Should I expect any long-term side effects?
+    - Is there any long-term follow up?
+    - Follow up
+    - WHO follow up?
+    - Is there any long term documented side-effects?
+    - Do we have any long term follow up?
+- intent: faq/vaccine_working
+  examples: |
+    - How exactly do vaccines work?
+    - How will the vaccines function?
+    - How is it working?
+    - Can you explain how it is working?
+    - How do vaccines work?
+    - How do vaccines protect a person?
+    - How exactly do vaccines protect a person?
+    - How are vaccines protecting people?
+    - Can you explain how is the vaccine working?
+    - Explain the vaccine work?
+- intent: faq/protection_from_variants
+  examples: |
+    - Will the vaccine protect us from the new variants?
+    - Chances of getting the Covid variants after getting vaccinated?
+    - Is the vaccination going to protect us against new variants?
+    - Is the vaccine still effective against the new variants?
+    - Are the new variants covered with the vaccines available?
+    - Can we be protected from the new variant via those vaccines?
+    - Are vaccines reassuring against variants?
+    - What are the measures against covid-19 variants?
+    - Solutions against covid19 variants?
+    - What is the situation with the covid19 variants?
+- intent: faq/vaccine_mandatory
+  examples: |
+    - Is it mandatory to take vaccines?
+    - Is it necessary to get vaccinated?
+    - Should we get vaccinated?
+    - Is it compulsory to get vaccinated?
+    - is it mandatory to take vaccine
+    - why should i vaccinate
+    - Should everyone get vaccinated against COVID-19?
+    - How can I know if I should vaccinate?
+    - Is vaccination mandatory?
+    - Am I obligated to vaccinate?
+- intent: faq/covid
+  examples: |
+    - What is a corona virus? 
+    - What is covid?
+    - What is Covid-19
+    - Corona virus?
+    - Define covid
+    - Explain Covid
+    - History of Covid19
+    - Is SARS part of Covid?
+- intent: faq/novel
+  examples: |
+    - What is a novel coronavirus?
+    - What do you mean by novel corona virus
+    - What does novel coronavirus mean?
+    - Novel coronavirus
+    - Is novel coronavirus different?
+    - What is Novel coronavirus?
+    - Explain Novel coronavirus?
+    - How different is novel coronavirus?
+    - Covid19 vs Novel coronavirus?
+- intent: faq/humans_affected
+  examples: |
+    - Can humans become infected with a novel coronavirus of animal source?
+    - How coronavirus transmitted from animals to humans?
+    - Can somebody get infected with a novel coronavirus of animal source?
+    - Can humans become infected with a novel coronavirus of animal source?
+    - Human and animals coronavirus?
+    - Do animals coronaviruses transmit to humans?
+- intent: faq/symptoms
+  examples: |
+    - How can corona virus affect our health?
+    - What are the symptoms of someone infected with a coronavirus?
+    - What are the common signs of infection?
+    - What are the symptoms of someone infected with a coronavirus?
+    - Signs of infection?
+    - symptoms?
+    - Symptoms
+    - Is fever a symptom?
+    - Is coughing a symptom?
+    - Respiratory symptoms?
+- intent: faq/transmission
+  examples: |
+    - How is corona virus transmitted?
+    - Can coronaviruses be transmitted from person to person?
+    - How will one get affected?
+    - How is corona virus spreading?
+    - How does infection occur?
+    - How is the coronavirus transmitted between people?
+    - Can I be infected if I’m in contact with an infected person?
+    - Can I be infected if somebody is coughing or sneezing close to me?
+- intent: faq/treatment
+  examples: |
+    - Are there any tratments available?
+    - Is there a treatment for a novel coronavirus?
+    - Treatments?
+    - Treatment
+    - What can be done if a person is infected with a novel coronavirus?
+    - Can novel coronavirus symptoms be treated?
+    - What is effective for an infected person?
+    - Effective treatments
+    - Are there any treatments for novel coronavirus?
+    - What are the treatments?
+- intent: faq/permissible_islam
+  examples: |
+    - Is COVID-19 vaccine permissible in Islam?
+    - Is vaccination allowed in Islam? 
+    - Is COVID-19 vaccine allowed in Islam?
+    - Is vaccination allowed in chariaa?
+    - Can we be Muslim and have the vaccine?
+    - What is the Islamic position from the coronavirus vaccine?
+    - Does vaccine contain any haram components?
+    - Is vaccinate haram or halal?
+- intent: faq/health_workers
+  examples: |
+    - Are health workers at risk from a novel coronavirus?
+    - How risky are the health workers?
+    - Are health workers prone to covid
+    - Are health workers exposed to novel coronavirus?
+    - Is it risky for healthcare workers to be in contact with patients?
+    - What is the healthcare workers situation?
+- intent: faq/WHO_recommend
+  examples: |
+    - What are the WHO recommendations for countries?
+    - What does the WHO recommend?
+    - WHO recommendations
+    - WHO recommendations for countries?
+    - Countries recommendations from WHO?
+    - What is WHO recommending?
+    - What WHO recommending for countries?
+    - Are countries encouraged to continue strengthening their preparedness for health emergencies?
+- intent: faq/approval_process
+  examples: |
+    - How does the approval process for COVID-19 vaccines work?
+    - What is the approval process of covid vaccines
+    - Is the covid vaccine approval process too long?
+    - What was the approval process for vaccines?
+    - What are the steps for the approval process for coronavirus vaccines?
+    - Explain the approval process for coronavirus vaccines?
+    - The approval process of covid vaccines
+    - Coronavirus vaccines approval process
+    - What is the Coronavirus vaccines approval process?
+- intent: faq/makesure_sideeffects
+  examples: |
+    - How can we be sure that vaccines will not put us at risk in terms of side effects and severe adverse reactions?
+    - How sure are we about the side effects?
+    - Did side effects occurred during the clinical trials?
+    - What did the clinical trials show as side effects to the vaccine?
+    - How can we be sure that vaccines do not have side effects or other safety concerns?
+    - How can we be sure that vaccines do not have side effects?
+    - How can we be sure that vaccines do not have safety concerns?
+    - What did the clinical trials show after the follow up of vaccinated people?
+- intent: faq/mRNA_vaccine_safety
+  examples: |
+    - How do we know if the mRNA vaccines that are based on new technology are safe?
+    - How can one ensure that mRNA vaccines are safe?
+    - What about mRNA vaccine?
+    - What about mRNA vaccine safety?
+    - What about mRNA vaccine technology?
+    - Is mRNA vaccine safe?
+    - Do mRNA vaccine interfere with human DNA?
+    - mRNA vaccines
+    - mRNA vaccine safety?
+    - Are we safe with mRNA vaccine?
+- intent: faq/emergency
+  examples: |
+    - What does it mean when we say that a vaccine has been given emergency use authorization by WHO?
+    - Vaccines that are authorized for emergency use by WHO
+- intent: faq/precautions_after_vaccine
+  examples: |
+    - Should we use precausions even after vaccination?
+    - Is it necessary to wear masks after vaccination?
+    - Is it ok to avoid masks after getting vaccinated?
+    - Why should I take precausions after taking vaccine?
+    - What are the precautions after vaccination?
+    - Should I wear a mask after vaccination?
+    - Is it ok to avoid masks after getting vaccinated?
+    - Precautions after vaccination
+    - Any precautions after vaccination?
+    - What should I do after vaccination?
+- intent: faq/benefits
+  examples: |
+    - What are the benefits of getting vaccinated?
+    - How will vaccines protect us?
+    - Will vaccine protect us from Covid-19?
+    - What are the benefits of getting vaccinated?
+    - What will I get from being vaccinated?
+    - What are the benefits of vaccination?
+    - Vaccination benefits
+    - How is the vaccination valuable?
+    - What is there for me?
+    - Explain the benefits of vaccination?
+    - How am I benefiting from vaccination?
+- intent: faq/wear_mask
+  examples: |
+    - Why should I wear a mask?
+    - When should I wear a mask?
+    - Is it necessary to wear a mask
+    - Is it needed to wear a mask
+    - How important is it to wear a mask
+    - Is it mandatory to wear a mask?
+- intent: faq/mask_protect
+  examples: |
+    - Will wearing a mask protect me from COVID-19?
+    - What can I do to protect myself from getting covid?
+    - How can we ensure that we will be protected by wearing a mask?
+    - What assurity can be given of not getting covid, even after wearing a mask
+    - Can a mask protect me from COVID-19?
+    - How can I protect myself from getting covid?
+    - Wearing a mask
+    - Why wearing a mask?
+    - Why should we wear a mask?
+- intent: faq/disadvantages_masks
+  examples: |
+    - Can wearing a mask have disadvantages?
+    - Is there any problems of wearinga mask?
+    - Will masks cause a problem?
+    - What are the problems masks can cause?
+    - Is there any issue, that masks can cause?
+    - What are the disadvantages of wearing masks?
+    - Masks problems
+    - Can masks cause problems?
+- intent: faq/vaccine_difference
+  examples: |
+    - There are several different kinds of vaccines that are now being used by countries for their populations. In general, what are the differences between these vaccines?
+    - How are the vaccines different?
+    - Are vaccines having some similarities?
+    - Despite of all the different vaccines available throughout the globe, is there any difference or sinilarity among them?
+    - Do all vaccines protect against covid19?
+    - Do vaccines work differently?
+    - What is the difference between vaccines?
+    - Vaccine difference
+- intent: faq/unauthorized_vaccines
+  examples: |
+    - Many countries are vaccinating their populations with vaccines other than the one authorized by WHO. What does this mean?
+    - Is it ok to take a vaccine which is not approved by WHO?
+    - Is it safe to get the vaccine, not approved by WHO
+    - Why are different countries prioritizing specific vaccines for their population?
+    - Which vaccines are authorized by WHO in my country?
+    - If the vaccine is not approved by WHO, is it ok to take it?
+    - Not approved vaccines by WHO
+    - Why is each country using a different vaccine for their population?
+- intent: faq/vaccine_distribution
+  examples: |
+    - How is WHO ensuring a fair distribution of vaccines throughout?
+    - Is the availability of vaccines made fair?
+    - Are vaccines made available in low or middle-income countries, countries with political conflict and other emergencies?
+    - Are the vaccines fairly distributed to people all over?
+    - Ensuring a fair distribution of vaccines
+    - Is the availability of vaccines made fair by WHO?
+    - How fair is the vaccine’s distribution?
+    - Are the vaccines distributed fairly all over the world?
+- intent: chitchat/howold
+  examples: |
+    - whats your age
+    - how old
+    - what's your age
+    - when were you born
+    - what is your birthday
+    - when is your birthday
+    - how many years old are you
+    - do you know how old you are
+    - what is your exact age
+    - what year were you born
+    - can you tell me your age
+- intent: chitchat/languagesbot
+  examples: |
+    - What languages can you use
+    - Which languages do you speak
+    - What are the languages you can speak
+    - In which languages can you speak
+    - What languages do you know
+    - What languages are you fluent in
+- intent: chitchat/wherefrom
+  examples: |
+    - where do you live
+    - where are you from
+    - So where are you from
+    - Where are you
+    - Where were you born
+    - What city were you born in
+    - From which country are you from?
+- intent: chitchat/whoami
+  examples: |
+    - Who am I
+    - Okay who am I
+    - WHo am I
+    - Tell me who am I
+    - Tell me who I am
+- intent: chitchat/compliments
+  examples: |
+    - you have a great sense of humor
+    - Colors seem brighter when you're around
+    - Your smile is contagious
+    - I bet you make babies smile
+    - you light up the room
+    - you're like sunshine on a rainy day
+    - you bring out the best in other people
+    - I bet you sweat glitter
+    - You are brilliant
+- intent: chitchat/handleinsult
+  examples: |
+    - you're a loser
+    - you are a stupid bot
+    - i hate you
+    - Stupid
+    - fuck you
+    - dick
+    - you're a dick
+    - get out
+    - go to hell
+    - you don't understand anything I say
+    - you're not funny
+    - so dumb
+    - you are a moron
+    - you are an idiot
+    - so fucking dumb
+- intent: chitchat/telljoke
+  examples: |
+    - tell me a joke
+    - Say something funny.
+    - Give me a joke.
+    - Give me a funny joke.
+    - What's a good joke
+    - Do you have any jokes
+- intent: chitchat/builder
+  examples: |
+    - can you share your boss with me
+    - i want to get to know your owner
+    - i want to know the company which designed you
+    - i want to know the company which generated you
+    - i want to know the company which invented you
+    - i want to know who invented you
+    - May I ask who invented you
+    - please tell me the company who created you
+    - who made you
+    - who made u
+    - who made u?
+    - who created you?
+    - who is your creator?
+- intent: chitchat/crocodile
+  examples: |
+    - see you later aligator
+    - cya aligator
+- intent: repeat_name
+  examples: |
+    - what is my name?
+    - tell me my name
+    - do you know my name
+    - repeat my name
+    - do you remember my name?
+    - what is my name
+    - May i know my name
+    - What do I call myself
+    - Explain my name to me.
+    - What could be my name
+- intent: give_name
+  examples: |
+    - [vincent]{"entity":"name","value":"vincent"}
+    - [rachael]{"entity":"name","value":"rachael"}
+    - I'm [emma]{"entity":"name","value":"emma"}
+    - My name is [juste]{"entity":"name","value":"juste"}
+    - You can call me [sree]{"entity":"name","value":"sree"}
+    - People call me [sam]{"entity":"name","value":"sam"}
+    - [jenny]{"entity":"name","value":"jenny"}
+    - [sukanya]{"entity":"name","value":"sukanya"} is my name
+    - [Sharon]{"entity":"name","value":"Sharon"}
+    - [Richa]{"entity":"name","value":"Richa"}
+    - I'm [Tazni]{"entity":"name","value":"Tazni"}
+    - My name is [Fathima]{"entity":"name","value":"Fathima"}
+    - You can call me [John]{"entity":"name","value":"John"}
+    - People call me [Emmanuel]{"entity":"name","value":"Emmanuel"}
+    - [kashi]{"entity":"name","value":"kashi"}
+    - [Mini]{"entity":"name","value":"Mini"} is my name
+    - [Nabil]{"entity":"name","value":"Nabil"}
+    - [Randa]{"entity":"name","value":"Randa"} is my name
+    - [Youness]{"entity":"name","value":"Youness"}
+    - [Leigh]{"entity":"name","value":"Leigh"} is my name
+    - [tarek]{"entity":"name","value":"tarek"}
+    - [fatima]{"entity":"name","value":"fatima"}
+    - I'm [mohamed]{"entity":"name","value":"mohamed"}
+    - My name is [ayoub]{"entity":"name","value":"ayoub"}
+    - [mostafa]{"entity":"name","value":"mostafa"}
+    - [abdesalam]{"entity":"name","value":"abdesalam"} is my name
+    - [mehdi]{"entity":"name","value":"mehdi"}
+    - [khadija]{"entity":"name","value":"khadija"} is my name
+    - [said]{"entity":"name","value":"said"}
+    - [ahmed]{"entity":"name","value":"ahmed"} is my name
+    - [lina]{"entity":"name","value":"lina"}
+    - [mhamed]{"entity":"name","value":"mhamed"} is my name
+    - [sirine]{"entity":"name","value":"sirine"}
+    - [sijith]{"entity":"name","value":"sijith"}
+    - My name is [jalal]{"entity":"name","value":"jalal"}
+    - [mubarak]{"entity":"name","value":"mubarak"}
+    - [karima]{"entity":"name","value":"karima"} is my name
+    - [hanaa]{"entity":"name","value":"hanaa"
+# - intent: give_age
+#   examples: |
+#     - [40]{"entity":"age","value":"40"}
+#     - [76]{"entity":"age","value":"76"}
+#     - [90]{"entity":"age","value":"90"} is my age
+#     - My age is [30]({"entity":"age","value":"30"}
+#     - I'm [86]{"entity":"age","value":"86"}
+#     - age is [23]{"entity":"age","value":"23"}
+#     - [60]{"entity":"age","value":"60"}
+#     - [96]{"entity":"age","value":"96"}
+#     - [41]{"entity":"age","value":"41"} is my age
+#     - My age is [31]({"entity":"age","value":"31"}
+#     - I'm [67]{"entity":"age","value":"67"}
+#     - age is [27]{"entity":"age","value":"27"}
+#     - I'm just [57]{"entity":"age","value":"57"}
+# - intent: give_country
+#   examples: |
+#     - [India]{"entity":"country","value":"India"} is my country
+#     - My native place is [Srilanka]{"entity":"country","value":"Srilanka"}
+#     - My country is [Pakistan]{"entity":"country","value":"Pakistan"}
+#     - I recide in [Morocco]{"entity":"country","value":"Morocco"}
+#     - [United Arab Emirates]{"entity":"country","value":"United Arab Emirates"} is my place
+#     - I'm from [UAE]{"entity":"country","value":"UAE"}
+#     - [China]{"entity":"country","value":"China"} is my country
+#     - My native place is [Bhutan]{"entity":"country","value":"Bhutan"}
+#     - My country is [USA]{"entity":"country","value":"USA"}
+#     - I recide in [United States of America]{"entity":"country","value":"United States of America"}
+#     - [Nepal]{"entity":"country","value":"Nepal"} is my place
+#     - I'm from [Brazil]{"entity":"country","value":"Brazil"}
+
+# - intent: rating_value
+#   examples: |
+#     - I'm giving a rating of [3]{"entity":"rating","value":"3"}
+#     - I will give you [4]{"entity":"rating","value":"4"}
+#     - It's just [2]{"entity":"rating","value":"2"}
+#     - You are not efficient, I'm givig you just [1]{"entity":"rating","value":"1"}
+#     - [4]{"entity":"rating","value":"4"}
+#     - [2]{"entity":"rating","value":"2"}
+- intent: restart
+  examples: |
+    - Restart the conversation
+    - Start from the beginning
+    - Start over again
+    - Restart chat
+- intent: give_realistic
+  examples: |
+    - 1
+    - 4
+    - 5
+- intent: give_robotic
+  examples: |
+    - 5
+    - 4
+    - 1
+- intent: give_welcoming
+  examples: |
+    - 1
+    - 3
+    - 5
+- intent: give_unfriendly
+  examples: |
+    - 5
+    - 1
+    - 3
+- intent: give_explainedscope
+  examples: |
+    - 1
+    - 5
+    - 3
+- intent: give_indication
+  examples: |
+    - 3
+    - 1
+    - 4
+- intent: give_navigate
+  examples: |
+    - 2
+    - 5
+    - 1
+- intent: give_confused
+  examples: |
+    - 5
+    - 1
+    - 3
+- intent: give_understoodme
+  examples: |
+    - 3
+    - 1
+- intent: give_recogniseinputs
+  examples: |
+    - 4 
+    - 1
+- intent: give_appropriateresponses
+  examples: |
+    - 3 
+    - 2
+- intent: give_irrelevant
+  examples: |
+    - 1 
+    - 4
+- intent: give_copeerrors
+  examples: |
+    - 4 
+    - 5
+- intent: give_unablehandle
+  examples: |
+    - 4 
+    - 3
+- intent: give_easytouse
+  examples: |
+    - 4 
+    - 1
+- intent: give_complex
+  examples: |
+    - 3
+    - 2
+    - 5
+    - 1
+- intent: give_passcode
+  examples: |
+    - b4i9o9Icbn
+    - ui9kjUk0ad
+    - 08hdijHucb
+    - uVXtrVHY38
+    - bozk5UjBE9
+    - hyI8oAplfd
+    - oihd7nHkjh
+    - Yhgs5vbcsv
+    - kjhsdkljnk
+    - kjghkJJSD7
+    - Ykldn6hgaf
+    - 0kjd6Rlkjd
+    - adm0uyGlja
+    - Zjbdyh8jhj
+    - Mjsdhj&jks
+    - RhkTk7nFDj
+    - TYopn76JKJ
+    - q7lL2SfoHf
+    - YIT43bdM61

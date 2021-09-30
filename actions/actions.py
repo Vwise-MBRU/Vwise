@@ -58,238 +58,6 @@ class ActionGetUniqueId(Action):
             print("Unique number in actions.py is: ",randomstring)
 
             return [SlotSet("unique_id", randomstring)]
-
-class ActionGetRealistic(Action):
-    def name(self) -> Text:
-        return "action_get_realistic"
-
-    def run(self, dispatcher: CollectingDispatcher,
-            tracker: Tracker,
-            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-           
-            realistic=tracker.latest_message['text'].strip()
-            if realistic in rate_list:
-                return [SlotSet("realistic", realistic)]
-            else:
-                return [SlotSet("realistic", None)]
-        
-class ActionGetRobotic(Action):
-    def name(self) -> Text:
-        return "action_get_robotic"
-
-    def run(self, dispatcher: CollectingDispatcher,
-            tracker: Tracker,
-            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-           
-            robotic=tracker.latest_message['text'].strip()
-            if robotic in rate_list:
-                return [SlotSet("robotic", robotic)]
-            else:
-                return [SlotSet("robotic", None)]
-          
-
-                
-class ActionGetWelcoming(Action):
-    def name(self) -> Text:
-        return "action_get_welcoming"
-
-    def run(self, dispatcher: CollectingDispatcher,
-            tracker: Tracker,
-            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-           
-            welcoming=tracker.latest_message['text'].strip()
-            if welcoming in rate_list:
-                return [SlotSet("welcoming", welcoming)]
-            else:
-                return [SlotSet("welcoming", None)]
-         
-
-            
-class ActionGetUnfriendly(Action):
-    def name(self) -> Text:
-        return "action_get_unfriendly"
-
-    def run(self, dispatcher: CollectingDispatcher,
-            tracker: Tracker,
-            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-           
-            unfriendly=tracker.latest_message['text'].strip()
-            if unfriendly in rate_list:
-                return [SlotSet("unfriendly", unfriendly)]
-            else:
-                return [SlotSet("unfriendly", None)]
-class ActionGetExplainedScope(Action):
-    def name(self) -> Text:
-        return "action_get_explainedscope"
-
-    def run(self, dispatcher: CollectingDispatcher,
-            tracker: Tracker,
-            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-           
-            explainedscope=tracker.latest_message['text'].strip()
-            if explainedscope in rate_list:
-                return [SlotSet("explainedscope", explainedscope)]
-            else:
-                return [SlotSet("explainedscope", None)]
-class ActionGetIndication(Action):
-    def name(self) -> Text:
-        return "action_get_indication"
-
-    def run(self, dispatcher: CollectingDispatcher,
-            tracker: Tracker,
-            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-           
-            indication=tracker.latest_message['text'].strip()
-            if indication in rate_list:
-                return [SlotSet("indication", indication)]
-            else:
-                return [SlotSet("indication", None)]
-
-            
-class ActionGetNavigate(Action):
-    def name(self) -> Text:
-        return "action_get_navigate"
-
-    def run(self, dispatcher: CollectingDispatcher,
-            tracker: Tracker,
-            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-           
-            navigate=tracker.latest_message['text'].strip()
-            if navigate in rate_list:
-                return [SlotSet("navigate", navigate)]
-            else:
-                return [SlotSet("navigate", None)]
-
-            
-class ActionGetConfused(Action):
-    def name(self) -> Text:
-        return "action_get_confused"
-
-    def run(self, dispatcher: CollectingDispatcher,
-            tracker: Tracker,
-            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-           
-            confused=tracker.latest_message['text'].strip()
-            if confused in rate_list:
-                return [SlotSet("confused", confused)]
-            else:
-                return [SlotSet("confused", None)]
-            
-class ActionGetUnderstoodme(Action):
-    def name(self) -> Text:
-        return "action_get_understoodme"
-
-    def run(self, dispatcher: CollectingDispatcher,
-            tracker: Tracker,
-            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-            understoodme=tracker.latest_message['text'].strip()
-            if understoodme in rate_list:
-                return [SlotSet("understoodme", understoodme)]
-            else:
-                return [SlotSet("understoodme", None)]
-class ActionGetRecogniseinputs(Action):
-    def name(self) -> Text:
-        return "action_get_recogniseinputs"
-
-    def run(self, dispatcher: CollectingDispatcher,
-            tracker: Tracker,
-            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-            recogniseinputs=tracker.latest_message['text'].strip()
-            if recogniseinputs in rate_list:
-                return [SlotSet("recogniseinputs", recogniseinputs)]
-            else:
-                return [SlotSet("recogniseinputs", None)]
-            
-class ActionGetAppropriateresponses(Action):
-    def name(self) -> Text:
-        return "action_get_appropriateresponses"
-
-    def run(self, dispatcher: CollectingDispatcher,
-            tracker: Tracker,
-            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-           
-            appropriateresponses=tracker.latest_message['text'].strip()
-            if appropriateresponses in rate_list:
-                return [SlotSet("appropriateresponses", appropriateresponses)]
-            else:
-                return [SlotSet("appropriateresponses", None)]
-            
-class ActionGetIrrelevant(Action):
-    def name(self) -> Text:
-        return "action_get_irrelevant"
-
-    def run(self, dispatcher: CollectingDispatcher,
-            tracker: Tracker,
-            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-           
-            irrelevant=tracker.latest_message['text'].strip()
-            if irrelevant in rate_list:
-                return [SlotSet("irrelevant", irrelevant)]
-            else:
-                return [SlotSet("irrelevant", None)]
-
-            
-class ActionGetCopeerrors(Action):
-    def name(self) -> Text:
-        return "action_get_copeerrors"
-
-    def run(self, dispatcher: CollectingDispatcher,
-            tracker: Tracker,
-            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-           
-            copeerrors=tracker.latest_message['text'].strip()
-            if copeerrors in rate_list:
-                return [SlotSet("copeerrors", copeerrors)]
-            else:
-                return [SlotSet("copeerrors", None)]
-
-
-        
-class ActionGetUnableHandle(Action):
-    def name(self) -> Text:
-        return "action_get_unablehandle"
-
-    def run(self, dispatcher: CollectingDispatcher,
-            tracker: Tracker,
-            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-           
-            unablehandle=tracker.latest_message['text'].strip()
-            if unablehandle in rate_list:
-                return [SlotSet("unablehandle", unablehandle)]
-            else:
-                return [SlotSet("unablehandle", None)]
-
-            
-class ActionGetEasytoUse(Action):
-    def name(self) -> Text:
-        return "action_get_easytouse"
-
-    def run(self, dispatcher: CollectingDispatcher,
-            tracker: Tracker,
-            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-           
-            easytouse=tracker.latest_message['text'].strip()
-            if easytouse in rate_list:
-                return [SlotSet("easytouse", easytouse)]
-            else:
-                return [SlotSet("easytouse", None)]
-           
-
-            
-class ActionGetComplex(Action):
-    def name(self) -> Text:
-        return "action_get_complex"
-
-    def run(self, dispatcher: CollectingDispatcher,
-            tracker: Tracker,
-            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-           
-            complex=tracker.latest_message['text'].strip()
-            if complex in rate_list:
-                return [SlotSet("complex", complex)]
-            else:
-                return [SlotSet("complex", None)]
-
             
         
 
@@ -302,12 +70,12 @@ class ActionSaveFeedback(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
             try:
-                db=sqlite3.connect("./details.db")
+                db=sqlite3.connect("details.db")
                 cursor=db.cursor()
                 chat_start_time=str(tracker.get_slot("start_time"))
                 
                 chat_end_time=str(tracker.get_slot("end_time"))
-                
+                unique_id=tracker.get_slot("unique_id")
                 Rating1=tracker.get_slot("realistic")
                 
                 Rating2=tracker.get_slot("robotic")
@@ -323,6 +91,7 @@ class ActionSaveFeedback(Action):
                 Rating7=tracker.get_slot("navigate")
                 
                 Rating8=tracker.get_slot("confused")
+
                 Rating9=tracker.get_slot("understoodme")
             
                 Rating10=tracker.get_slot("recogniseinputs")
@@ -339,18 +108,20 @@ class ActionSaveFeedback(Action):
                 
                 Rating16=tracker.get_slot("complex")
                 
-                sender_id=tracker.current_state()['sender_id'].strip()
+                sender_id=tracker.current_state()['sender_id']
                 print("*********************************",sender_id)
 
 
                 # q="UPDATE UserDetails SET Realistic= ?,Robotic= ?,Welcoming= ?,Unfriendly= ?,ExplainedScope= ?,Indication= ?, Navigate= ?,Confused= ?,Understoodme=?, RecogniseInputs= ?, AppropriateResponses= ?, Irrelevant= ?, CopeErrors= ?, UnableHandle= ?, EasytoUse= ?, Complex= ?, StartTime= ?, EndTime=? WHERE User_ID = ?"
                 
-                result=cursor.execute("""UPDATE UserDetails SET Realistic= ?,Robotic= ?,Welcoming= ?,Unfriendly= ?,ExplainedScope= ?,Indication= ?, Navigate= ?,Confused= ?,Understoodme=?, RecogniseInputs= ?, AppropriateResponses= ?, Irrelevant= ?, CopeErrors= ?, UnableHandle= ?, EasytoUse= ?, Complex= ?, StartTime= ?, EndTime=? WHERE User_ID = ?""",(Rating1,Rating2,Rating3,Rating4,Rating5,Rating6,Rating7,Rating8,Rating9,Rating10,Rating11,Rating12,Rating13,Rating14,Rating15,Rating16,chat_start_time, chat_end_time,str(sender_id)))
-                print("--------------------------------------",result)
+                result=cursor.execute("""UPDATE UserDetails SET Realistic= ?,Robotic= ?,Welcoming= ?,Unfriendly= ?,ExplainedScope= ?,Indication= ?, Navigate= ?,Confused= ?,Understoodme=?, RecogniseInputs= ?, AppropriateResponses= ?, Irrelevant= ?, CopeErrors= ?, UnableHandle= ?, EasytoUse= ?, Complex= ?, StartTime= ?, EndTime=? WHERE Unique_ID = ?""",(Rating1,Rating2,Rating3,Rating4,Rating5,Rating6,Rating7,Rating8,Rating9,Rating10,Rating11,Rating12,Rating13,Rating14,Rating15,Rating16,chat_start_time,chat_end_time,unique_id))
+                # print("--------------------------------------",result)
                 if result==0:
                     print("Couldn't find such a database")
                 else:
                     print("Ratings from user Saved Successfully!!")
+                    db.commit()
+                    
             # DataUpdate(tracker.get_slot("name"),tracker.get_slot("age"),tracker.get_slot("country"))
                     # dispatcher.utter_message(response="utter_details_thanks")
             except Exception as e:
@@ -405,7 +176,7 @@ class ActionSubmit(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
             try:
-                db=sqlite3.connect("./details.db")
+                db=sqlite3.connect("details.db")
                 
                 cursor=db.cursor()
                 sender_id=tracker.current_state()['sender_id']
@@ -413,24 +184,24 @@ class ActionSubmit(Action):
                 # Age=tracker.get_slot("age")
                 # Country=tracker.get_slot("country")
                 unique_id=tracker.get_slot("unique_id")
-                chat_start_time=0
-                chat_end_time=0
-                Rating1=0
-                Rating2=0
-                Rating3=0
-                Rating4=0
-                Rating5=0
-                Rating6=0
-                Rating7=0
-                Rating8=0
-                Rating9=0
-                Rating10=0
-                Rating11=0
-                Rating12=0
-                Rating13=0
-                Rating14=0
-                Rating15=0
-                Rating16=0
+                chat_start_time="0"
+                chat_end_time="0"
+                Rating1="0"
+                Rating2="0"
+                Rating3="0"
+                Rating4="0"
+                Rating5="0"
+                Rating6="0"
+                Rating7="0"
+                Rating8="0"
+                Rating9="0"
+                Rating10="0"
+                Rating11="0"
+                Rating12="0"
+                Rating13="0"
+                Rating14="0"
+                Rating15="0"
+                Rating16="0"
                 # q="""INSERT INTO UserDetails VALUES(?,?,?,?,?);"""
                 result=cursor.execute("INSERT INTO UserDetails VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",(sender_id,unique_id,Name,Rating1,Rating2,Rating3,Rating4,Rating5,Rating6,Rating7,Rating8,Rating9,Rating10,Rating11,Rating12,Rating13,Rating14,Rating15,Rating16,chat_start_time,chat_end_time))
                 if result==0:
@@ -439,12 +210,13 @@ class ActionSubmit(Action):
             # DataUpdate(tracker.get_slot("name"),tracker.get_slot("age"),tracker.get_slot("country"))
                     dispatcher.utter_message(response="utter_details_thanks")
                     db.commit()
-                    db.close()
+                    # db.close()
             except Exception as e:
                 print(str(e))
                 dispatcher.utter_message(text="Something went wrong! Data not saved to DB")
             # dispatcher.utter_message(response="utter_details_thanks")
             finally:
+                cursor.close()
                 db.close()
 
 # class ActionCheckforBlanks(Action):
@@ -466,248 +238,484 @@ class ActionSubmit(Action):
 
 
 
-# class BotEvaluationForm(Action):
+class BotEvaluationForm(Action):
 
+    def name(self) -> Text:
+        return "bot_evaluation_form"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+            required_slots=["appropriateresponses","complex","confused","copeerrors","easytouse","explainedscope","indication","irrelevant","realistic","navigate","recogniseinputs","robotic","unablehandle","understoodme","unfriendly","welcoming"]
+            for slot_name in required_slots:
+                if tracker.slots.get(slot_name) is  None:
+                    return [SlotSet("requested_slot",slot_name)]
+            return [SlotSet("requested_slot",None)]
+
+class ValidateBotEvaluationForm(FormValidationAction):
+    def name(self) -> Text:
+        return "validate_bot_evaluation_form"
+    
+    def validate_appropriateresponses(self,
+        slot_value: Any,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: "DomainDict") -> Dict[Text, Any]:
+        
+        if slot_value not in rate_list:
+            dispatcher.utter_message(response="utter_enter_valid_rating")
+            return {"appropriateresponses":None}
+            # return [SlotSet("appropriateresponses",None)]
+        else:
+            return {"appropriateresponses":slot_value}
+            # return [SlotSet("appropriateresponses",slot_value)]
+        
+
+    def validate_complex(self,
+        slot_value: Any,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: "DomainDict") -> Dict[Text, Any]:
+        
+        if slot_value not in rate_list:
+            dispatcher.utter_message(response="utter_enter_valid_rating")
+            return {"complex":None}
+            # return [SlotSet("complex",None)]
+        else:
+            return {"complex": slot_value}
+            # return [SlotSet("complex",slot_value)]
+
+    def validate_confused(self,
+        slot_value: Any,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: "DomainDict") -> Dict[Text, Any]:
+        if slot_value not in rate_list:
+            dispatcher.utter_message(response="utter_enter_valid_rating")
+            return {"confused":None}
+            # return [SlotSet("confused",None)]
+        else:
+            return {"confused":slot_value}
+            # return [SlotSet("confused",slot_value)]
+
+
+    def validate_copeerrors(self,
+        slot_value: Any,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: "DomainDict") -> Dict[Text, Any]:
+        if slot_value not in rate_list:
+            dispatcher.utter_message(response="utter_enter_valid_rating")
+            return {"copeerrors":None}
+            # return [SlotSet("copeerrors",None)]
+        else:
+            return {"copeerrors":slot_value}
+            # return [SlotSet("copeerrors",slot_value)]
+
+
+    def validate_easytouse(self,
+        slot_value: Any,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: "DomainDict") -> Dict[Text, Any]:
+        if slot_value not in rate_list:
+            dispatcher.utter_message(response="utter_enter_valid_rating")
+            return {"easytouse":None}
+            # return [SlotSet("easytouse",None)]
+        else:
+            return {"easytouse":slot_value}
+            # return [SlotSet("easytouse",slot_value)]
+
+
+    def validate_explainedscope(self,
+        slot_value: Any,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: "DomainDict") -> Dict[Text, Any]:
+        if slot_value not in rate_list:
+            dispatcher.utter_message(response="utter_enter_valid_rating")
+            return {"explainedscope":None}
+            # return [SlotSet("explainedscope",None)]
+        else:
+            return {"explainedscope":slot_value}
+            # return [SlotSet("explainedscope",slot_value)]
+
+
+    def validate_indication(self,
+        slot_value: Any,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: "DomainDict") -> Dict[Text, Any]:
+        if slot_value not in rate_list:
+            dispatcher.utter_message(response="utter_enter_valid_rating")
+            return {"indication":None}
+            # return [SlotSet("indication",None)]
+        else:
+            return {"indication":slot_value}
+            # return [SlotSet("indication",slot_value)]
+
+
+    def validate_irrelevant(self,
+        slot_value: Any,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: "DomainDict") -> Dict[Text, Any]:
+        if slot_value not in rate_list:
+            dispatcher.utter_message(response="utter_enter_valid_rating")
+            return {"irrelevant":None}
+            # return [SlotSet("irrelevant",None)]
+        else:
+            return {"irrelevant":slot_value}
+            # return [SlotSet("irrelevant",slot_value)]
+
+
+    def validate_realistic(self,
+        slot_value: Any,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: "DomainDict") -> Dict[Text, Any]:
+        if slot_value not in rate_list:
+            dispatcher.utter_message(response="utter_enter_valid_rating")
+            return {"realistic":None}
+            # return [SlotSet("realistic",None)]
+        else:
+            return {"realistic":slot_value}
+            # return [SlotSet("realistic",slot_value)]
+
+
+    def validate_navigate(self,
+        slot_value: Any,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: "DomainDict") -> Dict[Text, Any]:
+        if slot_value not in rate_list:
+            dispatcher.utter_message(response="utter_enter_valid_rating")
+            return {"navigate":None}
+            # return [SlotSet("navigate",None)]
+        else:
+            return {"navigate":slot_value}
+            # return [SlotSet("navigate",slot_value)]
+
+
+    def validate_recogniseinputs(self,
+        slot_value: Any,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: "DomainDict") -> Dict[Text, Any]:
+        if slot_value not in rate_list:
+            dispatcher.utter_message(response="utter_enter_valid_rating")
+            return {"recogniseinputs":None}
+            # return [SlotSet("recogniseinputs",None)]
+        else:
+            return {"recogniseinputs":slot_value}
+            # return [SlotSet("recogniseinputs",slot_value)]
+
+
+    def validate_robotic(self,
+        slot_value: Any,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: "DomainDict") -> Dict[Text, Any]:
+        if slot_value not in rate_list:
+            dispatcher.utter_message(response="utter_enter_valid_rating")
+            return {"robotic":None}
+            # return [SlotSet("robotic",None)]
+        else:
+            return {"robotic":slot_value}
+            # return [SlotSet("robotic",slot_value)]
+
+
+    def validate_unablehandle(self,
+        slot_value: Any,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: "DomainDict") -> Dict[Text, Any]:
+        if slot_value not in rate_list:
+            dispatcher.utter_message(response="utter_enter_valid_rating")
+            return {"unablehandle":None}
+            # return [SlotSet("unablehandle",None)]
+        else:
+            return {"unablehandle":slot_value}
+            # return [SlotSet("unablehandle",slot_value)]
+
+
+    def validate_understoodme(self,
+        slot_value: Any,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: "DomainDict") -> Dict[Text, Any]:
+        if slot_value not in rate_list:
+            dispatcher.utter_message(response="utter_enter_valid_rating")
+            return {"understoodme":None}
+            # return [SlotSet("understoodme",None)]
+        else:
+            return {"understoodme":slot_value}
+            # return [SlotSet("understoodme",slot_value)]
+
+
+    def validate_unfriendly(self,
+        slot_value: Any,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: "DomainDict") -> Dict[Text, Any]:
+        if slot_value not in rate_list:
+            dispatcher.utter_message(response="utter_enter_valid_rating")
+            return {"unfriendly":None}
+            # return [SlotSet("unfriendly",None)]
+        else:
+            return {"unfriendly":slot_value}
+            # return [SlotSet("unfriendly",slot_value)]
+
+
+    def validate_welcoming(self,
+        slot_value: Any,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: "DomainDict") -> Dict[Text, Any]:
+        if slot_value not in rate_list:
+            dispatcher.utter_message(response="utter_enter_valid_rating")
+            return {"welcoming":None}
+            # return [SlotSet("welcoming",None)]
+        else:
+            return {"welcoming":slot_value}
+            # return [SlotSet("welcoming",slot_value)]
+
+
+
+
+# class ActionGetRealistic(Action):
 #     def name(self) -> Text:
-#         return "bot_evaluation_form"
+#         return "action_get_realistic"
 
 #     def run(self, dispatcher: CollectingDispatcher,
 #             tracker: Tracker,
 #             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-
-#             required_slots=["appropriateresponses","complex","confused","copeerrors","easytouse","explainedscope","indication","irrelevant","realistic","navigate","recogniseinputs","robotic","unablehandle","understoodme","unfriendly","welcoming"]
-#             for slot_name in required_slots:
-#                 if tracker.slots.get(slot_name) is  None:
-#                     return [SlotSet("requested_slot",slot_name)]
-#             return [SlotSet("requested_slot",None)]
-
-# class ValidateBotEvaluationForm(FormValidationAction):
+           
+#             realistic=tracker.latest_message['text'].strip()
+#             if realistic in rate_list:
+#                 return [SlotSet("realistic", realistic)]
+#             else:
+#                 return [SlotSet("realistic", None)]
+        
+# class ActionGetRobotic(Action):
 #     def name(self) -> Text:
-#         return "validate_bot_evaluation_form"
-    
-#     def validate_appropriateresponses(self,
-#         slot_value: Any,
-#         dispatcher: CollectingDispatcher,
-#         tracker: Tracker,
-#         domain: "DomainDict") -> Dict[Text, Any]:
+#         return "action_get_robotic"
+
+#     def run(self, dispatcher: CollectingDispatcher,
+#             tracker: Tracker,
+#             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+           
+#             robotic=tracker.latest_message['text'].strip()
+#             if robotic in rate_list:
+#                 return [SlotSet("robotic", robotic)]
+#             else:
+#                 return [SlotSet("robotic", None)]
+          
+
+                
+# class ActionGetWelcoming(Action):
+#     def name(self) -> Text:
+#         return "action_get_welcoming"
+
+#     def run(self, dispatcher: CollectingDispatcher,
+#             tracker: Tracker,
+#             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+           
+#             welcoming=tracker.latest_message['text'].strip()
+#             if welcoming in rate_list:
+#                 return [SlotSet("welcoming", welcoming)]
+#             else:
+#                 return [SlotSet("welcoming", None)]
+         
+
+            
+# class ActionGetUnfriendly(Action):
+#     def name(self) -> Text:
+#         return "action_get_unfriendly"
+
+#     def run(self, dispatcher: CollectingDispatcher,
+#             tracker: Tracker,
+#             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+           
+#             unfriendly=tracker.latest_message['text'].strip()
+#             if unfriendly in rate_list:
+#                 return [SlotSet("unfriendly", unfriendly)]
+#             else:
+#                 return [SlotSet("unfriendly", None)]
+# class ActionGetExplainedScope(Action):
+#     def name(self) -> Text:
+#         return "action_get_explainedscope"
+
+#     def run(self, dispatcher: CollectingDispatcher,
+#             tracker: Tracker,
+#             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+           
+#             explainedscope=tracker.latest_message['text'].strip()
+#             if explainedscope in rate_list:
+#                 return [SlotSet("explainedscope", explainedscope)]
+#             else:
+#                 return [SlotSet("explainedscope", None)]
+# class ActionGetIndication(Action):
+#     def name(self) -> Text:
+#         return "action_get_indication"
+
+#     def run(self, dispatcher: CollectingDispatcher,
+#             tracker: Tracker,
+#             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+           
+#             indication=tracker.latest_message['text'].strip()
+#             if indication in rate_list:
+#                 return [SlotSet("indication", indication)]
+#             else:
+#                 return [SlotSet("indication", None)]
+
+            
+# class ActionGetNavigate(Action):
+#     def name(self) -> Text:
+#         return "action_get_navigate"
+
+#     def run(self, dispatcher: CollectingDispatcher,
+#             tracker: Tracker,
+#             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+           
+#             navigate=tracker.latest_message['text'].strip()
+#             if navigate in rate_list:
+#                 return [SlotSet("navigate", navigate)]
+#             else:
+#                 return [SlotSet("navigate", None)]
+
+            
+# class ActionGetConfused(Action):
+#     def name(self) -> Text:
+#         return "action_get_confused"
+
+#     def run(self, dispatcher: CollectingDispatcher,
+#             tracker: Tracker,
+#             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+           
+#             confused=tracker.latest_message['text'].strip()
+#             if confused in rate_list:
+#                 return [SlotSet("confused", confused)]
+#             else:
+#                 return [SlotSet("confused", None)]
+            
+# class ActionGetUnderstoodme(Action):
+#     def name(self) -> Text:
+#         return "action_get_understoodme"
+
+#     def run(self, dispatcher: CollectingDispatcher,
+#             tracker: Tracker,
+#             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+#             understoodme=tracker.latest_message['text'].strip()
+#             if understoodme in rate_list:
+#                 return [SlotSet("understoodme", understoodme)]
+#             else:
+#                 return [SlotSet("understoodme", None)]
+# class ActionGetRecogniseinputs(Action):
+#     def name(self) -> Text:
+#         return "action_get_recogniseinputs"
+
+#     def run(self, dispatcher: CollectingDispatcher,
+#             tracker: Tracker,
+#             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+#             recogniseinputs=tracker.latest_message['text'].strip()
+#             if recogniseinputs in rate_list:
+#                 return [SlotSet("recogniseinputs", recogniseinputs)]
+#             else:
+#                 return [SlotSet("recogniseinputs", None)]
+            
+# class ActionGetAppropriateresponses(Action):
+#     def name(self) -> Text:
+#         return "action_get_appropriateresponses"
+
+#     def run(self, dispatcher: CollectingDispatcher,
+#             tracker: Tracker,
+#             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+           
+#             appropriateresponses=tracker.latest_message['text'].strip()
+#             if appropriateresponses in rate_list:
+#                 return [SlotSet("appropriateresponses", appropriateresponses)]
+#             else:
+#                 return [SlotSet("appropriateresponses", None)]
+            
+# class ActionGetIrrelevant(Action):
+#     def name(self) -> Text:
+#         return "action_get_irrelevant"
+
+#     def run(self, dispatcher: CollectingDispatcher,
+#             tracker: Tracker,
+#             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+           
+#             irrelevant=tracker.latest_message['text'].strip()
+#             if irrelevant in rate_list:
+#                 return [SlotSet("irrelevant", irrelevant)]
+#             else:
+#                 return [SlotSet("irrelevant", None)]
+
+            
+# class ActionGetCopeerrors(Action):
+#     def name(self) -> Text:
+#         return "action_get_copeerrors"
+
+#     def run(self, dispatcher: CollectingDispatcher,
+#             tracker: Tracker,
+#             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+           
+#             copeerrors=tracker.latest_message['text'].strip()
+#             if copeerrors in rate_list:
+#                 return [SlotSet("copeerrors", copeerrors)]
+#             else:
+#                 return [SlotSet("copeerrors", None)]
+
+
         
-#         if slot_value not in rate_list:
-#             dispatcher.utter_message(response="utter_enter_valid_rating")
-#             return {"appropriateresponses":None}
-#             # return [SlotSet("appropriateresponses",None)]
-#         else:
-#             return {"appropriateresponses":slot_value}
-#             # return [SlotSet("appropriateresponses",slot_value)]
-        
+# class ActionGetUnableHandle(Action):
+#     def name(self) -> Text:
+#         return "action_get_unablehandle"
 
-#     def validate_complex(self,
-#         slot_value: Any,
-#         dispatcher: CollectingDispatcher,
-#         tracker: Tracker,
-#         domain: "DomainDict") -> Dict[Text, Any]:
-        
-#         if slot_value not in rate_list:
-#             dispatcher.utter_message(response="utter_enter_valid_rating")
-#             return {"complex":None}
-#             # return [SlotSet("complex",None)]
-#         else:
-#             return {"complex": slot_value}
-#             # return [SlotSet("complex",slot_value)]
+#     def run(self, dispatcher: CollectingDispatcher,
+#             tracker: Tracker,
+#             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+           
+#             unablehandle=tracker.latest_message['text'].strip()
+#             if unablehandle in rate_list:
+#                 return [SlotSet("unablehandle", unablehandle)]
+#             else:
+#                 return [SlotSet("unablehandle", None)]
 
-#     def validate_confused(self,
-#         slot_value: Any,
-#         dispatcher: CollectingDispatcher,
-#         tracker: Tracker,
-#         domain: "DomainDict") -> Dict[Text, Any]:
-#         if slot_value not in rate_list:
-#             dispatcher.utter_message(response="utter_enter_valid_rating")
-#             return {"confused":None}
-#             # return [SlotSet("confused",None)]
-#         else:
-#             return {"confused":slot_value}
-#             # return [SlotSet("confused",slot_value)]
+            
+# class ActionGetEasytoUse(Action):
+#     def name(self) -> Text:
+#         return "action_get_easytouse"
 
+#     def run(self, dispatcher: CollectingDispatcher,
+#             tracker: Tracker,
+#             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+           
+#             easytouse=tracker.latest_message['text'].strip()
+#             if easytouse in rate_list:
+#                 return [SlotSet("easytouse", easytouse)]
+#             else:
+#                 return [SlotSet("easytouse", None)]
+           
 
-#     def validate_copeerrors(self,
-#         slot_value: Any,
-#         dispatcher: CollectingDispatcher,
-#         tracker: Tracker,
-#         domain: "DomainDict") -> Dict[Text, Any]:
-#         if slot_value not in rate_list:
-#             dispatcher.utter_message(response="utter_enter_valid_rating")
-#             return {"copeerrors":None}
-#             # return [SlotSet("copeerrors",None)]
-#         else:
-#             return {"copeerrors":slot_value}
-#             # return [SlotSet("copeerrors",slot_value)]
+            
+# class ActionGetComplex(Action):
+#     def name(self) -> Text:
+#         return "action_get_complex"
+
+#     def run(self, dispatcher: CollectingDispatcher,
+#             tracker: Tracker,
+#             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+           
+#             complex=tracker.latest_message['text'].strip()
+#             if complex in rate_list:
+#                 return [SlotSet("complex", complex)]
+#             else:
+#                 return [SlotSet("complex", None)]
 
 
-#     def validate_easytouse(self,
-#         slot_value: Any,
-#         dispatcher: CollectingDispatcher,
-#         tracker: Tracker,
-#         domain: "DomainDict") -> Dict[Text, Any]:
-#         if slot_value not in rate_list:
-#             dispatcher.utter_message(response="utter_enter_valid_rating")
-#             return {"easytouse":None}
-#             # return [SlotSet("easytouse",None)]
-#         else:
-#             return {"easytouse":slot_value}
-#             # return [SlotSet("easytouse",slot_value)]
-
-
-#     def validate_explainedscope(self,
-#         slot_value: Any,
-#         dispatcher: CollectingDispatcher,
-#         tracker: Tracker,
-#         domain: "DomainDict") -> Dict[Text, Any]:
-#         if slot_value not in rate_list:
-#             dispatcher.utter_message(response="utter_enter_valid_rating")
-#             return {"explainedscope":None}
-#             # return [SlotSet("explainedscope",None)]
-#         else:
-#             return {"explainedscope":slot_value}
-#             # return [SlotSet("explainedscope",slot_value)]
-
-
-#     def validate_indication(self,
-#         slot_value: Any,
-#         dispatcher: CollectingDispatcher,
-#         tracker: Tracker,
-#         domain: "DomainDict") -> Dict[Text, Any]:
-#         if slot_value not in rate_list:
-#             dispatcher.utter_message(response="utter_enter_valid_rating")
-#             return {"indication":None}
-#             # return [SlotSet("indication",None)]
-#         else:
-#             return {"indication":slot_value}
-#             # return [SlotSet("indication",slot_value)]
-
-
-#     def validate_irrelevant(self,
-#         slot_value: Any,
-#         dispatcher: CollectingDispatcher,
-#         tracker: Tracker,
-#         domain: "DomainDict") -> Dict[Text, Any]:
-#         if slot_value not in rate_list:
-#             dispatcher.utter_message(response="utter_enter_valid_rating")
-#             return {"irrelevant":None}
-#             # return [SlotSet("irrelevant",None)]
-#         else:
-#             return {"irrelevant":slot_value}
-#             # return [SlotSet("irrelevant",slot_value)]
-
-
-#     def validate_realistic(self,
-#         slot_value: Any,
-#         dispatcher: CollectingDispatcher,
-#         tracker: Tracker,
-#         domain: "DomainDict") -> Dict[Text, Any]:
-#         if slot_value not in rate_list:
-#             dispatcher.utter_message(response="utter_enter_valid_rating")
-#             return {"realistic":None}
-#             # return [SlotSet("realistic",None)]
-#         else:
-#             return {"realistic":slot_value}
-#             # return [SlotSet("realistic",slot_value)]
-
-
-#     def validate_navigate(self,
-#         slot_value: Any,
-#         dispatcher: CollectingDispatcher,
-#         tracker: Tracker,
-#         domain: "DomainDict") -> Dict[Text, Any]:
-#         if slot_value not in rate_list:
-#             dispatcher.utter_message(response="utter_enter_valid_rating")
-#             return {"navigate":None}
-#             # return [SlotSet("navigate",None)]
-#         else:
-#             return {"navigate":slot_value}
-#             # return [SlotSet("navigate",slot_value)]
-
-
-#     def validate_recogniseinputs(self,
-#         slot_value: Any,
-#         dispatcher: CollectingDispatcher,
-#         tracker: Tracker,
-#         domain: "DomainDict") -> Dict[Text, Any]:
-#         if slot_value not in rate_list:
-#             dispatcher.utter_message(response="utter_enter_valid_rating")
-#             return {"recogniseinputs":None}
-#             # return [SlotSet("recogniseinputs",None)]
-#         else:
-#             return {"recogniseinputs":slot_value}
-#             # return [SlotSet("recogniseinputs",slot_value)]
-
-
-#     def validate_robotic(self,
-#         slot_value: Any,
-#         dispatcher: CollectingDispatcher,
-#         tracker: Tracker,
-#         domain: "DomainDict") -> Dict[Text, Any]:
-#         if slot_value not in rate_list:
-#             dispatcher.utter_message(response="utter_enter_valid_rating")
-#             return {"robotic":None}
-#             # return [SlotSet("robotic",None)]
-#         else:
-#             return {"robotic":slot_value}
-#             # return [SlotSet("robotic",slot_value)]
-
-
-#     def validate_unablehandle(self,
-#         slot_value: Any,
-#         dispatcher: CollectingDispatcher,
-#         tracker: Tracker,
-#         domain: "DomainDict") -> Dict[Text, Any]:
-#         if slot_value not in rate_list:
-#             dispatcher.utter_message(response="utter_enter_valid_rating")
-#             return {"unablehandle":None}
-#             # return [SlotSet("unablehandle",None)]
-#         else:
-#             return {"unablehandle":slot_value}
-#             # return [SlotSet("unablehandle",slot_value)]
-
-
-#     def validate_understoodme(self,
-#         slot_value: Any,
-#         dispatcher: CollectingDispatcher,
-#         tracker: Tracker,
-#         domain: "DomainDict") -> Dict[Text, Any]:
-#         if slot_value not in rate_list:
-#             dispatcher.utter_message(response="utter_enter_valid_rating")
-#             return {"understoodme":None}
-#             # return [SlotSet("understoodme",None)]
-#         else:
-#             return {"understoodme":slot_value}
-#             # return [SlotSet("understoodme",slot_value)]
-
-
-#     def validate_unfriendly(self,
-#         slot_value: Any,
-#         dispatcher: CollectingDispatcher,
-#         tracker: Tracker,
-#         domain: "DomainDict") -> Dict[Text, Any]:
-#         if slot_value not in rate_list:
-#             dispatcher.utter_message(response="utter_enter_valid_rating")
-#             return {"unfriendly":None}
-#             # return [SlotSet("unfriendly",None)]
-#         else:
-#             return {"unfriendly":slot_value}
-#             # return [SlotSet("unfriendly",slot_value)]
-
-
-#     def validate_welcoming(self,
-#         slot_value: Any,
-#         dispatcher: CollectingDispatcher,
-#         tracker: Tracker,
-#         domain: "DomainDict") -> Dict[Text, Any]:
-#         if slot_value not in rate_list:
-#             dispatcher.utter_message(response="utter_enter_valid_rating")
-#             return {"welcoming":None}
-#             # return [SlotSet("welcoming",None)]
-#         else:
-#             return {"welcoming":slot_value}
-#             # return [SlotSet("welcoming",slot_value)]
 
 
 

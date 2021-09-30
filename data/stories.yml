@@ -1,3 +1,212 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:2f1205c89c76aa594c98175a27b8cba3021063e04a5a873cc844d731db8dfee2
-size 5421
+version: "2.0"
+stories:
+- story: happy path
+  steps: 
+  - intent: mood_great
+  - action: utter_happy
+  # - action: action_save
+
+- story: greeting
+  steps:
+  - intent: greet
+  - action: utter_greet
+  # - action: utter_introduction
+  - action: action_get_start_time
+  - action: utter_passcode
+  - intent: give_passcode
+  - action: action_get_unique_id
+  - action: utter_get_name
+  - intent: give_name
+    entities:
+      - name: "Hitesh"
+  - slot_was_set:
+    - name: "Hitesh"
+  # - action: utter_details_thanks
+  - action: action_submit
+  - action: utter_askfor_help
+
+
+- story: ask for help
+  steps:
+  - intent: help
+  - action: utter_help
+  # - action: action_save
+
+- story: user asking to repeat his name
+  steps:
+  - intent: repeat_name
+  - action: action_say_name 
+
+# - story: restart
+#   steps:
+#   - intent: restart
+#   - action: action_restart
+  
+
+- story: say good bye
+  steps:
+  - intent: goodbye
+  - action: utter_anything_else
+  - intent: affirm
+  - action: utter_happy
+  # - intent: deny
+  # - action: utter_quality_questions
+  # - action: utter_ask_realistic
+  # - intent: give_realistic
+  # - action: action_get_realistic
+  # - action: utter_ask_robotic
+  # - intent: give_robotic
+  # - action: action_get_robotic
+  # - action: utter_ask_welcoming
+  # - intent: give_welcoming
+  # - action: action_get_welcoming
+  # - action: utter_ask_unfriendly
+  # - intent: give_unfriendly
+  # - action: action_get_unfriendly
+  # - action: utter_ask_explainedscope
+  # - intent: give_explainedscope
+  # - action: action_get_explainedscope
+  # - action: utter_ask_indication
+  # - intent: give_indication
+  # - action: action_get_indication
+  # - action: utter_ask_navigate
+  # - intent: give_navigate
+  # - action: action_get_navigate
+  # - action: utter_ask_confused
+  # - intent: give_confused
+  # - action: action_get_confused
+  # - action: utter_ask_understoodme
+  # - intent: give_understoodme
+  # - action: action_get_understoodme
+  # - action: utter_ask_recogniseinputs
+  # - intent: give_recogniseinputs
+  # - action: action_get_recogniseinputs
+  # - action: utter_ask_appropriateresponses
+  # - intent: give_appropriateresponses
+  # - action: action_get_appropriateresponses
+  # - action: utter_ask_irrelevant
+  # - intent: give_irrelevant
+  # - action: action_get_irrelevant
+  # - action: utter_ask_copeerrors
+  # - intent: give_copeerrors
+  # - action: action_get_copeerrors
+  # - action: utter_ask_unablehandle
+  # - intent: give_unablehandle
+  # - action: action_get_unablehandle
+  # - action: utter_ask_easytouse
+  # - intent: give_easytouse
+  # - action: action_get_easytouse
+  # - action: utter_ask_complex
+  # - intent: give_complex
+  # - action: action_get_complex
+  # - action: utter_feedback_ack
+  # - action: action_get_end_time
+  # - action: action_save_feedback
+  
+
+  # - action: utter_rating
+  # - intent: rating_value
+  #   entities:
+  #   - rating: "5"
+  # - slot_was_set:
+  #   - rating: "5"
+
+  # - action: utter_feedback_ack
+  # - action: action_save_feedback
+
+  # - action: action_save
+
+
+- story: sad path 1
+  steps:
+  # - intent: greet
+  # - action: utter_greet
+  # - action: utter_introduction
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+  # - action: action_save
+
+
+- story: sad path 2
+  steps:
+  # - intent: greet
+  # - action: utter_greet
+  # - action: utter_introduction
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  # - intent: deny
+  # - action: utter_goodbye
+  # - action: utter_rating
+  # - intent: rating_value
+  #   entities:
+  #   - rating: "5"
+  # - slot_was_set:
+  #   - rating: "5"
+  # - action: utter_feedback_ack
+  # - action: action_save_feedback
+  # - action: action_save
+
+
+# - story: connect to a human agent, need to collect phone number and email id, store it in slots
+#   steps:
+#   - action: action_greet
+#   - intent: greet
+#   - action: utter_introduction
+#   - action: utter_ask_name
+#   # - intent: give_name
+#   # - action: action_receive_name
+#   - action: utter_greet
+#   - intent: human_handoff
+#   - action: utter_ask_handoff
+#   - intent: affirm
+#   - action: utter_handoff
+#   - intent: deny
+#   - action: utter_anything_else
+#   - intent: affirm
+#   - action: utter_happy
+#   - intent: deny
+#   - action: utter_goodbye
+#   - action: utter_ask_rating
+
+
+# - story: ask anything else to help with if the user says thank you
+#   steps:
+#   - action: action_greet
+#   - intent: greet
+#   - action: utter_introduction
+#   - action: utter_ask_name
+#   # - intent: give_name
+#   # - action: action_receive_name
+#   - action: utter_greet
+#   
+# - story: user asking for vaccine slot booking
+#   steps:
+#   - intent: vaccine_slot_booking
+#   - action: utter_slot_booking
+#   - action: utter_anything_else
+- story: vaccine slot booking request
+  steps:
+  # - intent: greet
+  # - action: utter_greet
+  # - action: utter_introduction
+  - intent: vaccine_slot_booking
+  - action: utter_slot_booking
+  - action: utter_anything_else
+  - intent: affirm
+  - action: utter_happy
+  # - intent: deny
+  # - action: utter_goodbye
+  # - action: utter_rating
+  # - intent: rating_value
+  #   entities:
+  #   - rating: "5"
+  # - slot_was_set:
+  #   - rating: "5"
+  # - action: utter_feedback_ack
+  # - action: action_save_feedback
+  # - action: action_save
+

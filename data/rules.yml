@@ -1,3 +1,66 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:107cf862e0555142dd4228c6a38c3d38cb5d14da7fcb0c820321db9aaf28b930
-size 1521
+version: "2.0"
+
+rules:
+
+- rule: Ask the user to rephrase whenever they send a message with low NLU confidence
+  steps:
+  - intent: nlu_fallback
+  - action: utter_default
+
+- rule: Activate form to ask user to evaluate the bot
+  steps:
+  - intent: deny
+  - action: utter_quality_questions
+  - action: bot_evaluation_form
+  - active_loop: bot_evaluation_form
+
+- rule: Submit the bot evaluation form
+  condition:
+#   # Condition that form is active.
+  - active_loop: bot_evaluation_form
+  steps:
+  # Form is deactivated
+  - action: bot_evaluation_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  # The actions we want to run when the form is submitted.
+  - action: utter_feedback_ack
+  - action: action_get_end_time
+  - action: action_save_feedback
+
+
+# - rule: Activate form
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - action: utter_introduction
+#   - action: user_details_form
+#   - active_loop: user_details_form
+
+# - rule: Submit form
+#   condition:
+#   # Condition that form is active.
+#   - active_loop: user_details_form
+#   steps:
+#   # Form is deactivated
+#   - action: user_details_form
+#   - active_loop: null
+#   - slot_was_set:
+#     - requested_slot: null
+#   # The actions we want to run when the form is submitted.
+#   - action: action_submit
+#   - action: utter_askfor_help
+
+
+
+- rule: handle chitchat
+  steps:
+  - intent: chitchat
+  - action: utter_chitchat
+
+- rule: handle faqs
+  steps:
+  - intent: faq
+  - action: utter_faq
+

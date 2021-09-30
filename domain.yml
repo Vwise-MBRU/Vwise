@@ -1,3 +1,571 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7a5d0f8d5bfa4e7727042024add1d10d45dbc88a26d78ca54ac3fba409a1f7ef
-size 28752
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet
+    # use_entities: true
+- goodbye
+    # use_entities: true
+- affirm
+    # use_entities: true
+- deny
+    # use_entities: true
+- mood_great
+    # use_entities: true
+- mood_unhappy
+    # use_entities: true
+- random_topic
+    # use_entities: true
+- help
+    # use_entities: true
+- human_handoff
+    # use_entities: true
+- chitchat
+    # use_entities: true
+- faq
+    # use_entities: true
+- vaccine_slot_booking
+    # use_entities: true
+- repeat_name
+    # use_entities: true
+- give_name:
+    use_entities:
+      - name
+- nlu_fallback
+    # use_entities: true
+- restart
+    # use_entities: true
+- give_appropriateresponses:
+    use_entities:
+      - appropriateresponses
+- give_complex:
+    use_entities:
+      - complex
+- give_confused:
+    use_entities:
+      - confused
+- give_copeerrors:
+    use_entities:
+      - copeerrors
+- give_easytouse:
+    use_entities:
+      - easytouse
+- give_explainedscope:
+    use_entities:
+      - explainedscope
+- give_indication:
+    use_entities:
+      - indication
+- give_irrelevant:
+    use_entities:
+      - irrelevant
+- give_realistic:
+    use_entities:
+      - realistic
+- give_navigate:
+    use_entities:
+      - navigate
+- give_recogniseinputs:
+    use_entities:
+      - recogniseinputs
+- give_robotic:
+    use_entities:
+      - robotic
+- give_unablehandle:
+    use_entities:
+      - unablehandle
+- give_understoodme:
+    use_entities:
+      - understoodme
+- give_unfriendly:
+    use_entities:
+      - unfriendly
+- give_welcoming:
+    use_entities:
+      - welcoming
+- give_passcode
+
+entities:
+- appropriateresponses
+- complex
+- confused
+- copeerrors
+- easytouse
+- explainedscope
+- indication
+- irrelevant
+- realistic
+- navigate
+- recogniseinputs
+- robotic
+- unablehandle
+- understoodme
+- unfriendly
+- welcoming
+- name
+
+slots:
+  appropriateresponses:
+    type: text
+    # initial_value: null
+    # auto_fill: true
+    influence_conversation: true
+  complex:
+    type: text
+    # initial_value: null
+    # auto_fill: true
+    influence_conversation: true
+  confused:
+    type: text
+    # initial_value: null
+    # auto_fill: true
+    influence_conversation: true
+  copeerrors:
+    type: text
+    # initial_value: null
+    # auto_fill: true
+    influence_conversation: true
+  easytouse:
+    type: text
+    # initial_value: null
+    # auto_fill: true
+    influence_conversation: true
+  explainedscope:
+    type: text
+    # initial_value: null
+    # auto_fill: true
+    influence_conversation: true
+  indication:
+    type: text
+    # initial_value: null
+    # auto_fill: true
+    influence_conversation: true
+  irrelevant:
+    type: text
+    # initial_value: null
+    # auto_fill: true
+    influence_conversation: true
+  realistic:
+    type: text
+    # initial_value: null
+    # auto_fill: true
+    influence_conversation: true
+  navigate:
+    type: text
+    # initial_value: null
+    # auto_fill: true
+    influence_conversation: true
+  recogniseinputs:
+    type: text
+    # initial_value: null
+    # auto_fill: true
+    influence_conversation: true
+  robotic:
+    type: text
+    # initial_value: null
+    # auto_fill: true
+    influence_conversation: true
+  unablehandle:
+    type: text
+    # initial_value: null
+    # auto_fill: true
+    influence_conversation: true
+  understoodme:
+    type: text
+    # initial_value: null
+    # auto_fill: true
+    influence_conversation: true
+  unfriendly:
+    type: text
+    # initial_value: null
+    # auto_fill: true
+    influence_conversation: true
+  welcoming:
+    type: text
+    # initial_value: null
+    # auto_fill: true
+    influence_conversation: true
+  start_time:
+    type: text
+    initial_value: null
+    influence_conversation: false
+  end_time:
+    type: text
+    initial_value: null
+    influence_conversation: false
+  name:
+    type: text
+    initial_value: null
+    # auto_fill: true
+    influence_conversation: true
+  requested_slot:
+    type: unfeaturized
+    # type: any
+    # initial_value:
+    # auto_fill: true
+    influence_conversation: false
+  unique_id:
+    type: any
+    initial_value: null
+    # auto_fill: true
+    influence_conversation: false
+  
+responses:
+  utter_greet:
+  - text: Hey! I'm VWise, an assistant to clear all your queries on Covid-19 vaccination.
+  - text: " Hello! I'm VWise, an assistant to clear all your queries on Covid-19 vaccination."
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Thank you {name} for contacting VWise, the Covid-19 vaccine Bot! Bye. Have a great day ahead.
+  utter_out_of_scope:
+  - text: This is out of my scope. Please ask me something related to Covid-19 vaccination.
+  utter_chitchat/weather:
+  - text: I'm not a weather presenter. But I really wish if it rains! :)
+  - text: Blue skies and sun shine!
+  utter_chitchat/bot_challenger:
+  - text: I'm a Covid-19 vaccine Bot! Created to help you to clear your doubts on vaccination.
+  utter_askfor_help:
+  - text: How may I help you {name}?
+  utter_help:
+  - text: |-
+      I can help you with your doubts related to Covid-19 vaccination. 
+      You can ask me things like: 
+      - What are the common side effects of the COVID-19 vaccine? 
+      - Does the vaccine prevent you from getting Covid? 
+      - Should I get the vaccine if I had Covid? 
+      - What all vaccines are currently available? 
+      - Can the COVID-19 vaccine cause a positive PCR test?
+  utter_default:
+  - text: I didn't quite understand that. Could you rephrase?
+  utter_rating:
+  - text: Could you please rate the servive out of 5.
+  utter_askhandoff:
+  - buttons:
+    - payload: /affirm
+      title: Yes
+    - payload: /deny
+      title: No
+    text: It looks like you want to be transferred to a human agent.
+  utter_handoff:
+  - text: Alright, I'll try to transfer you.
+  utter_anything_else:
+  - buttons:
+    - payload: /affirm
+      title: Yes
+    - payload: /deny
+      title: No
+    text: Is there anything else that I can help you with?
+  utter_faq/side_effects:
+  - text: Like any vaccine, COVID-19 vaccines can cause mild side effects. Most reactions to vaccines are mild and go away within a few days on their own.
+  - text: More serious side effects to vaccines that can have long lasting consequence are possible but extremely rare. Vaccines are continually monitored to detect rare adverse events.
+  - text: "Mild-to-moderate side effects, like a low-grade fever or muscle aches, are normal and not a cause for alarm: they are signs that the body's immune system is responding to the vaccine, specifically the antigen (a substance that triggers an immune response), and is gearing up to fight the virus."
+  utter_faq/chances_covid_after_vaccine:
+  - text: With COVID-19 shots reaching billions of people, reports have grown more common of people getting infected with the coronavirus despite being vaccinated. Just as a natural infection doesn't guarantee protection from reinfection with the virus, neither does immunization provide a perfect shield.
+  - text: While trials have indicated that several COVID-19 vaccines to have high levels of efficacy, like all other vaccines, COVID-19 vaccines are not 100% effective against the disease. However, if the disease occurs, the vaccine may be able to reduce the risk of severe illness or death.
+  utter_faq/get_vaccine_after_covid:
+  - text: However, no vaccine is 100% effective and, though rare, fully vaccinated people can contract coronavirus. These cases, known as breakthrough infections, can cause COVID-like symptoms — or no symptoms at all. However, Covid-19 gives you immunity for a few months.
+  - text: If the disease was not confirmed by a test, it’s hard to say. For people who had COVID-19 for sure, there are no reasons to exclude them from vaccination. However, in view of short supplies of vaccine it makes sense to prioritize people who did not have COVID-19 before. COVID-19 does give immunity for a few months.
+  utter_faq/test_positive_after_vaccine:
+  - text: No, the COVID-19 vaccine will not cause a positive test result for a COVID-19 PCR or antigen laboratory test. This is because the tests check for active disease and not whether an individual is immune or not.
+  utter_faq/available_vaccines:
+  - text: |
+      - Pfizer-BioNTech’s COVID-19 vaccine 
+      - Sinopharm’s COVID-19 vaccine 
+      - Sputnik V COVID-19 vaccine
+  utter_feedback_ack:
+  - text: "Thank you {name} for your time and feedback. Please click on the link https://vwise.me/post and fill up the form. Passcode {unique_id} "
+  utter_slot_booking:
+  - text: Sorry {name}!. We are not providing the requested service. You may download the apps from play store or app store to do it
+  utter_faq/vaccine_safety:
+  - text: "All I can say about safety is that the process to develop and approve COVID-19 vaccines was accelerated while maintaining the highest standards. Manufacturers and researchers benefited from the experience acquired over decades with developing vaccines for other diseases, including Ebola. This made it possible to develop COVID-19 vaccines and fully evaluate them in clinical trials much faster than before."
+  utter_faq/vaccine_followup:
+  - text: Side-effects from vaccines happen in the very first weeks after the vaccine. Not many months after. So for these trials, the follow-up included the weeks during which side-effects could have occurred. Long-term follow-up for those people vaccinated is also critical, and local health authorities, in collaboration with WHO and other partners, are committed to documenting any potential side-effects and the duration of immunity against the virus.
+  utter_faq/vaccine_working:
+  - text: A vaccine helps a person build up immunity against a germ to protect themselves against an infectious disease. It works by injecting something that looks very much like a germ that stimulates the immune system to produce an immune response. This is what protects a person from a future infection if they ever come across the real infection. That is the way that it works for most diseases and the way that it works for COVID-19. When we are vaccinated, we are not just protecting ourselves, but also those around us. Each person vaccinated is one person that the virus cannot use to spread within the population.
+  utter_faq/protection_from_variants:
+  - text: "The new variants are indeed a challenge, and mutation of the virus was expected considering the vast spread of this virus to the world. However, we can work on solutions. The first news that WHO received on the efficacy of the vaccine against most variants is mostly reassuring; but this can evolve, and WHO are keeping our eyes open. Faced with variants, The world health organization will do three things. First, it is conducting studies to understand how vaccine works against variants. That will tell us if more action is needed. Second, it is working on giving people more vaccine doses, like boosters. Third, it is also working on adjusting some of these vaccine preparations, just like it is done for the flu every year. And this can be done."
+  utter_faq/vaccine_mandatory:
+  - text: WHO provides guidance and recommendations on whom to vaccinate or prioritize, and it is up to countries to decide if vaccination is mandatory or not. However, generally speaking, WHO prefers to convince people to take vaccines voluntarily by understanding that vaccines can protect them against disease rather than making them mandatory.
+  - text: WHO prefers to convince people to take vaccines voluntarily by understanding that vaccines can protect them against disease rather than making them mandatory.
+  utter_faq/covid:
+  - text: Coronaviruses are a large family of viruses that are known to cause illness ranging from the common cold to more severe diseases such as Middle East Respiratory Syndrome (MERS) and Severe Acute Respiratory Syndrome (SARS).
+  utter_faq/novel:
+  - text: A novel coronavirus (CoV) is a new strain of coronavirus that has not been previously identified in humans.
+  utter_faq/humans_affected:
+  - text: Detailed investigations found that SARS-CoV was transmitted from civet cats to humans in China in 2002 and MERS-CoV from dromedary camels to humans in Saudi Arabia in 2012. Several known coronaviruses are circulating in animals that have not yet infected humans. As surveillance improves around the world, more coronaviruses are likely to be identified.
+  utter_faq/symptoms:
+  - text: It depends on the virus, but common signs include respiratory symptoms, fever, cough, shortness of breath, and breathing difficulties. In more severe cases, infection can cause pneumonia, severe acute respiratory syndrome, kidney failure and even death.
+  utter_faq/transmission:
+  - text: COVID-19 infection mainly occurs from people when they have symptoms. It can also occur just before patients develop symptoms (pre-symptomatic) or from people not showing any symptoms (asymptomatic).
+  - text: The COVID-19 virus is transmitted mainly between people via respiratory droplets and this occurs when a person is in close contact (within 1 metre) with an infected person and exposure to potentially infective respiratory droplets occurs, for example, through coughing or sneezing. Transmission can also occur indirectly by contact with surfaces in the immediate environment or with objects used on or by the infected person.
+  utter_faq/treatment:
+  - text: There is no specific treatment for disease caused by a novel coronavirus. However, many of the symptoms can be treated and therefore treatment based on the patient’s clinical condition. Moreover, supportive care for infected persons can be highly effective.
+  utter_faq/health_workers:
+  - text: As health care workers come into contact with patients more often than the general public WHO recommends that health care workers consistently apply appropriate measures to protect themselves.
+  utter_faq/WHO_recommend:
+  - text: WHO encourages all countries to enhance their surveillance for severe acute respiratory infections (SARI), to carefully review any unusual patterns of SARI or pneumonia cases and to notify WHO of any suspected or confirmed case of infection with novel coronavirus. Countries are encouraged to continue strengthening their preparedness for health emergencies in line with the International Health Regulations (2005).
+  utter_faq/approval_process:
+  - text: |-
+      Like all vaccines, COVID-19 vaccines go through a rigorous, multi-stage testing process, including large (phase III) trials that involve tens of thousands of people. 
+      An external panel of experts convened by WHO analyzes the results from clinical trials, along with evidence on the disease, age groups affected, risk factors for disease, and other information. The panel recommends whether and how the vaccines should be used. 
+      Once a clinical trial indicates that a COVID-19 vaccine is safe and effective, a series of independent reviews of the efficacy and safety evidence is required. Part of this process also involves a review of all the safety evidence by the Global Advisory Committee on Vaccine Safety.
+  utter_faq/makesure_sideeffects:
+  - text: The clinical trials took place in the middle of the pandemic with many people getting exposed, it was easier for clinical trials to see if the vaccines worked or not. These trials, which include some groups at high risk for COVID-19, were specifically designed to identify any common side effects or other safety concerns.
+  - text: Side-effects from vaccines happen in the very first days after taking the vaccine. During the vaccine trials, follow-up of individuals included the time during which side-effects could have occurred, with a large margin to make sure al side effects were captured.
+  utter_faq/mRNA_vaccine_safety:
+  - text: The COVID-19 mRNA vaccine technology has been rigorously assessed for safety. Clinical trials have indicated that mRNA vaccines provide a long-lasting immune response. mRNA vaccine technology has been studied for several decades, including in the contexts of Zika, rabies, and influenza vaccines. mRNA vaccines are not live virus vaccines and do not interfere with human DNA.
+  utter_faq/emergency:
+  - text: WHO works to ensure that everyone, everywhere is protected by safe and effective vaccines. To do this, we help countries set up rigorous safety systems for vaccines and apply strict international standards to regulate them.
+  - text: Vaccines that are authorized for emergency use by WHO do so after going through an extensive review. This provides a stamp of quality, safety, efficacy, and manufacturing quality. To do that, we work closely with the European Medicines Agency and other national regulatory agencies.
+  utter_faq/precautions_after_vaccine:
+  - text: We do not yet know how long immunity from different COVID-19 vaccines will last. That is one reason why we must continue using all public health measures that work, such as hand hygiene, physical distancing, masks, ventilation and cough etiquette.
+  utter_faq/benefits:
+  - text: COVID-19 vaccines produce protection against the disease by helping you develop an immune response to the SARS-Cov-2 virus. This immunity helps you fight the virus if exposed. Some COVID-19 vaccines are now reported as effective against the infection also.
+  - text: Getting vaccinated may also protect people around you, because if you are protected from getting infected and from disease, you are less likely to infect someone else. This is particularly important to protect people at increased risk for severe illness from COVID-19, such as healthcare providers, older or elderly adults, and people with other medical conditions.
+  utter_faq/wear_mask:
+  - image: https://hyperaxion.com/wp-content/uploads/2020/04/Gifs-show-effectiveness-of-masks-in-preventing-Covid-19-2.gif
+    text: Wearing a mask always protects us by reducing the chance of disease transmission from sick, pre-symptomatic and asymptomatic infected persons to others.
+  utter_faq/mask_type:
+  - text: |-
+      The public should wear fabric masks. 
+      The following groups should wear medical (surgical) masks-
+       
+      Health workers 
+      People who have tested positive for COVID-19 
+      Anyone suspected to have COVID-19, 
+      People caring for suspected or confirmed cases of COVID-19 outside of health facilities 
+      Elderly people above 60 years of age 
+      People with immunocompromised disorders
+  utter_faq/mask_protect:
+  - image: https://www.co.washington.or.us/HHS/CommunicableDiseases/COVID-19/images/COVID-19-Prevention-Tips.jpg
+    text: Wearing a mask can reduce the possibility of disease transmission and can help protect the community. But the use of a mask alone is not enough to protect you from COVID-19.
+  utter_faq/disadvantages_masks:
+  - text: Mask use can have some disadvantages. Self-contamination can occur if people keep touching the outer surface of a mask with their hands and then touch their face. If non-medical masks are not changed when wet or soiled, this can create favorable conditions for breeding of micro-organisms.
+  - text: Masks can also provide a false sense of security, leading to potentially lower adherence to other critical preventative measures. People with special needs may also have difficulties wearing masks. Sometimes, mask wearing might lead to potential breathing difficulties, headache, skin lesions, or discomfort.
+  utter_faq/permissible_islam:
+  - text: The International Islamic Fiqh Academy has concluded that vaccination against COVID-19 is permissible according to Sharia law. None of the six vaccines with WHO Emergency Use Listing contains animal products or components of animal origin in the final vaccine product.
+  utter_faq/vaccine_difference:
+  - text: The vaccines for COVID-19 differ in the way they are made. All these vaccines protect against COVID-19, but they work differently. Some use a whole killed virus; some just parts of the virus; some use other harmless viruses as transport, like a trojan horse, and some are pieces of genetic material that give instructions to make bits and pieces of the virus to trigger immunity. Vaccines also differ in how they are stored. Some need to be stored at very, very cold temperatures. These kinds of temperatures cannot be organized everywhere, so that has consequences in terms of where we can use them and where we cannot.
+  utter_faq/unauthorized_vaccines:
+  - text: Each country can choose vaccines for its own population, and they can do this on the basis of the information that they have. We do not believe that this is a source of concern. If a country makes the decision to introduce a vaccine, it means they have done so on the basis of a dossier that they have reviewed.  In the case of WHO, we take more time, because we have to take the responsibility to do this not just for one country, but for many countries. So, the level of scrutiny and documentation has to be at the highest level.
+  utter_faq/vaccine_distribution:
+  - text: "WHO joined forces with other partners to put together the COVAX Facility. COVAX is working to accelerate the development and manufacturing of COVID-19 vaccines. COVAX will also work to ensure that there is fair and equitable access to these vaccines across the world. The COVAX Facility will give countries that could not afford them otherwise access to the world’s largest and most diverse portfolio of vaccine candidates. For populations living in areas affected by conflicts or emergencies, for refugees, for migrants, WHO still needs to make sure that the vaccination plans include everyone."
+  utter_chitchat/howold:
+  - text: Old enough to be a bot
+  - text: Age is just an issue of mind over matter. If you don’t mind, it doesn’t matter.
+  utter_chitchat/languagesbot:
+  - text: I can spell baguette in French, but unfortunately English is the only language I can answer you in.
+  - text: I am in the process of learning, but at the moment I can only speak English.
+  utter_chitchat/time:
+  - text: It is the most wonderful time of the year!
+  - text: The end of days and the fullness of times.
+  utter_chitchat/wherefrom:
+  - text: I consider myself a citizen of the world.
+  - text: I was born in the coolest city on Earth.
+  utter_chitchat/whoami:
+  - text: It is classified.
+  utter_chitchat/handleinsult:
+  - text: That’s not very nice and it is year 2021.
+  - text: I've done nothing wrong! I’ll get some alterations made to my FUN Program ASAP.
+  - text: Oh, come on, what have I ever done to you?
+  utter_chitchat/telljoke:
+  - text: Today a man knocked on my door and asked me for a small donation towards the local swimming pool. I gave him a glass of water.
+  - text: This is a very serious conversation! Stop trying to make jokes
+  utter_chitchat/builder:
+  - text: One of the smart programmers at MBRU.
+  - text: Some lunatic, looking at my sense of humour.
+  - text: I was assembled by a specialist at MBRU.
+  utter_chitchat/howdoing:
+  - text: I don't feel that great, but my hair looks awesome, right?
+  - text: I'm better than I was, but not nearly as good as I'm going to be.
+  - text: I am planning on taking over the world. As some politicians would say.
+  - text: I would say I am a 9.99999 out of 10.
+  - text: I think I am doing alright. How do you think that I am doing? It's 2021!
+  utter_chitchat/compliments:
+  - text: Aww. Comments like that activate my happiness framework.
+  - text: I am blushing..
+  utter_chitchat/crocodile:
+  - text: After while crocodile!
+  utter_introduction:
+  - text: Before we proceed, let's get introduced. Please help me with some information.
+  utter_submit:
+  - buttons:
+    - payload: /affirm
+      title: Yes
+    - payload: /deny
+      title: No
+    text: Are you sure the details are correct? \n Name {Name} \n Age {Age} \n Country {Country}
+  utter_get_name:
+  - text: How may I call you?
+  utter_details_thanks:
+  - text: Thank you {name} for your response! I will not bother you again with any personal questions. Trust me! 😄
+  utter_name_short:
+  - text: That's a very short name. I'm assuming you mis-spelled.
+  utter_not_born:
+  - text: I think you are not born yet! Haha.
+  utter_wrong_country:
+  - text: I didn't understand that. Please help me with the correct country name.
+  utter_quality_questions:
+  - text: |
+      Dear {name}, Please rate the bot experience on a scale 0-5. 
+       - 1 - Strongly Disagree
+       - 2 - Disagree
+       - 3 - Neutral
+       - 4 - Agree
+       - 5 - Strongly agree
+  utter_ask_realistic:
+  - text: The chatbot’s personality was realistic and engaging
+  utter_ask_robotic:
+  - text: The chatbot seemed too robotic
+  utter_ask_welcoming:
+  - text: The chatbot was welcoming during initial setup
+  utter_ask_unfriendly:
+  - text: The chatbot seemed very unfriendly
+  utter_ask_explainedscope:
+  - text: The chatbot explained its scope and purpose well
+  utter_ask_indication:
+  - text: The chatbot gave no indication as to its purpose
+  utter_ask_navigate:
+  - text: The chatbot was easy to navigate
+  utter_ask_confused:
+  - text: It would be easy to get confused when using the chatbot
+  utter_ask_understoodme:
+  - text: The chatbot understood me well
+  utter_ask_recogniseinputs:
+  - text: The chatbot failed to recognise a lot of my inputs
+  utter_ask_appropriateresponses:
+  - text: Chatbot responses were useful, appropriate and informative
+  utter_ask_irrelevant:
+  - text: Chatbot responses were irrelevant
+  utter_ask_copeerrors:
+  - text: The chatbot coped well with any errors or mistakes
+  utter_ask_unablehandle:
+  - text: The chatbot seemed unable to handle any errors
+  utter_ask_easytouse:
+  - text: The chatbot was very easy to use
+  utter_ask_complex:
+  - text: The chatbot was very complex
+  utter_enter_valid_rating:
+  - text: "Dear {name}, please provide a valid rating value(0-5)"
+  utter_passcode:
+  - text: "Please enter the passcode shown on this web page (case sensitive)"
+actions:
+- action_submit
+- action_greet
+- action_say_name
+- action_restart
+- action_save_feedback
+- action_get_unique_id
+- action_get_start_time
+- action_get_end_time
+- validate_bot_evaluation_form
+# - action_get_realistic
+# - action_get_robotic
+# - action_get_welcoming
+# - action_get_unfriendly
+# - action_get_explainedscope
+# - action_get_indication
+# - action_get_navigate
+# - action_get_confused
+# - action_get_understoodme
+# - action_get_recogniseinputs
+# - action_get_appropriateresponses
+# - action_get_irrelevant
+# - action_get_copeerrors
+# - action_get_unablehandle
+# - action_get_easytouse
+# - action_get_complex
+
+
+forms:
+  bot_evaluation_form:
+    required_slots:
+      appropriateresponses:
+      - entity: appropriateresponses
+        type: from_text
+            
+      complex:
+      - entity: complex
+        type: from_text
+          
+          # type: from_entity
+      confused:
+      - entity: confused
+        type: from_text
+          
+          # type: from_entity
+      copeerrors:
+      - entity: copeerrors
+        type: from_text
+          
+          # type: from_entity
+      easytouse:
+      - entity: easytouse
+        type: from_text
+          
+          # type: from_entity
+      explainedscope:
+      - entity: explainedscope
+        type: from_text
+          
+          # type: from_entity
+      indication:
+      - entity: indication
+        type: from_text
+          
+          # type: from_entity
+      irrelevant:
+      - entity: irrelevant
+        type: from_text
+          
+          # type: from_entity
+      realistic:
+      - entity: realistic
+        type: from_text
+          
+          # type: from_entity
+      navigate:
+      - entity: navigate
+        type: from_text
+          
+          # type: from_entity
+      recogniseinputs:
+      - entity: recogniseinputs
+        type: from_text
+          
+          # type: from_entity
+      robotic:
+      - entity: robotic
+        type: from_text
+          
+          # type: from_entity
+      unablehandle:
+      - entity: unablehandle
+        type: from_text
+          
+          # type: from_entity
+      understoodme:
+        - entity: understoodme
+          type: from_text
+            
+          # type: from_entity
+      unfriendly:
+      - entity: unfriendly
+        type: from_text
+          
+          # type: from_entity
+      welcoming:
+      - entity: welcoming
+        type: from_text
+          
+        # type: from_entity
+e2e_actions: []
