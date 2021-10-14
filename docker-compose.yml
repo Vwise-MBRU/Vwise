@@ -1,0 +1,82 @@
+version: "3.8"
+services:
+#  app:
+#    build: .
+#    command: python main.py
+#    ports:
+#      - "5000:5000"
+#      - "443:443"
+#    volumes:
+#      - .:/vwiseme
+  rasa_action_server:
+    build: .
+    #command: rasa run actions
+    ports:
+      - "5055:5055"
+    volumes:
+      - .:/vwiseme_actions
+  rasa:
+    build: .
+    #command: rasa run -m models --enable-api --cors "*" --debug
+    ports:
+      - "5005:5005"
+    volumes:
+      - .:/vwiseme_rasa
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# version: '3'
+# services:
+#     nginx:
+#       container_name: "nginx"
+#       image: nginx
+#       volumes:
+#         - ./nginx.conf:/etc/nginx/nginx.conf
+#         #I kept my SSL certs in a certs folder in project directory (Make sure to include this in .gitignore)
+#         - ./etc/rasa/certs:/etc/letsencrypt/live/bot.me
+#       ports:
+#         - 80:80
+#         - 443:443
+#       depends_on: 
+#         - rasa
+#         - action_server
+#         # - chatbot
+#     rasa:
+#       container_name: "rasa_server"
+#       build: 
+#         context: backend
+#       ports: 
+#         - "5005:5005"
+#     action_server:
+#       container_name: "action_server"
+#       build: 
+#         context: actions
+#       volumes:
+#         - ./actions:/app/actions
+#         # - ./etc/passwd:/etc/passwd
+#       ports:
+#         - "5055:5055"  
+#     # chatbot:
+#     #   container_name: "chatbot"
+#     #   build: 
+#     #     context: frontend
+#     #   ports:
+#     #     - "3000:3000"
+

@@ -2,7 +2,7 @@
 from sqlite3.dbapi2 import Cursor, Date, connect
 from flask import Flask, render_template,request,redirect
 # from flask.wrappers import Request
-from flask_sqlalchemy import SQLAlchemy
+# from flask_sqlalchemy import SQLAlchemy
 from datetime import date, datetime
 import string
 import random

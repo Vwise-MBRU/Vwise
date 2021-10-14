@@ -114,7 +114,7 @@ class ActionSaveFeedback(Action):
 
                 # q="UPDATE UserDetails SET Realistic= ?,Robotic= ?,Welcoming= ?,Unfriendly= ?,ExplainedScope= ?,Indication= ?, Navigate= ?,Confused= ?,Understoodme=?, RecogniseInputs= ?, AppropriateResponses= ?, Irrelevant= ?, CopeErrors= ?, UnableHandle= ?, EasytoUse= ?, Complex= ?, StartTime= ?, EndTime=? WHERE User_ID = ?"
                 
-                result=cursor.execute("""UPDATE UserDetails SET Realistic= ?,Robotic= ?,Welcoming= ?,Unfriendly= ?,ExplainedScope= ?,Indication= ?, Navigate= ?,Confused= ?,Understoodme=?, RecogniseInputs= ?, AppropriateResponses= ?, Irrelevant= ?, CopeErrors= ?, UnableHandle= ?, EasytoUse= ?, Complex= ?, StartTime= ?, EndTime=? WHERE Unique_ID = ?""",(Rating1,Rating2,Rating3,Rating4,Rating5,Rating6,Rating7,Rating8,Rating9,Rating10,Rating11,Rating12,Rating13,Rating14,Rating15,Rating16,chat_start_time,chat_end_time,unique_id))
+                result=cursor.execute("""UPDATE UserDetails SET Realistic= ?,Robotic= ?,Welcoming= ?,Unfriendly= ?,ExplainedScope= ?,Indication= ?, Navigate= ?,Confused= ?,Understoodme=?, RecogniseInputs= ?, AppropriateResponses= ?, Irrelevant= ?, CopeErrors= ?, UnableHandle= ?, EasytoUse= ?, Complex= ?, StartTime= ?, EndTime=? WHERE Unique_ID = ? and User_ID=?""",(Rating1,Rating2,Rating3,Rating4,Rating5,Rating6,Rating7,Rating8,Rating9,Rating10,Rating11,Rating12,Rating13,Rating14,Rating15,Rating16,chat_start_time,chat_end_time,unique_id,sender_id))
                 # print("--------------------------------------",result)
                 if result==0:
                     print("Couldn't find such a database")

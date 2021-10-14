@@ -1,3 +1,65 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:267e79c0ad6305bd2e68ca082bb92b7dd4ca8ec2b0c1b8c4a31a5a9e8e7c0dbe
-size 1892
+# This file contains the different endpoints your bot can use.
+
+# Server where the models are pulled from.
+# https://rasa.com/docs/rasa/model-storage#fetching-models-from-a-server
+
+#models:
+#  url: http://my-server.com/models/default_core@latest
+#  wait_time_between_pulls:  10   # [optional](default: 100)
+
+# Server which runs your custom actions.
+# https://rasa.com/docs/rasa/custom-actions
+
+action_endpoint:
+  url: "http://20.185.1.2:5055/webhook"
+#  url: "http://localhost:5055/webhook"
+ 
+# action_endpoint:
+#    url: ${RASA_USER_APP}/webhook
+#    token: ""
+
+
+# models:
+#    url: ${RASA_MODEL_SERVER}
+#    token: ${RASA_X_TOKEN}
+#    wait_time_between_pulls: ${RASA_MODEL_PULL_INTERVAL}
+
+# Tracker store which is used to store the conversations.
+# By default the conversations are stored in memory.
+# https://rasa.com/docs/rasa/tracker-stores
+
+# tracker_store:
+#    type: redis
+#    url: <host of the redis instance, e.g. localhost>
+#    port: <port of your redis instance, usually 6379>
+#    db: <number of your database within redis, e.g. 0>
+#    password: <password used for authentication>
+#    use_ssl: <whether or not the communication is encrypted, default false>
+
+
+tracker_store:
+   type: SQL
+   dialect: sqlite
+   url: "sqlite:///./vaccine.db"
+  #  port: <port of your redis instance, usually 6379>
+   db: vaccine.db
+  # password: <password used for authentication>
+  #  use_ssl: <whether or not the communication is encrypted, default false>
+
+#tracker_store:
+#    type: mongod
+#    url: <url to your mongo instance, e.g. mongodb://localhost:27017>
+#    db: <name of the db within your mongo instance, e.g. rasa>
+#    username: <username used for authentication>
+#    password: <password used for authentication>
+
+# Event broker which all conversation events should be streamed to.
+# https://rasa.com/docs/rasa/event-brokers
+
+#event_broker:
+#  url: localhost
+#  username: username
+#  password: password
+#  queue: queue
+
+
