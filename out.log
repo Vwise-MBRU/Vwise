@@ -1,0 +1,1102 @@
+2021-10-26 07:06:50,028 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id:path>/messages     POST                           add_message
+/conversations/<conversation_id:path>/tracker/events POST                           append_events
+/webhooks/rasa                                     GET                            custom_webhook_RasaChatInput.health
+/webhooks/rasa/webhook                             POST                           custom_webhook_RasaChatInput.receive
+/webhooks/rest                                     GET                            custom_webhook_RestInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_RestInput.receive
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id:path>/execute      POST                           execute_action
+/domain                                            GET                            get_domain
+/socket.io                                         GET                            handle_request
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id:path>/predict      POST                           predict
+/conversations/<conversation_id:path>/tracker/events PUT                            replace_events
+/conversations/<conversation_id:path>/story        GET                            retrieve_story
+/conversations/<conversation_id:path>/tracker      GET                            retrieve_tracker
+/webhooks/socketio                                 GET                            socketio_webhook.health
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/conversations/<conversation_id:path>/trigger_intent POST                           trigger_intent
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2021-10-26 07:06:50,029 [INFO ]  Starting Rasa server on http://localhost:5005
+2021-10-26 07:06:50,029 [DEBUG]  Using the default number of Sanic workers (1).
+2021-10-26 07:06:50,035 [INFO ]  Loading model models/20211025-111459.tar.gz...
+2021-10-26 07:06:51,531 [DEBUG]  Extracted model to '/tmp/tmpuv0jq9_r'.
+2021-10-26 07:06:51,580 [DEBUG]  Starting new HTTPS connection (1): api.segment.io:443
+2021-10-26 07:06:52,721 [DEBUG]  https://api.segment.io:443 "POST /v1/track HTTP/1.1" 200 21
+2021-10-26 07:06:52,724 [INFO ]  Enabling coroutine debugging. Loop id 97514384.
+2021-10-26 07:06:52,724 [INFO ]  Loading model models/20211025-111459.tar.gz...
+2021-10-26 07:06:54,205 [DEBUG]  Extracted model to '/tmp/tmpbwcdo__s'.
+2021-10-26 07:06:56,133 [INFO ]  Added 'SpacyNLP' to component cache. Key 'SpacyNLP-en_core_web_md'.
+2021-10-26 07:06:56,182 [DEBUG]  Loading the model from /tmp/tmpbwcdo__s/nlu/component_7_DIETClassifier.tf_model with finetune_mode=False...
+2021-10-26 07:06:56,263 [DEBUG]  Following metrics will be logged during training: 
+2021-10-26 07:06:56,264 [DEBUG]    t_loss (total loss)
+2021-10-26 07:06:56,264 [DEBUG]    i_acc (intent acc)
+2021-10-26 07:06:56,264 [DEBUG]    i_loss (intent loss)
+2021-10-26 07:06:56,264 [DEBUG]    e_f1 (entity f1)
+2021-10-26 07:06:56,264 [DEBUG]    e_loss (entity loss)
+2021-10-26 07:07:10,867 [DEBUG]  Finished loading the model.
+2021-10-26 07:07:10,870 [DEBUG]  Loading the model from /tmp/tmpbwcdo__s/nlu/component_9_ResponseSelector.tf_model with finetune_mode=False...
+2021-10-26 07:07:10,943 [DEBUG]  Following metrics will be logged during training: 
+2021-10-26 07:07:10,943 [DEBUG]    t_loss (total loss)
+2021-10-26 07:07:10,943 [DEBUG]    r_acc (response acc)
+2021-10-26 07:07:10,943 [DEBUG]    r_loss (response loss)
+2021-10-26 07:07:14,338 [DEBUG]  Finished loading the model.
+2021-10-26 07:07:14,340 [DEBUG]  Loading the model from /tmp/tmpbwcdo__s/nlu/component_11_ResponseSelector.tf_model with finetune_mode=False...
+2021-10-26 07:07:14,390 [DEBUG]  Following metrics will be logged during training: 
+2021-10-26 07:07:14,390 [DEBUG]    t_loss (total loss)
+2021-10-26 07:07:14,391 [DEBUG]    r_acc (response acc)
+2021-10-26 07:07:14,391 [DEBUG]    r_loss (response loss)
+2021-10-26 07:07:17,502 [DEBUG]  Finished loading the model.
+2021-10-26 07:07:17,505 [DEBUG]  Loading the model from /tmp/tmpbwcdo__s/nlu/component_12_ResponseSelector.tf_model with finetune_mode=False...
+2021-10-26 07:07:17,556 [DEBUG]  Following metrics will be logged during training: 
+2021-10-26 07:07:17,556 [DEBUG]    t_loss (total loss)
+2021-10-26 07:07:17,556 [DEBUG]    r_acc (response acc)
+2021-10-26 07:07:17,556 [DEBUG]    r_loss (response loss)
+2021-10-26 07:07:20,864 [DEBUG]  Finished loading the model.
+2021-10-26 07:07:20,905 [DEBUG]  Attempting to connect to database via 'sqlite:///./vaccine.db'.
+2021-10-26 07:07:20,908 [DEBUG]  Connection to SQL database 'vaccine.db' successful.
+2021-10-26 07:07:20,908 [DEBUG]  Connected to SQLTrackerStore.
+2021-10-26 07:07:20,908 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2021-10-26 07:07:22,408 [DEBUG]  Extracted model to '/tmp/tmpje8q99l6'.
+2021-10-26 07:07:22,683 [DEBUG]  Loading the model from /tmp/tmpje8q99l6/core/policy_2_UnexpecTEDIntentPolicy/unexpected_intent_policy.tf_model with finetune_mode=False...
+2021-10-26 07:07:32,837 [DEBUG]  Finished loading the model.
+2021-10-26 07:07:32,839 [WARNI]  The UnexpecTED Intent Policy is currently experimental and might change or be removed in the future 🔬 Please share your feedback on it in the forum (https://forum.rasa.com) to help us make this feature ready for production.
+2021-10-26 07:07:32,842 [DEBUG]  Loading the model from /tmp/tmpje8q99l6/core/policy_3_TEDPolicy/ted_policy.tf_model with finetune_mode=False...
+2021-10-26 07:07:41,970 [DEBUG]  Finished loading the model.
+2021-10-26 07:07:41,973 [DEBUG]  Instantiated NLG to 'TemplatedNaturalLanguageGenerator'.
+2021-10-26 07:07:41,973 [INFO ]  Rasa server is up and running.
+2021-10-26 11:01:37,530 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id:path>/messages     POST                           add_message
+/conversations/<conversation_id:path>/tracker/events POST                           append_events
+/webhooks/rasa                                     GET                            custom_webhook_RasaChatInput.health
+/webhooks/rasa/webhook                             POST                           custom_webhook_RasaChatInput.receive
+/webhooks/rest                                     GET                            custom_webhook_RestInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_RestInput.receive
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id:path>/execute      POST                           execute_action
+/domain                                            GET                            get_domain
+/socket.io                                         POST                           handle_request
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id:path>/predict      POST                           predict
+/conversations/<conversation_id:path>/tracker/events PUT                            replace_events
+/conversations/<conversation_id:path>/story        GET                            retrieve_story
+/conversations/<conversation_id:path>/tracker      GET                            retrieve_tracker
+/webhooks/socketio                                 GET                            socketio_webhook.health
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/conversations/<conversation_id:path>/trigger_intent POST                           trigger_intent
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2021-10-26 11:01:37,530 [INFO ]  Starting Rasa server on http://localhost:5005
+2021-10-26 11:01:37,530 [DEBUG]  Using the default number of Sanic workers (1).
+2021-10-26 11:01:37,536 [INFO ]  Loading model models/20211025-111459.tar.gz...
+2021-10-26 11:01:39,106 [DEBUG]  Extracted model to '/tmp/tmp9nfwcrqp'.
+2021-10-26 11:01:39,151 [DEBUG]  Starting new HTTPS connection (1): api.segment.io:443
+2021-10-26 11:01:40,374 [DEBUG]  https://api.segment.io:443 "POST /v1/track HTTP/1.1" 200 21
+2021-10-26 11:01:40,381 [INFO ]  Enabling coroutine debugging. Loop id 102722752.
+2021-10-26 11:01:40,382 [INFO ]  Loading model models/20211025-111459.tar.gz...
+2021-10-26 11:01:41,860 [DEBUG]  Extracted model to '/tmp/tmpnktt320j'.
+2021-10-26 11:01:43,908 [INFO ]  Added 'SpacyNLP' to component cache. Key 'SpacyNLP-en_core_web_md'.
+2021-10-26 11:01:43,960 [DEBUG]  Loading the model from /tmp/tmpnktt320j/nlu/component_7_DIETClassifier.tf_model with finetune_mode=False...
+2021-10-26 11:01:44,040 [DEBUG]  Following metrics will be logged during training: 
+2021-10-26 11:01:44,040 [DEBUG]    t_loss (total loss)
+2021-10-26 11:01:44,040 [DEBUG]    i_acc (intent acc)
+2021-10-26 11:01:44,040 [DEBUG]    i_loss (intent loss)
+2021-10-26 11:01:44,040 [DEBUG]    e_f1 (entity f1)
+2021-10-26 11:01:44,040 [DEBUG]    e_loss (entity loss)
+2021-10-26 11:01:58,425 [DEBUG]  Finished loading the model.
+2021-10-26 11:01:58,428 [DEBUG]  Loading the model from /tmp/tmpnktt320j/nlu/component_9_ResponseSelector.tf_model with finetune_mode=False...
+2021-10-26 11:01:58,504 [DEBUG]  Following metrics will be logged during training: 
+2021-10-26 11:01:58,505 [DEBUG]    t_loss (total loss)
+2021-10-26 11:01:58,505 [DEBUG]    r_acc (response acc)
+2021-10-26 11:01:58,505 [DEBUG]    r_loss (response loss)
+2021-10-26 11:02:01,786 [DEBUG]  Finished loading the model.
+2021-10-26 11:02:01,789 [DEBUG]  Loading the model from /tmp/tmpnktt320j/nlu/component_11_ResponseSelector.tf_model with finetune_mode=False...
+2021-10-26 11:02:01,840 [DEBUG]  Following metrics will be logged during training: 
+2021-10-26 11:02:01,840 [DEBUG]    t_loss (total loss)
+2021-10-26 11:02:01,840 [DEBUG]    r_acc (response acc)
+2021-10-26 11:02:01,840 [DEBUG]    r_loss (response loss)
+2021-10-26 11:02:04,916 [DEBUG]  Finished loading the model.
+2021-10-26 11:02:04,919 [DEBUG]  Loading the model from /tmp/tmpnktt320j/nlu/component_12_ResponseSelector.tf_model with finetune_mode=False...
+2021-10-26 11:02:04,968 [DEBUG]  Following metrics will be logged during training: 
+2021-10-26 11:02:04,968 [DEBUG]    t_loss (total loss)
+2021-10-26 11:02:04,968 [DEBUG]    r_acc (response acc)
+2021-10-26 11:02:04,969 [DEBUG]    r_loss (response loss)
+2021-10-26 11:02:08,191 [DEBUG]  Finished loading the model.
+2021-10-26 11:02:08,243 [DEBUG]  Attempting to connect to database via 'sqlite:///./vaccine.db'.
+2021-10-26 11:02:08,249 [DEBUG]  Connection to SQL database 'vaccine.db' successful.
+2021-10-26 11:02:08,249 [DEBUG]  Connected to SQLTrackerStore.
+2021-10-26 11:02:08,249 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2021-10-26 11:02:09,750 [DEBUG]  Extracted model to '/tmp/tmpucm6elqd'.
+2021-10-26 11:02:10,026 [DEBUG]  Loading the model from /tmp/tmpucm6elqd/core/policy_2_UnexpecTEDIntentPolicy/unexpected_intent_policy.tf_model with finetune_mode=False...
+2021-10-26 11:02:20,122 [DEBUG]  Finished loading the model.
+2021-10-26 11:02:20,123 [WARNI]  The UnexpecTED Intent Policy is currently experimental and might change or be removed in the future 🔬 Please share your feedback on it in the forum (https://forum.rasa.com) to help us make this feature ready for production.
+2021-10-26 11:02:20,125 [DEBUG]  Loading the model from /tmp/tmpucm6elqd/core/policy_3_TEDPolicy/ted_policy.tf_model with finetune_mode=False...
+2021-10-26 11:02:29,053 [DEBUG]  Finished loading the model.
+2021-10-26 11:02:29,056 [DEBUG]  Instantiated NLG to 'TemplatedNaturalLanguageGenerator'.
+2021-10-26 11:02:29,056 [INFO ]  Rasa server is up and running.
+2021-10-26 11:38:06,564 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id:path>/messages     POST                           add_message
+/conversations/<conversation_id:path>/tracker/events POST                           append_events
+/webhooks/rasa                                     GET                            custom_webhook_RasaChatInput.health
+/webhooks/rasa/webhook                             POST                           custom_webhook_RasaChatInput.receive
+/webhooks/rest                                     GET                            custom_webhook_RestInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_RestInput.receive
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id:path>/execute      POST                           execute_action
+/domain                                            GET                            get_domain
+/socket.io                                         OPTIONS                        handle_request
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id:path>/predict      POST                           predict
+/conversations/<conversation_id:path>/tracker/events PUT                            replace_events
+/conversations/<conversation_id:path>/story        GET                            retrieve_story
+/conversations/<conversation_id:path>/tracker      GET                            retrieve_tracker
+/webhooks/socketio                                 GET                            socketio_webhook.health
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/conversations/<conversation_id:path>/trigger_intent POST                           trigger_intent
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2021-10-26 11:38:06,564 [INFO ]  Starting Rasa server on http://localhost:5005
+2021-10-26 11:38:06,564 [DEBUG]  Using the default number of Sanic workers (1).
+2021-10-26 11:38:06,571 [INFO ]  Loading model models/20211025-111459.tar.gz...
+2021-10-26 11:38:08,039 [DEBUG]  Extracted model to '/tmp/tmpjl7lwarl'.
+2021-10-26 11:38:08,082 [DEBUG]  Starting new HTTPS connection (1): api.segment.io:443
+2021-10-26 11:38:09,974 [DEBUG]  https://api.segment.io:443 "POST /v1/track HTTP/1.1" 200 21
+2021-10-26 11:38:09,977 [INFO ]  Enabling coroutine debugging. Loop id 103234464.
+2021-10-26 11:38:09,977 [INFO ]  Loading model models/20211025-111459.tar.gz...
+2021-10-26 11:38:11,467 [DEBUG]  Extracted model to '/tmp/tmpeptywi_h'.
+2021-10-26 11:38:11,571 [DEBUG]  Could not load interpreter from '/app/models'.
+2021-10-26 11:38:11,579 [DEBUG]  Attempting to connect to database via 'sqlite:///./vaccine.db'.
+2021-10-26 11:38:11,581 [DEBUG]  Connection to SQL database 'vaccine.db' successful.
+2021-10-26 11:38:11,581 [DEBUG]  Connected to SQLTrackerStore.
+2021-10-26 11:38:11,581 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2021-10-26 11:38:13,051 [DEBUG]  Extracted model to '/tmp/tmpzdzet2l9'.
+2021-10-26 11:38:13,053 [ERROR]  Could not load model due to Not all required importable packages are installed to use the configured NLU pipeline. To use this pipeline, you need to install the missing modules: 
+  - spacy (needed for rasa.nlu.utils.spacy_utils.SpacyNLP)
+Please install the packages that contain the missing modules..
+2021-10-26 11:38:13,055 [DEBUG]  Instantiated NLG to 'TemplatedNaturalLanguageGenerator'.
+2021-10-26 11:38:13,055 [INFO ]  Rasa server is up and running.
+2021-10-26 11:45:59,797 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id:path>/messages     POST                           add_message
+/conversations/<conversation_id:path>/tracker/events POST                           append_events
+/webhooks/rasa                                     GET                            custom_webhook_RasaChatInput.health
+/webhooks/rasa/webhook                             POST                           custom_webhook_RasaChatInput.receive
+/webhooks/rest                                     GET                            custom_webhook_RestInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_RestInput.receive
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id:path>/execute      POST                           execute_action
+/domain                                            GET                            get_domain
+/socket.io                                         OPTIONS                        handle_request
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id:path>/predict      POST                           predict
+/conversations/<conversation_id:path>/tracker/events PUT                            replace_events
+/conversations/<conversation_id:path>/story        GET                            retrieve_story
+/conversations/<conversation_id:path>/tracker      GET                            retrieve_tracker
+/webhooks/socketio                                 GET                            socketio_webhook.health
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/conversations/<conversation_id:path>/trigger_intent POST                           trigger_intent
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2021-10-26 11:45:59,798 [INFO ]  Starting Rasa server on http://localhost:5005
+2021-10-26 11:45:59,798 [DEBUG]  Using the default number of Sanic workers (1).
+2021-10-26 11:45:59,805 [INFO ]  Loading model models/20211025-111459.tar.gz...
+2021-10-26 11:46:01,345 [DEBUG]  Extracted model to '/tmp/tmp9k7du0lt'.
+2021-10-26 11:46:01,388 [DEBUG]  Starting new HTTPS connection (1): api.segment.io:443
+2021-10-26 11:46:02,651 [DEBUG]  https://api.segment.io:443 "POST /v1/track HTTP/1.1" 200 21
+2021-10-26 11:46:02,654 [INFO ]  Enabling coroutine debugging. Loop id 108394480.
+2021-10-26 11:46:02,654 [INFO ]  Loading model models/20211025-111459.tar.gz...
+2021-10-26 11:46:04,327 [DEBUG]  Extracted model to '/tmp/tmp3w485ylo'.
+2021-10-26 11:46:04,434 [DEBUG]  Could not load interpreter from '/app/models'.
+2021-10-26 11:46:04,443 [DEBUG]  Attempting to connect to database via 'sqlite:///./vaccine.db'.
+2021-10-26 11:46:04,445 [DEBUG]  Connection to SQL database 'vaccine.db' successful.
+2021-10-26 11:46:04,445 [DEBUG]  Connected to SQLTrackerStore.
+2021-10-26 11:46:04,445 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2021-10-26 11:46:05,987 [DEBUG]  Extracted model to '/tmp/tmpnbkncmxp'.
+2021-10-26 11:46:05,989 [ERROR]  Could not load model due to Not all required importable packages are installed to use the configured NLU pipeline. To use this pipeline, you need to install the missing modules: 
+  - spacy (needed for rasa.nlu.utils.spacy_utils.SpacyNLP)
+Please install the packages that contain the missing modules..
+2021-10-26 11:46:05,990 [DEBUG]  Instantiated NLG to 'TemplatedNaturalLanguageGenerator'.
+2021-10-26 11:46:05,990 [INFO ]  Rasa server is up and running.
+2021-10-27 05:28:44,020 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id:path>/messages     POST                           add_message
+/conversations/<conversation_id:path>/tracker/events POST                           append_events
+/webhooks/rasa                                     GET                            custom_webhook_RasaChatInput.health
+/webhooks/rasa/webhook                             POST                           custom_webhook_RasaChatInput.receive
+/webhooks/rest                                     GET                            custom_webhook_RestInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_RestInput.receive
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id:path>/execute      POST                           execute_action
+/domain                                            GET                            get_domain
+/socket.io                                         OPTIONS                        handle_request
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id:path>/predict      POST                           predict
+/conversations/<conversation_id:path>/tracker/events PUT                            replace_events
+/conversations/<conversation_id:path>/story        GET                            retrieve_story
+/conversations/<conversation_id:path>/tracker      GET                            retrieve_tracker
+/webhooks/socketio                                 GET                            socketio_webhook.health
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/conversations/<conversation_id:path>/trigger_intent POST                           trigger_intent
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2021-10-27 05:28:44,020 [INFO ]  Starting Rasa server on http://localhost:5005
+2021-10-27 05:28:44,020 [DEBUG]  Using the default number of Sanic workers (1).
+2021-10-27 05:28:44,027 [INFO ]  Loading model models/20211025-111459.tar.gz...
+2021-10-27 05:28:45,511 [DEBUG]  Extracted model to '/tmp/tmpmm_9yomh'.
+2021-10-27 05:28:45,554 [DEBUG]  Starting new HTTPS connection (1): api.segment.io:443
+2021-10-27 05:28:46,687 [DEBUG]  https://api.segment.io:443 "POST /v1/track HTTP/1.1" 200 21
+2021-10-27 05:28:46,690 [INFO ]  Enabling coroutine debugging. Loop id 87035984.
+2021-10-27 05:28:46,690 [INFO ]  Loading model models/20211025-111459.tar.gz...
+2021-10-27 05:28:48,177 [DEBUG]  Extracted model to '/tmp/tmpsy4qltrb'.
+2021-10-27 05:28:48,281 [DEBUG]  Could not load interpreter from '/app/models'.
+2021-10-27 05:28:48,289 [DEBUG]  Attempting to connect to database via 'sqlite:///./vaccine.db'.
+2021-10-27 05:28:48,291 [DEBUG]  Connection to SQL database 'vaccine.db' successful.
+2021-10-27 05:28:48,291 [DEBUG]  Connected to SQLTrackerStore.
+2021-10-27 05:28:48,291 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2021-10-27 05:28:49,771 [DEBUG]  Extracted model to '/tmp/tmpcab702h3'.
+2021-10-27 05:28:49,773 [ERROR]  Could not load model due to Not all required importable packages are installed to use the configured NLU pipeline. To use this pipeline, you need to install the missing modules: 
+  - spacy (needed for rasa.nlu.utils.spacy_utils.SpacyNLP)
+Please install the packages that contain the missing modules..
+2021-10-27 05:28:49,775 [DEBUG]  Instantiated NLG to 'TemplatedNaturalLanguageGenerator'.
+2021-10-27 05:28:49,775 [INFO ]  Rasa server is up and running.
+2021-10-27 08:49:26,759 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id:path>/messages     POST                           add_message
+/conversations/<conversation_id:path>/tracker/events POST                           append_events
+/webhooks/rasa                                     GET                            custom_webhook_RasaChatInput.health
+/webhooks/rasa/webhook                             POST                           custom_webhook_RasaChatInput.receive
+/webhooks/rest                                     GET                            custom_webhook_RestInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_RestInput.receive
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id:path>/execute      POST                           execute_action
+/domain                                            GET                            get_domain
+/socket.io                                         POST                           handle_request
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id:path>/predict      POST                           predict
+/conversations/<conversation_id:path>/tracker/events PUT                            replace_events
+/conversations/<conversation_id:path>/story        GET                            retrieve_story
+/conversations/<conversation_id:path>/tracker      GET                            retrieve_tracker
+/webhooks/socketio                                 GET                            socketio_webhook.health
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/conversations/<conversation_id:path>/trigger_intent POST                           trigger_intent
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2021-10-27 08:49:26,760 [INFO ]  Starting Rasa server on http://localhost:5005
+2021-10-27 08:49:26,760 [DEBUG]  Using the default number of Sanic workers (1).
+2021-10-27 08:49:26,766 [INFO ]  Loading model models/20211025-111459.tar.gz...
+2021-10-27 08:49:28,248 [DEBUG]  Extracted model to '/tmp/tmph9_obcpi'.
+2021-10-27 08:49:28,292 [DEBUG]  Starting new HTTPS connection (1): api.segment.io:443
+2021-10-27 08:49:29,512 [DEBUG]  https://api.segment.io:443 "POST /v1/track HTTP/1.1" 200 21
+2021-10-27 08:49:29,515 [INFO ]  Enabling coroutine debugging. Loop id 87288288.
+2021-10-27 08:49:29,515 [INFO ]  Loading model models/20211025-111459.tar.gz...
+2021-10-27 08:49:31,000 [DEBUG]  Extracted model to '/tmp/tmpjrlvf_3w'.
+2021-10-27 08:49:31,111 [DEBUG]  Could not load interpreter from '/app/models'.
+2021-10-27 08:49:31,120 [DEBUG]  Attempting to connect to database via 'sqlite:///./vaccine.db'.
+2021-10-27 08:49:31,122 [DEBUG]  Connection to SQL database 'vaccine.db' successful.
+2021-10-27 08:49:31,122 [DEBUG]  Connected to SQLTrackerStore.
+2021-10-27 08:49:31,122 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2021-10-27 08:49:32,612 [DEBUG]  Extracted model to '/tmp/tmphba4un5d'.
+2021-10-27 08:49:32,613 [ERROR]  Could not load model due to Not all required importable packages are installed to use the configured NLU pipeline. To use this pipeline, you need to install the missing modules: 
+  - spacy (needed for rasa.nlu.utils.spacy_utils.SpacyNLP)
+Please install the packages that contain the missing modules..
+2021-10-27 08:49:32,615 [DEBUG]  Instantiated NLG to 'TemplatedNaturalLanguageGenerator'.
+2021-10-27 08:49:32,615 [INFO ]  Rasa server is up and running.
+2021-10-27 09:06:58,047 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id:path>/messages     POST                           add_message
+/conversations/<conversation_id:path>/tracker/events POST                           append_events
+/webhooks/rasa                                     GET                            custom_webhook_RasaChatInput.health
+/webhooks/rasa/webhook                             POST                           custom_webhook_RasaChatInput.receive
+/webhooks/rest                                     GET                            custom_webhook_RestInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_RestInput.receive
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id:path>/execute      POST                           execute_action
+/domain                                            GET                            get_domain
+/socket.io                                         OPTIONS                        handle_request
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id:path>/predict      POST                           predict
+/conversations/<conversation_id:path>/tracker/events PUT                            replace_events
+/conversations/<conversation_id:path>/story        GET                            retrieve_story
+/conversations/<conversation_id:path>/tracker      GET                            retrieve_tracker
+/webhooks/socketio                                 GET                            socketio_webhook.health
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/conversations/<conversation_id:path>/trigger_intent POST                           trigger_intent
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2021-10-27 09:06:58,047 [INFO ]  Starting Rasa server on http://localhost:5005
+2021-10-27 09:06:58,047 [DEBUG]  Using the default number of Sanic workers (1).
+2021-10-27 09:06:58,054 [INFO ]  Loading model models/20211025-111459.tar.gz...
+2021-10-27 09:06:59,543 [DEBUG]  Extracted model to '/tmp/tmp_04ocplj'.
+2021-10-27 09:06:59,585 [DEBUG]  Starting new HTTPS connection (1): api.segment.io:443
+2021-10-27 09:07:00,666 [DEBUG]  https://api.segment.io:443 "POST /v1/track HTTP/1.1" 200 21
+2021-10-27 09:07:00,669 [INFO ]  Enabling coroutine debugging. Loop id 87597168.
+2021-10-27 09:07:00,669 [INFO ]  Loading model models/20211025-111459.tar.gz...
+2021-10-27 09:07:02,166 [DEBUG]  Extracted model to '/tmp/tmprn8pvbka'.
+2021-10-27 09:07:02,269 [DEBUG]  Could not load interpreter from '/app/models'.
+2021-10-27 09:07:02,277 [DEBUG]  Attempting to connect to database via 'sqlite:///./vaccine.db'.
+2021-10-27 09:07:02,279 [DEBUG]  Connection to SQL database 'vaccine.db' successful.
+2021-10-27 09:07:02,279 [DEBUG]  Connected to SQLTrackerStore.
+2021-10-27 09:07:02,279 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2021-10-27 09:07:03,768 [DEBUG]  Extracted model to '/tmp/tmpa2pss54o'.
+2021-10-27 09:07:03,770 [ERROR]  Could not load model due to Not all required importable packages are installed to use the configured NLU pipeline. To use this pipeline, you need to install the missing modules: 
+  - spacy (needed for rasa.nlu.utils.spacy_utils.SpacyNLP)
+Please install the packages that contain the missing modules..
+2021-10-27 09:07:03,771 [DEBUG]  Instantiated NLG to 'TemplatedNaturalLanguageGenerator'.
+2021-10-27 09:07:03,772 [INFO ]  Rasa server is up and running.
+2021-10-27 09:23:57,269 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id:path>/messages     POST                           add_message
+/conversations/<conversation_id:path>/tracker/events POST                           append_events
+/webhooks/rasa                                     GET                            custom_webhook_RasaChatInput.health
+/webhooks/rasa/webhook                             POST                           custom_webhook_RasaChatInput.receive
+/webhooks/rest                                     GET                            custom_webhook_RestInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_RestInput.receive
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id:path>/execute      POST                           execute_action
+/domain                                            GET                            get_domain
+/socket.io                                         GET                            handle_request
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id:path>/predict      POST                           predict
+/conversations/<conversation_id:path>/tracker/events PUT                            replace_events
+/conversations/<conversation_id:path>/story        GET                            retrieve_story
+/conversations/<conversation_id:path>/tracker      GET                            retrieve_tracker
+/webhooks/socketio                                 GET                            socketio_webhook.health
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/conversations/<conversation_id:path>/trigger_intent POST                           trigger_intent
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2021-10-27 09:23:57,269 [INFO ]  Starting Rasa server on http://localhost:5005
+2021-10-27 09:23:57,269 [DEBUG]  Using the default number of Sanic workers (1).
+2021-10-27 09:23:57,276 [INFO ]  Loading model models/20211025-111459.tar.gz...
+2021-10-27 09:23:58,763 [DEBUG]  Extracted model to '/tmp/tmpfpv3_3pl'.
+2021-10-27 09:23:58,805 [DEBUG]  Starting new HTTPS connection (1): api.segment.io:443
+2021-10-27 09:23:59,901 [DEBUG]  https://api.segment.io:443 "POST /v1/track HTTP/1.1" 200 21
+2021-10-27 09:23:59,904 [INFO ]  Enabling coroutine debugging. Loop id 103736080.
+2021-10-27 09:23:59,905 [INFO ]  Loading model models/20211025-111459.tar.gz...
+2021-10-27 09:24:01,398 [DEBUG]  Extracted model to '/tmp/tmph4qmvg7b'.
+2021-10-27 09:24:01,502 [DEBUG]  Could not load interpreter from '/app/models'.
+2021-10-27 09:24:01,510 [DEBUG]  Attempting to connect to database via 'sqlite:///./vaccine.db'.
+2021-10-27 09:24:01,512 [DEBUG]  Connection to SQL database 'vaccine.db' successful.
+2021-10-27 09:24:01,512 [DEBUG]  Connected to SQLTrackerStore.
+2021-10-27 09:24:01,512 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2021-10-27 09:24:02,991 [DEBUG]  Extracted model to '/tmp/tmp2ydkyph2'.
+2021-10-27 09:24:02,993 [ERROR]  Could not load model due to Not all required importable packages are installed to use the configured NLU pipeline. To use this pipeline, you need to install the missing modules: 
+  - spacy (needed for rasa.nlu.utils.spacy_utils.SpacyNLP)
+Please install the packages that contain the missing modules..
+2021-10-27 09:24:02,995 [DEBUG]  Instantiated NLG to 'TemplatedNaturalLanguageGenerator'.
+2021-10-27 09:24:02,995 [INFO ]  Rasa server is up and running.
+2021-10-27 09:27:11,793 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id:path>/messages     POST                           add_message
+/conversations/<conversation_id:path>/tracker/events POST                           append_events
+/webhooks/rasa                                     GET                            custom_webhook_RasaChatInput.health
+/webhooks/rasa/webhook                             POST                           custom_webhook_RasaChatInput.receive
+/webhooks/rest                                     GET                            custom_webhook_RestInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_RestInput.receive
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id:path>/execute      POST                           execute_action
+/domain                                            GET                            get_domain
+/socket.io                                         POST                           handle_request
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id:path>/predict      POST                           predict
+/conversations/<conversation_id:path>/tracker/events PUT                            replace_events
+/conversations/<conversation_id:path>/story        GET                            retrieve_story
+/conversations/<conversation_id:path>/tracker      GET                            retrieve_tracker
+/webhooks/socketio                                 GET                            socketio_webhook.health
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/conversations/<conversation_id:path>/trigger_intent POST                           trigger_intent
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2021-10-27 09:27:11,794 [INFO ]  Starting Rasa server on http://localhost:5005
+2021-10-27 09:27:11,794 [DEBUG]  Using the default number of Sanic workers (1).
+2021-10-27 09:27:11,801 [INFO ]  Loading model models/20211025-111459.tar.gz...
+2021-10-27 09:27:13,314 [DEBUG]  Extracted model to '/tmp/tmpl61r3w66'.
+2021-10-27 09:27:13,360 [DEBUG]  Starting new HTTPS connection (1): api.segment.io:443
+2021-10-27 09:27:14,487 [DEBUG]  https://api.segment.io:443 "POST /v1/track HTTP/1.1" 200 21
+2021-10-27 09:27:14,490 [INFO ]  Enabling coroutine debugging. Loop id 101888048.
+2021-10-27 09:27:14,491 [INFO ]  Loading model models/20211025-111459.tar.gz...
+2021-10-27 09:27:16,015 [DEBUG]  Extracted model to '/tmp/tmp22lmyqkr'.
+2021-10-27 09:27:16,127 [DEBUG]  Could not load interpreter from '/app/models'.
+2021-10-27 09:27:16,137 [DEBUG]  Attempting to connect to database via 'sqlite:///./vaccine.db'.
+2021-10-27 09:27:16,139 [DEBUG]  Connection to SQL database 'vaccine.db' successful.
+2021-10-27 09:27:16,139 [DEBUG]  Connected to SQLTrackerStore.
+2021-10-27 09:27:16,139 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2021-10-27 09:27:17,623 [DEBUG]  Extracted model to '/tmp/tmpr_opluqn'.
+2021-10-27 09:27:17,624 [ERROR]  Could not load model due to Not all required importable packages are installed to use the configured NLU pipeline. To use this pipeline, you need to install the missing modules: 
+  - spacy (needed for rasa.nlu.utils.spacy_utils.SpacyNLP)
+Please install the packages that contain the missing modules..
+2021-10-27 09:27:17,626 [DEBUG]  Instantiated NLG to 'TemplatedNaturalLanguageGenerator'.
+2021-10-27 09:27:17,626 [INFO ]  Rasa server is up and running.
+2021-10-27 09:39:27,789 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id:path>/messages     POST                           add_message
+/conversations/<conversation_id:path>/tracker/events POST                           append_events
+/webhooks/rasa                                     GET                            custom_webhook_RasaChatInput.health
+/webhooks/rasa/webhook                             POST                           custom_webhook_RasaChatInput.receive
+/webhooks/rest                                     GET                            custom_webhook_RestInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_RestInput.receive
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id:path>/execute      POST                           execute_action
+/domain                                            GET                            get_domain
+/socket.io                                         OPTIONS                        handle_request
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id:path>/predict      POST                           predict
+/conversations/<conversation_id:path>/tracker/events PUT                            replace_events
+/conversations/<conversation_id:path>/story        GET                            retrieve_story
+/conversations/<conversation_id:path>/tracker      GET                            retrieve_tracker
+/webhooks/socketio                                 GET                            socketio_webhook.health
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/conversations/<conversation_id:path>/trigger_intent POST                           trigger_intent
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2021-10-27 09:39:27,790 [INFO ]  Starting Rasa server on http://localhost:5005
+2021-10-27 09:39:27,790 [DEBUG]  Using the default number of Sanic workers (1).
+2021-10-27 09:39:27,797 [INFO ]  Loading model models/20211025-111459.tar.gz...
+2021-10-27 09:39:29,267 [DEBUG]  Extracted model to '/tmp/tmpaoobia7q'.
+2021-10-27 09:39:29,311 [DEBUG]  Starting new HTTPS connection (1): api.segment.io:443
+2021-10-27 09:39:30,453 [DEBUG]  https://api.segment.io:443 "POST /v1/track HTTP/1.1" 200 21
+2021-10-27 09:39:30,456 [INFO ]  Enabling coroutine debugging. Loop id 107855520.
+2021-10-27 09:39:30,456 [INFO ]  Loading model models/20211025-111459.tar.gz...
+2021-10-27 09:39:31,939 [DEBUG]  Extracted model to '/tmp/tmp5syzu8h7'.
+2021-10-27 09:39:32,047 [DEBUG]  Could not load interpreter from '/app/models'.
+2021-10-27 09:39:32,056 [DEBUG]  Attempting to connect to database via 'sqlite:///./vaccine.db'.
+2021-10-27 09:39:32,058 [DEBUG]  Connection to SQL database 'vaccine.db' successful.
+2021-10-27 09:39:32,058 [DEBUG]  Connected to SQLTrackerStore.
+2021-10-27 09:39:32,058 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2021-10-27 09:39:33,528 [DEBUG]  Extracted model to '/tmp/tmpmct2o5iu'.
+2021-10-27 09:39:33,530 [ERROR]  Could not load model due to Not all required importable packages are installed to use the configured NLU pipeline. To use this pipeline, you need to install the missing modules: 
+  - spacy (needed for rasa.nlu.utils.spacy_utils.SpacyNLP)
+Please install the packages that contain the missing modules..
+2021-10-27 09:39:33,532 [DEBUG]  Instantiated NLG to 'TemplatedNaturalLanguageGenerator'.
+2021-10-27 09:39:33,532 [INFO ]  Rasa server is up and running.
+2021-10-27 10:03:05,068 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id:path>/messages     POST                           add_message
+/conversations/<conversation_id:path>/tracker/events POST                           append_events
+/webhooks/rasa                                     GET                            custom_webhook_RasaChatInput.health
+/webhooks/rasa/webhook                             POST                           custom_webhook_RasaChatInput.receive
+/webhooks/rest                                     GET                            custom_webhook_RestInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_RestInput.receive
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id:path>/execute      POST                           execute_action
+/domain                                            GET                            get_domain
+/socket.io                                         GET                            handle_request
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id:path>/predict      POST                           predict
+/conversations/<conversation_id:path>/tracker/events PUT                            replace_events
+/conversations/<conversation_id:path>/story        GET                            retrieve_story
+/conversations/<conversation_id:path>/tracker      GET                            retrieve_tracker
+/webhooks/socketio                                 GET                            socketio_webhook.health
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/conversations/<conversation_id:path>/trigger_intent POST                           trigger_intent
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2021-10-27 10:03:05,069 [INFO ]  Starting Rasa server on http://localhost:5005
+2021-10-27 10:03:05,069 [DEBUG]  Using the default number of Sanic workers (1).
+2021-10-27 10:03:05,075 [INFO ]  Loading model models/20211025-111459.tar.gz...
+2021-10-27 10:03:06,752 [DEBUG]  Extracted model to '/tmp/tmpbiiwgm4k'.
+2021-10-27 10:03:06,796 [DEBUG]  Starting new HTTPS connection (1): api.segment.io:443
+2021-10-27 10:03:07,897 [DEBUG]  https://api.segment.io:443 "POST /v1/track HTTP/1.1" 200 21
+2021-10-27 10:03:07,907 [INFO ]  Enabling coroutine debugging. Loop id 104476336.
+2021-10-27 10:03:07,908 [INFO ]  Loading model models/20211025-111459.tar.gz...
+2021-10-27 10:03:09,409 [DEBUG]  Extracted model to '/tmp/tmpclen1f_y'.
+2021-10-27 10:03:09,604 [DEBUG]  Could not load interpreter from '/app/models'.
+2021-10-27 10:03:09,619 [DEBUG]  Attempting to connect to database via 'sqlite:///./vaccine.db'.
+2021-10-27 10:03:09,627 [DEBUG]  Connection to SQL database 'vaccine.db' successful.
+2021-10-27 10:03:09,627 [DEBUG]  Connected to SQLTrackerStore.
+2021-10-27 10:03:09,627 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2021-10-27 10:03:11,138 [DEBUG]  Extracted model to '/tmp/tmp47x5g6_5'.
+2021-10-27 10:03:11,140 [ERROR]  Could not load model due to Not all required importable packages are installed to use the configured NLU pipeline. To use this pipeline, you need to install the missing modules: 
+  - spacy (needed for rasa.nlu.utils.spacy_utils.SpacyNLP)
+Please install the packages that contain the missing modules..
+2021-10-27 10:03:11,141 [DEBUG]  Instantiated NLG to 'TemplatedNaturalLanguageGenerator'.
+2021-10-27 10:03:11,142 [INFO ]  Rasa server is up and running.
+2021-10-27 10:36:05,865 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id:path>/messages     POST                           add_message
+/conversations/<conversation_id:path>/tracker/events POST                           append_events
+/webhooks/rasa                                     GET                            custom_webhook_RasaChatInput.health
+/webhooks/rasa/webhook                             POST                           custom_webhook_RasaChatInput.receive
+/webhooks/rest                                     GET                            custom_webhook_RestInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_RestInput.receive
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id:path>/execute      POST                           execute_action
+/domain                                            GET                            get_domain
+/socket.io                                         OPTIONS                        handle_request
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id:path>/predict      POST                           predict
+/conversations/<conversation_id:path>/tracker/events PUT                            replace_events
+/conversations/<conversation_id:path>/story        GET                            retrieve_story
+/conversations/<conversation_id:path>/tracker      GET                            retrieve_tracker
+/webhooks/socketio                                 GET                            socketio_webhook.health
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/conversations/<conversation_id:path>/trigger_intent POST                           trigger_intent
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2021-10-27 10:36:05,866 [INFO ]  Starting Rasa server on http://localhost:5005
+2021-10-27 10:36:05,866 [DEBUG]  Using the default number of Sanic workers (1).
+2021-10-27 10:36:05,872 [INFO ]  Loading model models/20211025-111459.tar.gz...
+2021-10-27 10:36:07,352 [DEBUG]  Extracted model to '/tmp/tmp5t_k5vt2'.
+2021-10-27 10:36:07,397 [DEBUG]  Starting new HTTPS connection (1): api.segment.io:443
+2021-10-27 10:36:08,551 [DEBUG]  https://api.segment.io:443 "POST /v1/track HTTP/1.1" 200 21
+2021-10-27 10:36:08,554 [INFO ]  Enabling coroutine debugging. Loop id 89979744.
+2021-10-27 10:36:08,554 [INFO ]  Loading model models/20211025-111459.tar.gz...
+2021-10-27 10:36:10,084 [DEBUG]  Extracted model to '/tmp/tmpawjnsypp'.
+2021-10-27 10:36:10,190 [DEBUG]  Could not load interpreter from '/app/models'.
+2021-10-27 10:36:10,198 [DEBUG]  Attempting to connect to database via 'sqlite:///./vaccine.db'.
+2021-10-27 10:36:10,200 [DEBUG]  Connection to SQL database 'vaccine.db' successful.
+2021-10-27 10:36:10,200 [DEBUG]  Connected to SQLTrackerStore.
+2021-10-27 10:36:10,200 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2021-10-27 10:36:11,805 [DEBUG]  Extracted model to '/tmp/tmpnh_on7zb'.
+2021-10-27 10:36:11,807 [ERROR]  Could not load model due to Not all required importable packages are installed to use the configured NLU pipeline. To use this pipeline, you need to install the missing modules: 
+  - spacy (needed for rasa.nlu.utils.spacy_utils.SpacyNLP)
+Please install the packages that contain the missing modules..
+2021-10-27 10:36:11,809 [DEBUG]  Instantiated NLG to 'TemplatedNaturalLanguageGenerator'.
+2021-10-27 10:36:11,809 [INFO ]  Rasa server is up and running.
+2021-10-28 04:34:48,463 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id:path>/messages     POST                           add_message
+/conversations/<conversation_id:path>/tracker/events POST                           append_events
+/webhooks/rasa                                     GET                            custom_webhook_RasaChatInput.health
+/webhooks/rasa/webhook                             POST                           custom_webhook_RasaChatInput.receive
+/webhooks/rest                                     GET                            custom_webhook_RestInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_RestInput.receive
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id:path>/execute      POST                           execute_action
+/domain                                            GET                            get_domain
+/socket.io                                         GET                            handle_request
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id:path>/predict      POST                           predict
+/conversations/<conversation_id:path>/tracker/events PUT                            replace_events
+/conversations/<conversation_id:path>/story        GET                            retrieve_story
+/conversations/<conversation_id:path>/tracker      GET                            retrieve_tracker
+/webhooks/socketio                                 GET                            socketio_webhook.health
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/conversations/<conversation_id:path>/trigger_intent POST                           trigger_intent
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2021-10-28 04:34:48,464 [INFO ]  Starting Rasa server on http://localhost:5005
+2021-10-28 04:34:48,464 [DEBUG]  Using the default number of Sanic workers (1).
+2021-10-28 04:34:48,471 [INFO ]  Loading model models/20211025-111459.tar.gz...
+2021-10-28 04:34:50,062 [DEBUG]  Extracted model to '/tmp/tmpx5n3xc_v'.
+2021-10-28 04:34:50,111 [DEBUG]  Starting new HTTPS connection (1): api.segment.io:443
+2021-10-28 04:34:51,251 [DEBUG]  https://api.segment.io:443 "POST /v1/track HTTP/1.1" 200 21
+2021-10-28 04:34:51,254 [INFO ]  Enabling coroutine debugging. Loop id 92553360.
+2021-10-28 04:34:51,255 [INFO ]  Loading model models/20211025-111459.tar.gz...
+2021-10-28 04:34:52,760 [DEBUG]  Extracted model to '/tmp/tmp_ewmlsi3'.
+2021-10-28 04:34:52,877 [DEBUG]  Could not load interpreter from '/app/models'.
+2021-10-28 04:34:52,888 [DEBUG]  Attempting to connect to database via 'sqlite:///./vaccine.db'.
+2021-10-28 04:34:52,890 [DEBUG]  Connection to SQL database 'vaccine.db' successful.
+2021-10-28 04:34:52,890 [DEBUG]  Connected to SQLTrackerStore.
+2021-10-28 04:34:52,890 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2021-10-28 04:34:54,387 [DEBUG]  Extracted model to '/tmp/tmpyd0kc7wr'.
+2021-10-28 04:34:54,389 [ERROR]  Could not load model due to Not all required importable packages are installed to use the configured NLU pipeline. To use this pipeline, you need to install the missing modules: 
+  - spacy (needed for rasa.nlu.utils.spacy_utils.SpacyNLP)
+Please install the packages that contain the missing modules..
+2021-10-28 04:34:54,391 [DEBUG]  Instantiated NLG to 'TemplatedNaturalLanguageGenerator'.
+2021-10-28 04:34:54,391 [INFO ]  Rasa server is up and running.
+2021-10-28 04:34:56,308 [DEBUG]  User m4G3sRMLNO8rIoSwAAAB connected to socketIO endpoint.
+2021-10-28 04:34:56,324 [DEBUG]  User m4G3sRMLNO8rIoSwAAAB connected to socketIO endpoint.
+2021-10-28 04:35:14,688 [DEBUG]  Issuing ticket for conversation 'ad665616635c46e4b04367278acd49ef'.
+2021-10-28 04:35:14,688 [DEBUG]  Acquiring lock for conversation 'ad665616635c46e4b04367278acd49ef'.
+2021-10-28 04:35:14,688 [DEBUG]  Acquired lock for conversation 'ad665616635c46e4b04367278acd49ef'.
+2021-10-28 04:35:14,696 [DEBUG]  Can't retrieve tracker matching sender id 'ad665616635c46e4b04367278acd49ef' from SQL storage. Returning `None` instead.
+2021-10-28 04:35:14,701 [DEBUG]  Tracker with sender_id 'ad665616635c46e4b04367278acd49ef' stored to database
+2021-10-28 04:35:14,701 [DEBUG]  Starting a new session for conversation ID 'ad665616635c46e4b04367278acd49ef'.
+2021-10-28 04:35:14,703 [DEBUG]  Policy prediction ended with events '[]'.
+2021-10-28 04:35:14,703 [DEBUG]  Action 'action_session_start' ended with events '[<rasa.shared.core.events.SessionStarted object at 0x7f77e57a3040>, ActionExecuted(action: action_listen, policy: None, confidence: None)]'.
+2021-10-28 04:35:14,703 [DEBUG]  Current slot values: 
+	session_started_metadata: None
+2021-10-28 04:35:14,703 [DEBUG]  Received user message '/greet' with intent '{'name': 'greet', 'confidence': 1.0}' and entities '[]'
+2021-10-28 04:35:14,704 [DEBUG]  Logged UserUtterance - tracker now has 4 events.
+2021-10-28 04:35:14,720 [DEBUG]  Tracker with sender_id 'ad665616635c46e4b04367278acd49ef' stored to database
+2021-10-28 04:35:14,721 [DEBUG]  Deleted lock for conversation 'ad665616635c46e4b04367278acd49ef'.
+2021-10-28 04:35:20,762 [DEBUG]  Issuing ticket for conversation 'ad665616635c46e4b04367278acd49ef'.
+2021-10-28 04:35:20,762 [DEBUG]  Acquiring lock for conversation 'ad665616635c46e4b04367278acd49ef'.
+2021-10-28 04:35:20,763 [DEBUG]  Acquired lock for conversation 'ad665616635c46e4b04367278acd49ef'.
+2021-10-28 04:35:20,765 [DEBUG]  Recreating tracker from sender id 'ad665616635c46e4b04367278acd49ef'
+2021-10-28 04:35:20,766 [DEBUG]  Received user message 'Hi' with intent '{'name': 'Hi', 'confidence': 1.0}' and entities '[]'
+2021-10-28 04:35:20,767 [DEBUG]  Logged UserUtterance - tracker now has 4 events.
+2021-10-28 04:35:20,789 [DEBUG]  Tracker with sender_id 'ad665616635c46e4b04367278acd49ef' stored to database
+2021-10-28 04:35:20,789 [DEBUG]  Deleted lock for conversation 'ad665616635c46e4b04367278acd49ef'.
+2021-10-28 04:44:09,236 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id:path>/messages     POST                           add_message
+/conversations/<conversation_id:path>/tracker/events POST                           append_events
+/webhooks/rasa                                     GET                            custom_webhook_RasaChatInput.health
+/webhooks/rasa/webhook                             POST                           custom_webhook_RasaChatInput.receive
+/webhooks/rest                                     GET                            custom_webhook_RestInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_RestInput.receive
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id:path>/execute      POST                           execute_action
+/domain                                            GET                            get_domain
+/socket.io                                         POST                           handle_request
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id:path>/predict      POST                           predict
+/conversations/<conversation_id:path>/tracker/events PUT                            replace_events
+/conversations/<conversation_id:path>/story        GET                            retrieve_story
+/conversations/<conversation_id:path>/tracker      GET                            retrieve_tracker
+/webhooks/socketio                                 GET                            socketio_webhook.health
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/conversations/<conversation_id:path>/trigger_intent POST                           trigger_intent
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2021-10-28 04:44:09,236 [INFO ]  Starting Rasa server on http://localhost:5005
+2021-10-28 04:44:09,237 [DEBUG]  Using the default number of Sanic workers (1).
+2021-10-28 04:44:09,243 [INFO ]  Loading model models/20211025-111459.tar.gz...
+2021-10-28 04:44:10,787 [DEBUG]  Extracted model to '/tmp/tmpd5kbb0fo'.
+2021-10-28 04:44:10,836 [DEBUG]  Starting new HTTPS connection (1): api.segment.io:443
+2021-10-28 04:44:11,987 [DEBUG]  https://api.segment.io:443 "POST /v1/track HTTP/1.1" 200 21
+2021-10-28 04:44:11,990 [INFO ]  Enabling coroutine debugging. Loop id 100308800.
+2021-10-28 04:44:11,991 [INFO ]  Loading model models/20211025-111459.tar.gz...
+2021-10-28 04:44:13,482 [DEBUG]  Extracted model to '/tmp/tmpe_ga1zie'.
+2021-10-28 04:44:13,594 [DEBUG]  Could not load interpreter from '/app/models'.
+2021-10-28 04:44:13,602 [DEBUG]  Attempting to connect to database via 'sqlite:///./vaccine.db'.
+2021-10-28 04:44:13,604 [DEBUG]  Connection to SQL database 'vaccine.db' successful.
+2021-10-28 04:44:13,604 [DEBUG]  Connected to SQLTrackerStore.
+2021-10-28 04:44:13,604 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2021-10-28 04:44:15,101 [DEBUG]  Extracted model to '/tmp/tmp6_t7kyd3'.
+2021-10-28 04:44:15,103 [ERROR]  Could not load model due to Not all required importable packages are installed to use the configured NLU pipeline. To use this pipeline, you need to install the missing modules: 
+  - spacy (needed for rasa.nlu.utils.spacy_utils.SpacyNLP)
+Please install the packages that contain the missing modules..
+2021-10-28 04:44:15,105 [DEBUG]  Instantiated NLG to 'TemplatedNaturalLanguageGenerator'.
+2021-10-28 04:44:15,105 [INFO ]  Rasa server is up and running.
+2021-10-28 04:44:19,306 [DEBUG]  User loYTZNel6jYeWdATAAAB connected to socketIO endpoint.
+2021-10-28 04:44:19,319 [DEBUG]  User loYTZNel6jYeWdATAAAB connected to socketIO endpoint.
+2021-10-28 04:44:30,501 [DEBUG]  User loYTZNel6jYeWdATAAAB disconnected from socketIO endpoint.
+2021-10-28 04:44:49,225 [DEBUG]  User BQ5vQz6L1Yi2UZ6KAAAD connected to socketIO endpoint.
+2021-10-28 04:44:49,248 [DEBUG]  User BQ5vQz6L1Yi2UZ6KAAAD connected to socketIO endpoint.
+2021-10-28 04:46:10,518 [DEBUG]  User BQ5vQz6L1Yi2UZ6KAAAD disconnected from socketIO endpoint.
+2021-10-28 04:46:33,282 [DEBUG]  User x8cbZ8mJr34dQKnPAAAF connected to socketIO endpoint.
+2021-10-28 04:46:33,309 [DEBUG]  User x8cbZ8mJr34dQKnPAAAF connected to socketIO endpoint.
+2021-10-28 04:46:35,477 [DEBUG]  Issuing ticket for conversation '7d57df73fcbc4b7794092311bd8b32bd'.
+2021-10-28 04:46:35,478 [DEBUG]  Acquiring lock for conversation '7d57df73fcbc4b7794092311bd8b32bd'.
+2021-10-28 04:46:35,478 [DEBUG]  Acquired lock for conversation '7d57df73fcbc4b7794092311bd8b32bd'.
+2021-10-28 04:46:35,482 [DEBUG]  Can't retrieve tracker matching sender id '7d57df73fcbc4b7794092311bd8b32bd' from SQL storage. Returning `None` instead.
+2021-10-28 04:46:35,487 [DEBUG]  Tracker with sender_id '7d57df73fcbc4b7794092311bd8b32bd' stored to database
+2021-10-28 04:46:35,487 [DEBUG]  Starting a new session for conversation ID '7d57df73fcbc4b7794092311bd8b32bd'.
+2021-10-28 04:46:35,488 [DEBUG]  Policy prediction ended with events '[]'.
+2021-10-28 04:46:35,488 [DEBUG]  Action 'action_session_start' ended with events '[<rasa.shared.core.events.SessionStarted object at 0x7f682150afd0>, ActionExecuted(action: action_listen, policy: None, confidence: None)]'.
+2021-10-28 04:46:35,488 [DEBUG]  Current slot values: 
+	session_started_metadata: None
+2021-10-28 04:46:35,489 [DEBUG]  Received user message '/greet' with intent '{'name': 'greet', 'confidence': 1.0}' and entities '[]'
+2021-10-28 04:46:35,489 [DEBUG]  Logged UserUtterance - tracker now has 4 events.
+2021-10-28 04:46:35,546 [DEBUG]  Tracker with sender_id '7d57df73fcbc4b7794092311bd8b32bd' stored to database
+2021-10-28 04:46:35,546 [DEBUG]  Deleted lock for conversation '7d57df73fcbc4b7794092311bd8b32bd'.
+2021-10-28 04:47:49,511 [DEBUG]  User x8cbZ8mJr34dQKnPAAAF disconnected from socketIO endpoint.
+2021-10-28 04:47:49,703 [DEBUG]  User bcfC5XhjSdnZNgA3AAAH connected to socketIO endpoint.
+2021-10-28 04:47:49,718 [DEBUG]  User bcfC5XhjSdnZNgA3AAAH connected to socketIO endpoint.
+2021-10-28 04:47:52,331 [DEBUG]  Issuing ticket for conversation '749dade97161459ba7e29a69d0ce8f04'.
+2021-10-28 04:47:52,331 [DEBUG]  Acquiring lock for conversation '749dade97161459ba7e29a69d0ce8f04'.
+2021-10-28 04:47:52,331 [DEBUG]  Acquired lock for conversation '749dade97161459ba7e29a69d0ce8f04'.
+2021-10-28 04:47:52,334 [DEBUG]  Can't retrieve tracker matching sender id '749dade97161459ba7e29a69d0ce8f04' from SQL storage. Returning `None` instead.
+2021-10-28 04:47:52,338 [DEBUG]  Tracker with sender_id '749dade97161459ba7e29a69d0ce8f04' stored to database
+2021-10-28 04:47:52,339 [DEBUG]  Starting a new session for conversation ID '749dade97161459ba7e29a69d0ce8f04'.
+2021-10-28 04:47:52,339 [DEBUG]  Policy prediction ended with events '[]'.
+2021-10-28 04:47:52,339 [DEBUG]  Action 'action_session_start' ended with events '[<rasa.shared.core.events.SessionStarted object at 0x7f6821535580>, ActionExecuted(action: action_listen, policy: None, confidence: None)]'.
+2021-10-28 04:47:52,339 [DEBUG]  Current slot values: 
+	session_started_metadata: None
+2021-10-28 04:47:52,339 [DEBUG]  Received user message '/greet' with intent '{'name': 'greet', 'confidence': 1.0}' and entities '[]'
+2021-10-28 04:47:52,340 [DEBUG]  Logged UserUtterance - tracker now has 4 events.
+2021-10-28 04:47:52,350 [DEBUG]  Tracker with sender_id '749dade97161459ba7e29a69d0ce8f04' stored to database
+2021-10-28 04:47:52,350 [DEBUG]  Deleted lock for conversation '749dade97161459ba7e29a69d0ce8f04'.
+2021-10-28 04:49:10,867 [DEBUG]  Issuing ticket for conversation '749dade97161459ba7e29a69d0ce8f04'.
+2021-10-28 04:49:10,867 [DEBUG]  Acquiring lock for conversation '749dade97161459ba7e29a69d0ce8f04'.
+2021-10-28 04:49:10,867 [DEBUG]  Acquired lock for conversation '749dade97161459ba7e29a69d0ce8f04'.
+2021-10-28 04:49:10,871 [DEBUG]  Recreating tracker from sender id '749dade97161459ba7e29a69d0ce8f04'
+2021-10-28 04:49:10,872 [DEBUG]  Received user message 'hi' with intent '{'name': 'hi', 'confidence': 1.0}' and entities '[]'
+2021-10-28 04:49:10,872 [DEBUG]  Logged UserUtterance - tracker now has 4 events.
+2021-10-28 04:49:10,946 [DEBUG]  Tracker with sender_id '749dade97161459ba7e29a69d0ce8f04' stored to database
+2021-10-28 04:49:10,947 [DEBUG]  Deleted lock for conversation '749dade97161459ba7e29a69d0ce8f04'.
+2021-10-28 04:55:22,053 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id:path>/messages     POST                           add_message
+/conversations/<conversation_id:path>/tracker/events POST                           append_events
+/webhooks/rasa                                     GET                            custom_webhook_RasaChatInput.health
+/webhooks/rasa/webhook                             POST                           custom_webhook_RasaChatInput.receive
+/webhooks/rest                                     GET                            custom_webhook_RestInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_RestInput.receive
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id:path>/execute      POST                           execute_action
+/domain                                            GET                            get_domain
+/socket.io                                         OPTIONS                        handle_request
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id:path>/predict      POST                           predict
+/conversations/<conversation_id:path>/tracker/events PUT                            replace_events
+/conversations/<conversation_id:path>/story        GET                            retrieve_story
+/conversations/<conversation_id:path>/tracker      GET                            retrieve_tracker
+/webhooks/socketio                                 GET                            socketio_webhook.health
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/conversations/<conversation_id:path>/trigger_intent POST                           trigger_intent
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2021-10-28 04:55:22,054 [INFO ]  Starting Rasa server on http://localhost:5005
+2021-10-28 04:55:22,054 [DEBUG]  Using the default number of Sanic workers (1).
+2021-10-28 04:55:22,062 [INFO ]  Loading model models/20211025-111459.tar.gz...
+2021-10-28 04:55:23,658 [DEBUG]  Extracted model to '/tmp/tmpos88tdvs'.
+2021-10-28 04:55:23,709 [DEBUG]  Starting new HTTPS connection (1): api.segment.io:443
+2021-10-28 04:55:24,797 [DEBUG]  https://api.segment.io:443 "POST /v1/track HTTP/1.1" 200 21
+2021-10-28 04:55:24,800 [INFO ]  Enabling coroutine debugging. Loop id 81052816.
+2021-10-28 04:55:24,801 [INFO ]  Loading model models/20211025-111459.tar.gz...
+2021-10-28 04:55:26,302 [DEBUG]  Extracted model to '/tmp/tmpw6meaxyb'.
+2021-10-28 04:55:26,414 [DEBUG]  Could not load interpreter from '/app/models'.
+2021-10-28 04:55:26,422 [DEBUG]  Attempting to connect to database via 'sqlite:///./vaccine.db'.
+2021-10-28 04:55:26,424 [DEBUG]  Connection to SQL database 'vaccine.db' successful.
+2021-10-28 04:55:26,425 [DEBUG]  Connected to SQLTrackerStore.
+2021-10-28 04:55:26,425 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2021-10-28 04:55:27,918 [DEBUG]  Extracted model to '/tmp/tmpysw4b3gl'.
+2021-10-28 04:55:27,920 [ERROR]  Could not load model due to Not all required importable packages are installed to use the configured NLU pipeline. To use this pipeline, you need to install the missing modules: 
+  - spacy (needed for rasa.nlu.utils.spacy_utils.SpacyNLP)
+Please install the packages that contain the missing modules..
+2021-10-28 04:55:27,921 [DEBUG]  Instantiated NLG to 'TemplatedNaturalLanguageGenerator'.
+2021-10-28 04:55:27,921 [INFO ]  Rasa server is up and running.
+2021-10-28 04:55:29,464 [DEBUG]  User bkK6Q2IszEDDnLkdAAAB connected to socketIO endpoint.
+2021-10-28 04:55:29,478 [DEBUG]  User bkK6Q2IszEDDnLkdAAAB connected to socketIO endpoint.
+2021-10-28 04:56:06,207 [DEBUG]  User bkK6Q2IszEDDnLkdAAAB disconnected from socketIO endpoint.
+2021-10-28 04:56:25,007 [DEBUG]  User EGL7YJyv0hg4-_m0AAAD connected to socketIO endpoint.
+2021-10-28 04:56:25,025 [DEBUG]  User EGL7YJyv0hg4-_m0AAAD connected to socketIO endpoint.
+2021-10-28 04:56:26,823 [DEBUG]  Issuing ticket for conversation '3edea057fa39495cab57a632d617fcfe'.
+2021-10-28 04:56:26,823 [DEBUG]  Acquiring lock for conversation '3edea057fa39495cab57a632d617fcfe'.
+2021-10-28 04:56:26,823 [DEBUG]  Acquired lock for conversation '3edea057fa39495cab57a632d617fcfe'.
+2021-10-28 04:56:26,828 [DEBUG]  Can't retrieve tracker matching sender id '3edea057fa39495cab57a632d617fcfe' from SQL storage. Returning `None` instead.
+2021-10-28 04:56:26,833 [DEBUG]  Tracker with sender_id '3edea057fa39495cab57a632d617fcfe' stored to database
+2021-10-28 04:56:26,833 [DEBUG]  Starting a new session for conversation ID '3edea057fa39495cab57a632d617fcfe'.
+2021-10-28 04:56:26,834 [DEBUG]  Policy prediction ended with events '[]'.
+2021-10-28 04:56:26,834 [DEBUG]  Action 'action_session_start' ended with events '[<rasa.shared.core.events.SessionStarted object at 0x7f53778e3fa0>, ActionExecuted(action: action_listen, policy: None, confidence: None)]'.
+2021-10-28 04:56:26,835 [DEBUG]  Current slot values: 
+	session_started_metadata: None
+2021-10-28 04:56:26,835 [DEBUG]  Received user message '/greet' with intent '{'name': 'greet', 'confidence': 1.0}' and entities '[]'
+2021-10-28 04:56:26,836 [DEBUG]  Logged UserUtterance - tracker now has 4 events.
+2021-10-28 04:56:26,863 [DEBUG]  Tracker with sender_id '3edea057fa39495cab57a632d617fcfe' stored to database
+2021-10-28 04:56:26,863 [DEBUG]  Deleted lock for conversation '3edea057fa39495cab57a632d617fcfe'.
+2021-10-28 04:56:38,730 [DEBUG]  Issuing ticket for conversation '3edea057fa39495cab57a632d617fcfe'.
+2021-10-28 04:56:38,730 [DEBUG]  Acquiring lock for conversation '3edea057fa39495cab57a632d617fcfe'.
+2021-10-28 04:56:38,730 [DEBUG]  Acquired lock for conversation '3edea057fa39495cab57a632d617fcfe'.
+2021-10-28 04:56:38,733 [DEBUG]  Recreating tracker from sender id '3edea057fa39495cab57a632d617fcfe'
+2021-10-28 04:56:38,734 [DEBUG]  Received user message 'Hi' with intent '{'name': 'Hi', 'confidence': 1.0}' and entities '[]'
+2021-10-28 04:56:38,735 [DEBUG]  Logged UserUtterance - tracker now has 4 events.
+2021-10-28 04:56:38,744 [DEBUG]  Tracker with sender_id '3edea057fa39495cab57a632d617fcfe' stored to database
+2021-10-28 04:56:38,744 [DEBUG]  Deleted lock for conversation '3edea057fa39495cab57a632d617fcfe'.
+2021-10-28 05:13:57,336 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id:path>/messages     POST                           add_message
+/conversations/<conversation_id:path>/tracker/events POST                           append_events
+/webhooks/rasa                                     GET                            custom_webhook_RasaChatInput.health
+/webhooks/rasa/webhook                             POST                           custom_webhook_RasaChatInput.receive
+/webhooks/rest                                     GET                            custom_webhook_RestInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_RestInput.receive
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id:path>/execute      POST                           execute_action
+/domain                                            GET                            get_domain
+/socket.io                                         OPTIONS                        handle_request
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id:path>/predict      POST                           predict
+/conversations/<conversation_id:path>/tracker/events PUT                            replace_events
+/conversations/<conversation_id:path>/story        GET                            retrieve_story
+/conversations/<conversation_id:path>/tracker      GET                            retrieve_tracker
+/webhooks/socketio                                 GET                            socketio_webhook.health
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/conversations/<conversation_id:path>/trigger_intent POST                           trigger_intent
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2021-10-28 05:13:57,336 [INFO ]  Starting Rasa server on http://localhost:5005
+2021-10-28 05:13:57,337 [DEBUG]  Using the default number of Sanic workers (1).
+2021-10-28 05:13:57,344 [INFO ]  Loading model models/20211025-111459.tar.gz...
+2021-10-28 05:13:58,972 [DEBUG]  Extracted model to '/tmp/tmp9izcwy28'.
+2021-10-28 05:13:59,021 [DEBUG]  Starting new HTTPS connection (1): api.segment.io:443
+2021-10-28 05:14:00,141 [DEBUG]  https://api.segment.io:443 "POST /v1/track HTTP/1.1" 200 21
+2021-10-28 05:14:00,144 [INFO ]  Enabling coroutine debugging. Loop id 106147200.
+2021-10-28 05:14:00,145 [INFO ]  Loading model models/20211025-111459.tar.gz...
+2021-10-28 05:14:01,670 [DEBUG]  Extracted model to '/tmp/tmp350jhi5j'.
+2021-10-28 05:14:01,795 [DEBUG]  Could not load interpreter from '/app/models'.
+2021-10-28 05:14:01,803 [DEBUG]  Attempting to connect to database via 'sqlite:///./vaccine.db'.
+2021-10-28 05:14:01,806 [DEBUG]  Connection to SQL database 'vaccine.db' successful.
+2021-10-28 05:14:01,806 [DEBUG]  Connected to SQLTrackerStore.
+2021-10-28 05:14:01,806 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2021-10-28 05:14:03,329 [DEBUG]  Extracted model to '/tmp/tmpckroivx9'.
+2021-10-28 05:14:03,331 [ERROR]  Could not load model due to Not all required importable packages are installed to use the configured NLU pipeline. To use this pipeline, you need to install the missing modules: 
+  - spacy (needed for rasa.nlu.utils.spacy_utils.SpacyNLP)
+Please install the packages that contain the missing modules..
+2021-10-28 05:14:03,333 [DEBUG]  Instantiated NLG to 'TemplatedNaturalLanguageGenerator'.
+2021-10-28 05:14:03,333 [INFO ]  Rasa server is up and running.
+2021-10-28 05:14:04,807 [DEBUG]  User COU2npNAAMXeg-i9AAAB connected to socketIO endpoint.
+2021-10-28 05:14:04,823 [DEBUG]  User COU2npNAAMXeg-i9AAAB connected to socketIO endpoint.
+2021-10-28 05:14:29,103 [DEBUG]  User COU2npNAAMXeg-i9AAAB disconnected from socketIO endpoint.
+2021-10-28 05:14:44,872 [DEBUG]  User Kw0K9we32cIaw6k_AAAD connected to socketIO endpoint.
+2021-10-28 05:14:44,889 [DEBUG]  User Kw0K9we32cIaw6k_AAAD connected to socketIO endpoint.
+2021-10-28 05:14:46,699 [DEBUG]  Issuing ticket for conversation 'c0b479a0afbe45e09f326d65dea38ad5'.
+2021-10-28 05:14:46,699 [DEBUG]  Acquiring lock for conversation 'c0b479a0afbe45e09f326d65dea38ad5'.
+2021-10-28 05:14:46,699 [DEBUG]  Acquired lock for conversation 'c0b479a0afbe45e09f326d65dea38ad5'.
+2021-10-28 05:14:46,704 [DEBUG]  Can't retrieve tracker matching sender id 'c0b479a0afbe45e09f326d65dea38ad5' from SQL storage. Returning `None` instead.
+2021-10-28 05:14:46,708 [DEBUG]  Tracker with sender_id 'c0b479a0afbe45e09f326d65dea38ad5' stored to database
+2021-10-28 05:14:46,709 [DEBUG]  Starting a new session for conversation ID 'c0b479a0afbe45e09f326d65dea38ad5'.
+2021-10-28 05:14:46,710 [DEBUG]  Policy prediction ended with events '[]'.
+2021-10-28 05:14:46,710 [DEBUG]  Action 'action_session_start' ended with events '[<rasa.shared.core.events.SessionStarted object at 0x7efdff43dbb0>, ActionExecuted(action: action_listen, policy: None, confidence: None)]'.
+2021-10-28 05:14:46,710 [DEBUG]  Current slot values: 
+	session_started_metadata: None
+2021-10-28 05:14:46,711 [DEBUG]  Received user message '/greet' with intent '{'name': 'greet', 'confidence': 1.0}' and entities '[]'
+2021-10-28 05:14:46,711 [DEBUG]  Logged UserUtterance - tracker now has 4 events.
+2021-10-28 05:14:46,726 [DEBUG]  Tracker with sender_id 'c0b479a0afbe45e09f326d65dea38ad5' stored to database
+2021-10-28 05:14:46,726 [DEBUG]  Deleted lock for conversation 'c0b479a0afbe45e09f326d65dea38ad5'.
+2021-10-28 05:14:53,401 [DEBUG]  Issuing ticket for conversation 'c0b479a0afbe45e09f326d65dea38ad5'.
+2021-10-28 05:14:53,401 [DEBUG]  Acquiring lock for conversation 'c0b479a0afbe45e09f326d65dea38ad5'.
+2021-10-28 05:14:53,401 [DEBUG]  Acquired lock for conversation 'c0b479a0afbe45e09f326d65dea38ad5'.
+2021-10-28 05:14:53,404 [DEBUG]  Recreating tracker from sender id 'c0b479a0afbe45e09f326d65dea38ad5'
+2021-10-28 05:14:53,405 [DEBUG]  Received user message 'Hi' with intent '{'name': 'Hi', 'confidence': 1.0}' and entities '[]'
+2021-10-28 05:14:53,405 [DEBUG]  Logged UserUtterance - tracker now has 4 events.
+2021-10-28 05:14:53,419 [DEBUG]  Tracker with sender_id 'c0b479a0afbe45e09f326d65dea38ad5' stored to database
+2021-10-28 05:14:53,419 [DEBUG]  Deleted lock for conversation 'c0b479a0afbe45e09f326d65dea38ad5'.
+2021-10-28 06:30:02,582 [DEBUG]  User Kw0K9we32cIaw6k_AAAD disconnected from socketIO endpoint.
+2021-10-28 06:55:09,973 [ERROR]  Task was destroyed but it is pending!
+source_traceback: Object created at (most recent call last):
+  File "/opt/venv/bin/rasa", line 8, in <module>
+    sys.exit(main())
+  File "/opt/venv/lib/python3.8/site-packages/rasa/__main__.py", line 117, in main
+    cmdline_arguments.func(cmdline_arguments)
+  File "/opt/venv/lib/python3.8/site-packages/rasa/cli/run.py", line 95, in run
+    rasa.run(**vars(args))
+  File "/opt/venv/lib/python3.8/site-packages/rasa/api.py", line 57, in run
+    rasa.core.run.serve_application(
+  File "/opt/venv/lib/python3.8/site-packages/rasa/core/run.py", line 221, in serve_application
+    app.run(
+  File "/opt/venv/lib/python3.8/site-packages/sanic/app.py", line 1111, in run
+    serve(**server_settings)
+  File "/opt/venv/lib/python3.8/site-packages/sanic/server.py", line 912, in serve
+    loop.run_forever()
+  File "/opt/venv/lib/python3.8/site-packages/spf/framework.py", line 557, in _handle_request
+    _ = await real_handle(request, write_callback,
+  File "/opt/venv/lib/python3.8/site-packages/sanic/app.py", line 931, in handle_request
+    response = await response
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 249, in handle_request
+    r = await self._handle_connect(environ, transport,
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 387, in _handle_connect
+    self.start_background_task(self._service_task)
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 323, in start_background_task
+    return asyncio.ensure_future(target(*args, **kwargs))
+task: <Task pending name='Task-5' coro=<AsyncServer._service_task() running at /opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py:478> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7efe01d73430>()] created at /usr/lib/python3.8/asyncio/tasks.py:654> created at /opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py:323>
+2021-10-28 07:01:07,965 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id:path>/messages     POST                           add_message
+/conversations/<conversation_id:path>/tracker/events POST                           append_events
+/webhooks/rasa                                     GET                            custom_webhook_RasaChatInput.health
+/webhooks/rasa/webhook                             POST                           custom_webhook_RasaChatInput.receive
+/webhooks/rest                                     GET                            custom_webhook_RestInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_RestInput.receive
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id:path>/execute      POST                           execute_action
+/domain                                            GET                            get_domain
+/socket.io                                         POST                           handle_request
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id:path>/predict      POST                           predict
+/conversations/<conversation_id:path>/tracker/events PUT                            replace_events
+/conversations/<conversation_id:path>/story        GET                            retrieve_story
+/conversations/<conversation_id:path>/tracker      GET                            retrieve_tracker
+/webhooks/socketio                                 GET                            socketio_webhook.health
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/conversations/<conversation_id:path>/trigger_intent POST                           trigger_intent
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2021-10-28 07:01:07,965 [INFO ]  Starting Rasa server on http://localhost:5005
+2021-10-28 07:01:07,965 [DEBUG]  Using the default number of Sanic workers (1).
+2021-10-28 07:01:07,972 [INFO ]  Loading model models/20211025-111459.tar.gz...
+2021-10-28 07:01:09,593 [DEBUG]  Extracted model to '/tmp/tmpbt6l5ltv'.
+2021-10-28 07:01:09,641 [DEBUG]  Starting new HTTPS connection (1): api.segment.io:443
+2021-10-28 07:01:10,762 [DEBUG]  https://api.segment.io:443 "POST /v1/track HTTP/1.1" 200 21
+2021-10-28 07:01:10,765 [INFO ]  Enabling coroutine debugging. Loop id 111379792.
+2021-10-28 07:01:10,766 [INFO ]  Loading model models/20211025-111459.tar.gz...
+2021-10-28 07:01:12,277 [DEBUG]  Extracted model to '/tmp/tmp9agb8xzx'.
+2021-10-28 07:01:12,395 [DEBUG]  Could not load interpreter from '/app/models'.
+2021-10-28 07:01:12,406 [DEBUG]  Attempting to connect to database via 'sqlite:///./vaccine.db'.
+2021-10-28 07:01:12,409 [DEBUG]  Connection to SQL database 'vaccine.db' successful.
+2021-10-28 07:01:12,409 [DEBUG]  Connected to SQLTrackerStore.
+2021-10-28 07:01:12,409 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2021-10-28 07:01:13,903 [DEBUG]  Extracted model to '/tmp/tmp7pokea77'.
+2021-10-28 07:01:13,905 [ERROR]  Could not load model due to Not all required importable packages are installed to use the configured NLU pipeline. To use this pipeline, you need to install the missing modules: 
+  - spacy (needed for rasa.nlu.utils.spacy_utils.SpacyNLP)
+Please install the packages that contain the missing modules..
+2021-10-28 07:01:13,907 [DEBUG]  Instantiated NLG to 'TemplatedNaturalLanguageGenerator'.
+2021-10-28 07:01:13,907 [INFO ]  Rasa server is up and running.
+2021-10-28 07:01:24,618 [DEBUG]  User 9618CCZxW7-8nS44AAAB connected to socketIO endpoint.
+2021-10-28 07:01:24,635 [DEBUG]  User 9618CCZxW7-8nS44AAAB connected to socketIO endpoint.
+2021-10-28 07:01:28,758 [DEBUG]  Issuing ticket for conversation '6fbcccd457634b5badc8da8f902323e2'.
+2021-10-28 07:01:28,758 [DEBUG]  Acquiring lock for conversation '6fbcccd457634b5badc8da8f902323e2'.
+2021-10-28 07:01:28,759 [DEBUG]  Acquired lock for conversation '6fbcccd457634b5badc8da8f902323e2'.
+2021-10-28 07:01:28,764 [DEBUG]  Can't retrieve tracker matching sender id '6fbcccd457634b5badc8da8f902323e2' from SQL storage. Returning `None` instead.
+2021-10-28 07:01:28,768 [DEBUG]  Tracker with sender_id '6fbcccd457634b5badc8da8f902323e2' stored to database
+2021-10-28 07:01:28,769 [DEBUG]  Starting a new session for conversation ID '6fbcccd457634b5badc8da8f902323e2'.
+2021-10-28 07:01:28,770 [DEBUG]  Policy prediction ended with events '[]'.
+2021-10-28 07:01:28,770 [DEBUG]  Action 'action_session_start' ended with events '[<rasa.shared.core.events.SessionStarted object at 0x7f6d08769670>, ActionExecuted(action: action_listen, policy: None, confidence: None)]'.
+2021-10-28 07:01:28,770 [DEBUG]  Current slot values: 
+	session_started_metadata: None
+2021-10-28 07:01:28,771 [DEBUG]  Received user message '/greet' with intent '{'name': 'greet', 'confidence': 1.0}' and entities '[]'
+2021-10-28 07:01:28,772 [DEBUG]  Logged UserUtterance - tracker now has 4 events.
+2021-10-28 07:01:28,841 [DEBUG]  Tracker with sender_id '6fbcccd457634b5badc8da8f902323e2' stored to database
+2021-10-28 07:01:28,842 [DEBUG]  Deleted lock for conversation '6fbcccd457634b5badc8da8f902323e2'.
+2021-10-28 07:01:34,271 [DEBUG]  Issuing ticket for conversation '6fbcccd457634b5badc8da8f902323e2'.
+2021-10-28 07:01:34,271 [DEBUG]  Acquiring lock for conversation '6fbcccd457634b5badc8da8f902323e2'.
+2021-10-28 07:01:34,272 [DEBUG]  Acquired lock for conversation '6fbcccd457634b5badc8da8f902323e2'.
+2021-10-28 07:01:34,275 [DEBUG]  Recreating tracker from sender id '6fbcccd457634b5badc8da8f902323e2'
+2021-10-28 07:01:34,276 [DEBUG]  Received user message 'hi' with intent '{'name': 'hi', 'confidence': 1.0}' and entities '[]'
+2021-10-28 07:01:34,277 [DEBUG]  Logged UserUtterance - tracker now has 4 events.
+2021-10-28 07:01:34,299 [DEBUG]  Tracker with sender_id '6fbcccd457634b5badc8da8f902323e2' stored to database
+2021-10-28 07:01:34,300 [DEBUG]  Deleted lock for conversation '6fbcccd457634b5badc8da8f902323e2'.
+2021-10-28 07:01:50,188 [DEBUG]  User 9618CCZxW7-8nS44AAAB disconnected from socketIO endpoint.
+2021-10-28 07:23:19,679 [DEBUG]  User h_eoUdAMnhTenNtSAAAD connected to socketIO endpoint.
+2021-10-28 07:23:19,704 [DEBUG]  User h_eoUdAMnhTenNtSAAAD connected to socketIO endpoint.
+2021-10-28 07:23:51,671 [DEBUG]  Issuing ticket for conversation '48599aaf490a459bb1efcab9021aa86c'.
+2021-10-28 07:23:51,671 [DEBUG]  Acquiring lock for conversation '48599aaf490a459bb1efcab9021aa86c'.
+2021-10-28 07:23:51,671 [DEBUG]  Acquired lock for conversation '48599aaf490a459bb1efcab9021aa86c'.
+2021-10-28 07:23:51,675 [DEBUG]  Can't retrieve tracker matching sender id '48599aaf490a459bb1efcab9021aa86c' from SQL storage. Returning `None` instead.
+2021-10-28 07:23:51,679 [DEBUG]  Tracker with sender_id '48599aaf490a459bb1efcab9021aa86c' stored to database
+2021-10-28 07:23:51,679 [DEBUG]  Starting a new session for conversation ID '48599aaf490a459bb1efcab9021aa86c'.
+2021-10-28 07:23:51,679 [DEBUG]  Policy prediction ended with events '[]'.
+2021-10-28 07:23:51,679 [DEBUG]  Action 'action_session_start' ended with events '[<rasa.shared.core.events.SessionStarted object at 0x7f6d08736910>, ActionExecuted(action: action_listen, policy: None, confidence: None)]'.
+2021-10-28 07:23:51,679 [DEBUG]  Current slot values: 
+	session_started_metadata: None
+2021-10-28 07:23:51,680 [DEBUG]  Received user message '/greet' with intent '{'name': 'greet', 'confidence': 1.0}' and entities '[]'
+2021-10-28 07:23:51,680 [DEBUG]  Logged UserUtterance - tracker now has 4 events.
+2021-10-28 07:23:51,712 [DEBUG]  Tracker with sender_id '48599aaf490a459bb1efcab9021aa86c' stored to database
+2021-10-28 07:23:51,713 [DEBUG]  Deleted lock for conversation '48599aaf490a459bb1efcab9021aa86c'.
+2021-10-31 05:51:55,508 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id:path>/messages     POST                           add_message
+/conversations/<conversation_id:path>/tracker/events POST                           append_events
+/webhooks/rasa                                     GET                            custom_webhook_RasaChatInput.health
+/webhooks/rasa/webhook                             POST                           custom_webhook_RasaChatInput.receive
+/webhooks/rest                                     GET                            custom_webhook_RestInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_RestInput.receive
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id:path>/execute      POST                           execute_action
+/domain                                            GET                            get_domain
+/socket.io                                         OPTIONS                        handle_request
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id:path>/predict      POST                           predict
+/conversations/<conversation_id:path>/tracker/events PUT                            replace_events
+/conversations/<conversation_id:path>/story        GET                            retrieve_story
+/conversations/<conversation_id:path>/tracker      GET                            retrieve_tracker
+/webhooks/socketio                                 GET                            socketio_webhook.health
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/conversations/<conversation_id:path>/trigger_intent POST                           trigger_intent
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2021-10-31 05:51:55,515 [INFO ]  Starting Rasa server on http://localhost:5005
+2021-10-31 05:51:55,515 [DEBUG]  Using the default number of Sanic workers (1).
+2021-10-31 05:51:55,522 [INFO ]  Loading model models/20211025-111459.tar.gz...
+2021-10-31 05:51:57,245 [DEBUG]  Extracted model to '/tmp/tmpryj0j0p8'.
+2021-10-31 05:51:57,294 [DEBUG]  Starting new HTTPS connection (1): api.segment.io:443
+2021-10-31 05:51:58,405 [DEBUG]  https://api.segment.io:443 "POST /v1/track HTTP/1.1" 200 21
+2021-10-31 05:51:58,408 [INFO ]  Enabling coroutine debugging. Loop id 85917984.
+2021-10-31 05:51:58,408 [INFO ]  Loading model models/20211025-111459.tar.gz...
+2021-10-31 05:51:59,900 [DEBUG]  Extracted model to '/tmp/tmp_zof59qy'.
+2021-10-31 05:52:00,197 [DEBUG]  Could not load interpreter from '/app/models'.
+2021-10-31 05:52:00,205 [DEBUG]  Attempting to connect to database via 'sqlite:///./vaccine.db'.
+2021-10-31 05:52:00,207 [DEBUG]  Connection to SQL database 'vaccine.db' successful.
+2021-10-31 05:52:00,207 [DEBUG]  Connected to SQLTrackerStore.
+2021-10-31 05:52:00,207 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2021-10-31 05:52:01,684 [DEBUG]  Extracted model to '/tmp/tmpiwywv3ic'.
+2021-10-31 05:52:01,686 [ERROR]  Could not load model due to Not all required importable packages are installed to use the configured NLU pipeline. To use this pipeline, you need to install the missing modules: 
+  - spacy (needed for rasa.nlu.utils.spacy_utils.SpacyNLP)
+Please install the packages that contain the missing modules..
+2021-10-31 05:52:01,688 [DEBUG]  Instantiated NLG to 'TemplatedNaturalLanguageGenerator'.
+2021-10-31 05:52:01,688 [INFO ]  Rasa server is up and running.
+2021-10-31 05:55:57,456 [DEBUG]  User hFWNObfBpcgVE1YEAAAB connected to socketIO endpoint.
+2021-10-31 05:55:57,480 [DEBUG]  User hFWNObfBpcgVE1YEAAAB connected to socketIO endpoint.
+2021-10-31 05:55:59,630 [DEBUG]  Issuing ticket for conversation '73bf45449bb34e65b0b69867d6825524'.
+2021-10-31 05:55:59,653 [DEBUG]  Acquiring lock for conversation '73bf45449bb34e65b0b69867d6825524'.
+2021-10-31 05:55:59,653 [DEBUG]  Acquired lock for conversation '73bf45449bb34e65b0b69867d6825524'.
+2021-10-31 05:55:59,660 [DEBUG]  Can't retrieve tracker matching sender id '73bf45449bb34e65b0b69867d6825524' from SQL storage. Returning `None` instead.
+2021-10-31 05:55:59,664 [DEBUG]  Tracker with sender_id '73bf45449bb34e65b0b69867d6825524' stored to database
+2021-10-31 05:55:59,664 [DEBUG]  Starting a new session for conversation ID '73bf45449bb34e65b0b69867d6825524'.
+2021-10-31 05:55:59,665 [DEBUG]  Policy prediction ended with events '[]'.
+2021-10-31 05:55:59,665 [DEBUG]  Action 'action_session_start' ended with events '[<rasa.shared.core.events.SessionStarted object at 0x7f72609dbf70>, ActionExecuted(action: action_listen, policy: None, confidence: None)]'.
+2021-10-31 05:55:59,665 [DEBUG]  Current slot values: 
+	session_started_metadata: None
+2021-10-31 05:55:59,666 [DEBUG]  Received user message '/greet' with intent '{'name': 'greet', 'confidence': 1.0}' and entities '[]'
+2021-10-31 05:55:59,666 [DEBUG]  Logged UserUtterance - tracker now has 4 events.
+2021-10-31 05:55:59,829 [DEBUG]  Tracker with sender_id '73bf45449bb34e65b0b69867d6825524' stored to database
+2021-10-31 05:55:59,829 [DEBUG]  Deleted lock for conversation '73bf45449bb34e65b0b69867d6825524'.
+2021-10-31 05:56:08,251 [DEBUG]  Issuing ticket for conversation '73bf45449bb34e65b0b69867d6825524'.
+2021-10-31 05:56:08,251 [DEBUG]  Acquiring lock for conversation '73bf45449bb34e65b0b69867d6825524'.
+2021-10-31 05:56:08,251 [DEBUG]  Acquired lock for conversation '73bf45449bb34e65b0b69867d6825524'.
+2021-10-31 05:56:08,255 [DEBUG]  Recreating tracker from sender id '73bf45449bb34e65b0b69867d6825524'
+2021-10-31 05:56:08,256 [DEBUG]  Received user message 'Hi' with intent '{'name': 'Hi', 'confidence': 1.0}' and entities '[]'
+2021-10-31 05:56:08,256 [DEBUG]  Logged UserUtterance - tracker now has 4 events.
+2021-10-31 05:56:08,284 [DEBUG]  Tracker with sender_id '73bf45449bb34e65b0b69867d6825524' stored to database
+2021-10-31 05:56:08,285 [DEBUG]  Deleted lock for conversation '73bf45449bb34e65b0b69867d6825524'.

@@ -1,29 +1,23 @@
-version: "3.8"
+version: '3'
 services:
-#  app:
-#    build: .
-#    command: python main.py
-#    ports:
-#      - "5000:5000"
-#      - "443:443"
-#    volumes:
-#      - .:/vwiseme
-  rasa_action_server:
-    build: .
-    #command: rasa run actions
-    ports:
-      - "5055:5055"
-    volumes:
-      - .:/vwiseme_actions
-  rasa:
-    build: .
-    #command: rasa run -m models --enable-api --cors "*" --debug
-    ports:
-      - "5005:5005"
-    volumes:
-      - .:/vwiseme_rasa
-
-
+    rasa:
+      container_name: "rasa_server"
+      user: root
+      build: 
+        context:  .
+      volumes:
+      - "./:/app"
+      ports: 
+        - "5005:5005"
+    action_server:
+      container_name: "action_server"
+      build: 
+        context: actions
+      volumes:
+        - ./actions:/app/actions
+        - ./data:/app/data
+      ports:
+        - 5055:5055
 
 
 

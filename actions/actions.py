@@ -9,14 +9,15 @@
 
 
 from typing import Any, Text, Dict, List
-import rasa.core.tracker_store
+#import rasa.core.tracker_store
 from rasa_sdk.events import SlotSet,UserUtteranceReverted,EventType, Restarted
-from rasa.shared.core.trackers import DialogueStateTracker
+#from rasa.shared.core.trackers import DialogueStateTracker
 from rasa_sdk import Action, Tracker,FormValidationAction
 from rasa_sdk.executor import CollectingDispatcher
-from rasa_sdk.types import DomainDict
+#from rasa_sdk.types import DomainDict
 import sqlite3
 import time
+
 
 rate_list=["1","2","3","4","5"]
 
@@ -70,7 +71,7 @@ class ActionSaveFeedback(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
             try:
-                db=sqlite3.connect("details.db")
+                db=sqlite3.connect("/home/rasaadmin/Vwise/details.db")
                 cursor=db.cursor()
                 chat_start_time=str(tracker.get_slot("start_time"))
                 
@@ -176,7 +177,7 @@ class ActionSubmit(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
             try:
-                db=sqlite3.connect("details.db")
+                db=sqlite3.connect("/home/rasaadmin/Vwise/details.db")
                 
                 cursor=db.cursor()
                 sender_id=tracker.current_state()['sender_id']

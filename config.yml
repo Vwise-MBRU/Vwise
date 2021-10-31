@@ -1,3 +1,65 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1b59bcd63a5e9555e1e3b54cc964919edd65915b7fe84d3814f216c4f437388c
-size 1942
+# Configuration for Rasa NLU.
+# https://rasa.com/docs/rasa/nlu/components/
+language: en
+
+pipeline:
+# # No configuration for the NLU pipeline was provided. The following default pipeline was used to train your model.
+# # If you'd like to customize it, uncomment and adjust the pipeline.
+# # See https://rasa.com/docs/rasa/tuning-your-model for more information.
+  #- name: SpacyNLP
+   # model: "en_core_web_md"
+  #- name: SpacyTokenizer
+  - name: WhitespaceTokenizer
+  - name: RegexFeaturizer
+ # - name: SpacyFeaturizer
+  
+  - name: LexicalSyntacticFeaturizer
+  - name: CountVectorsFeaturizer
+  - name: CountVectorsFeaturizer
+    analyzer: char_wb
+    min_ngram: 1
+    max_ngram: 4
+  #- name: SpacyEntityExtractor
+  # - name: CRFEntityExtractor
+  - name: DIETClassifier
+    epochs: 100
+    constrain_similarities: true
+  - name: EntitySynonymMapper
+  - name: ResponseSelector
+    epochs: 100
+    constrain_similarities: true
+  - name: FallbackClassifier
+    threshold: 0.3
+    ambiguity_threshold: 0.1
+  - name: ResponseSelector
+    epochs: 100
+    retrieval_intent: chitchat
+  - name: ResponseSelector
+    epochs: 100
+    retrieval_intent: faq
+  
+  # - name: SpacyNLP
+  #   model: "en_core_web_m
+  #   dimensions: ["PERSON"]  
+  # - name: DucklingEntityExtractor
+  #   url: http://localhost:8000
+  #   dimensions: [number]
+     
+
+# Configuration for Rasa Core.
+# https://rasa.com/docs/rasa/core/policies/
+policies:
+# # No configuration for policies was provided. The following default policies were used to train your model.
+# # If you'd like to customize them, uncomment and adjust the policies.
+# # See https://rasa.com/docs/rasa/policies for more information.
+  - name: MemoizationPolicy
+  - name: RulePolicy
+  - name: UnexpecTEDIntentPolicy
+    max_history: 5
+    epochs: 100
+  - name: TEDPolicy
+    max_history: 5
+    epochs: 100
+    constrain_similarities: true
+    
+

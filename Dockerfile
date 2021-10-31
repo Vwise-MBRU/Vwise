@@ -1,28 +1,33 @@
-FROM rasa/rasa:2.8.1
+FROM rasa/rasa:2.8.2
+
+
+WORKDIR '/app'
+COPY . /app
+
 
 USER root
  # The Rasa SDK image runs as non-root user by default. Hence, you have to swit$
  # back to the `root` user if you want to install additional dependencies
-# USER root
 
-WORKDIR /app
-COPY . /app
+#RUN pip install --upgrade pip==20.2
 
-RUN pip install --upgrade pip==20.2
-
-RUN pip install sqlite3
-RUN pip install -U spacy
-RUN python -m spacy download en_core_web_md
+#RUN pip install -U spacy
+#RUN python -m spacy download en_core_web_md
 
 RUN pip install -r requirements.txt
 
+
+RUN rasa train
 #RUN mkdir models
-VOLUME /app
-VOLUME /app/data
+#VOLUME /app
+#VOLUME /app/data
 VOLUME /app/models
+#COPY ./actions /app/actions
 
-CMD [ "run","-m","/app/models","--enable-api","--cors","*","--debug"]
+#CMD ["run","actions"]
+CMD [ "run","-m","/app/models","--enable-api","--cors","*","--debug","--endpoints", "endpoints.yml", "--log-file", "out.log", "--debug"]
 
+EXPOSE 5005
 # Switch back to a non-root user
 USER 1001
 

@@ -71,11 +71,34 @@ randomstr = ''.join(random.choices(string.ascii_letters+string.digits,k=10))
 def index():
     return render_template("index.html")
 
-@app.route('/pre')
+@app.route('/pre',methods=["POST","GET"])
 def pre():
     # create a randomstring, pass it to post page
     # randomstr = ''.join(random.choices(string.ascii_letters+string.digits,k=10))
-    return render_template("pre.html")
+	# if request.method=="POST":
+    #     con=sqlite3.connect("/home/rasaadmin/Vwise/consent.db")
+    #     cursor=con.cursor()
+	# 	status=request.form['choice']
+	# 	signedTime=datetime.datetime.utcnow()
+    #     try:
+    #         sql="""INSERT INTO consent VALUES(?,?)"""
+           
+    #         result=cursor.execute(sql,(status,signedTime))
+            
+    #         if result==0:
+    #             print("Error in database")
+    #         else:
+    #             print("Success")
+    #         con.commit()
+    #         cursor.close()
+    #         con.close()
+    #         return render_template('pre.html')
+    #     except Exception as e:
+    #         print(str(e))
+    #         return redirect('/')
+	# else:
+	return render_template("pre.html")
+
 
 @app.route('/post')
 def post():
@@ -88,7 +111,7 @@ def ca():
     # randomstr = ''.join(random.choices(string.ascii_letters+string.digits,k=10))
     
     if request.method=="POST":
-        con=sqlite3.connect("surveydetails.db")
+        con=sqlite3.connect("/home/rasaadmin/Vwise/surveydetails.db")
         cursor=con.cursor()
                
         print("Random String got inside function is : ",randomstr)
@@ -107,13 +130,14 @@ def ca():
         person_q8=request.form['likert8']
         person_q9=request.form['likert9']
         person_q10=request.form['likert10']
+        native=request.form['langgroup']
         # chat_start_time=time.time()
         # person_vaccinestat=request.form['vacstatgroup']
         # person_dateofsurvey=int(date('now'))
         try:
-            sql="""INSERT INTO SurveyDetails VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?)"""
+            sql="""INSERT INTO SurveyDetails VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)"""
             # result=cursor.execute(sql)
-            result=cursor.execute(sql,(person_id,person_gender,person_age,person_country,person_q1,person_q2,person_q3,person_q4,person_q5,person_q6,person_q7,person_q8,person_q9,person_q10))
+            result=cursor.execute(sql,(person_id,person_gender,person_age,person_country,native,person_q1,person_q2,person_q3,person_q4,person_q5,person_q6,person_q7,person_q8,person_q9,person_q10))
             
             if result==0:
                 print("Error in database")
@@ -126,6 +150,7 @@ def ca():
         except Exception as e:
             print(str(e))
             return redirect('/')
+            
     
  
 
@@ -136,7 +161,7 @@ def ca():
 @app.route('/thankyou',methods=["POST"])
 def thankyou():
     
-    con=sqlite3.connect("PostSurveyDetails.db")
+    con=sqlite3.connect("/home/rasaadmin/Vwise/PostSurveyDetails.db")
     cursor=con.cursor()
     person_id=request.form['pcode']
     person_q1=request.form['likert11']
@@ -169,5 +194,5 @@ def thankyou():
 
 if __name__=="__main__":
     
-    app.run(debug=True)
+    app.run(host='0.0.0.0',debug=True)
      

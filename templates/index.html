@@ -1,7 +1,130 @@
 <!DOCTYPE html>
 <html>
+<head>
+<title>VWise Bot</title>
+</head>
     <body>
-        <h1>Hesitancy Project</h1> 
-        <a href="/pre">Click here to take the survey</a>
+        <h1 style="margin-left: 25%;font-weight: bolder;font-size: xx-large;">Informed Consent to Participate in a Research Study </h1> 
+       
+            <div style="margin-left: 20%;align-self: auto;">
+                <br />
+                <h3>This study has been approved by the MBRU-Institutional Review Board Committee [MBRU IRB-2021-67]</h3>
+            </div>
+
+
+            <div>
+                <h4>Principal Investigator: <i>Dr. Nabil Zary</i> <br />
+                    Address: <i>Mohammad Bin Rashid University of Medicine and Health Sciences Building No 14, Dubai Health Care City 
+
+                    Dubai - UAE</i>
+                <br />
+                Phone: <i>800- MBRU (6278) ext. 8765</i> <br />
+                Site where the study will be conducted: <i>MBRU Campus</i> <br />
+                      
+                </h4>
+            <h5 style="align-self: center;word-wrap: normal;margin-top: 3%;font-style: oblique;">You are invited to participate in this research study 
+                conducted at the Mohammad Bin Rashid University of Medicine and Health Sciences (MBRU). 
+                Please, take your time to read the following information carefully, before you decide whether 
+                you wish to take part in this research study or not. You are encouraged to ask the study 
+                investigator if you need any additional information or clarification about what is stated 
+                in this form and/or in the research study as a whole. You are also free to take this information 
+                sheet and consult with your doctor or other health professionals. Please note that, should you decide 
+                to participate, you are free to withdraw at any time without any consequence. 
+            </h5>
+            </div>
+
+
+            <div style="border: solid;">
+            <!-- Scroll bar present and enabled when more contents -->        
+                <div style="width: 95%; height: 200px; overflow-y: scroll;overflow-y: scroll;align-self: center;margin-left: 5%;word-wrap: normal;margin-top: 3%;font-family:Arial, Helvetica, sans-serif;">
+                    <ol type="I">
+                        <li> Purpose of the Research Study and Overview of Participation</li>
+                            <h6><p>You are invited to participate in a research study in which you will interact with a 
+                                conversational agent, or chatbot. The overall aim of this study is to understand how a 
+                                chatbot might be used as a health communication tool to address people’s hesitancy to vaccinate.  </p>
+                            
+                                <p>Prior to interacting with the chatbot you will be asked to answer 10 questions to better understand 
+                                your opinion about vaccination, as well some demographic information (age, gender, nationality and vaccination status). 
+                                <u>No personal information (e.g., name, ID, etc) will be collected.  </u></p>
+
+                                <p>The chatbot is designed to answer questions about COVID-19 and vaccinations. You will be able to ask questions and interact 
+                                with the bot for as long as you would like. After you have finished talking to the chatbot, you will be asked to fill out a 
+                                short survey about your experience with the bot and repeat the original survey of 10 questions. </p>
+
+                                <p><u>The entire experience should take about 10-15 minutes </u>(or longer should you want to continue interacting with the bot). </p>
+                                
+                                <p><u>We are committed to protecting your privacy.</u> Any information you share with the chatbot will be accessible ONLY to the 
+                                research team and will only be used for research purposes. Any information shared with the chatbot that might identify you in 
+                                some way will be removed from the dataset and will not be included in any reports. </p>
+                            
+                            </h6>
+                        <li> Any Risks as a Result of Participating in the Study</li>
+                            <h6>
+                                <p>You might feel worried or anxious when discussing/asking questions regarding the Covid-19 pandemic or vaccines. 
+                                Please know that your participation is voluntary and that you can stop and leave at any given moment without any consequence or penalty.</p> 
+                            </h6>
+
+                        <li> Any Benefits as a Result of Participating in the Study </li>
+                            <h6>
+                                <p>The chatbot prototype that you will be conversing with is developed using information about COVID-19 and vaccines that is gathered from 
+                                trusted sources such as the WHO. Based on the questions you ask it you will be given information that is tailored to your need. 
+                                By participating in this study, you can help us contribute to the body of knowledge about vaccine hesitancy, and to contribute to the 
+                                development of an innovative tool that can be utilized to improve health communication. </p>
+                            </h6>
+                    </ol>
+                </div>
+            </div>
+
+
+            <div style="font-size: 12px;">
+                <p> <b>If you agree to take part in this research study, please, be ensured that the obtained information will be kept confidential. Unless required by 
+                    law, only the study investigator or designee, the MBRU-Institutional Review Board Committee (MBRU-IRB), and/or inspectors from governmental agencies 
+                    will have direct access to your information. </b>
+                </p>
+            </div>
+
+            <div style="font-size: 11px;">
+                <p>
+                    <u>Subject’s Participation: </u>
+                </p>
+
+                <p>
+                    I have read and understood all aspects of the research study and all my questions have been answered. I voluntarily agree to be a part 
+                    of this research study and I know that I can contact Dr. Nabil Zary at 800- MBRU (6278) ext. 8765 or any of his/her team involved in the 
+                    study in case I have any questions. If I feel that my questions have not been answered, I can   contact the MBRU-IRB. I understand that I am 
+                    free to withdraw this consent and discontinue participation in this project at any time, even after submitting this form, and it will  not affect 
+                    my care or benefits. 
+                </p>
+            </div>
+
+            <div>
+                <form id="cform" name="consent" action="/pre" method="POST" onsubmit="return validateForm()">
+                    <div style="font-size:12px">
+                        <input type="radio" id="choice1" name="choice" value="Agreed">
+                        <label for="choice1"> I am currently over 18 years of age and my data can be used for research purposes. </label>
+                    </div>
+
+                    <div style="margin-left: 20%;margin-top: 2%;">
+                        <button class="submit" onclick="document.getElementById('cform').style.display='none'"> Continue </button>
+                    </div>
+                </form>
+            </div>
+	
+
+
+
+		<script>
+                function validateForm() {
+                let a = document.forms["consent"]["choice"].value;
+                
+                if (a == "") {
+                  alert("If you agree to the consent, please click on the Agree button to continue");
+                  return false;
+                }
+                else
+                  return true;
+              
+              }
+              </script>
     </body>
-</html>
+</html> 
