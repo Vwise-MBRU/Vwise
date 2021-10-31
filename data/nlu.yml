@@ -35,15 +35,15 @@ nlu:
     - hi!
     - hi there
     - Hello
-    - hello its [ella]{"entity":"name","value":"ella"}
+    - hello its [ella](name)
     - Hola.
     - welcome
     - howdy
     - good day
-    - Hello I'm [Susan]{"entity":"name","value":"ella"}
-    - Hai it's [Hari]{"entity":"name","value":"Hari"}
-    - Hello [Chanchal]{"entity":"name","value":"chanchal"} here.
-    - This is me [sara]{"entity":"name","value":"sara"}
+    - Hello I'm [Susan]{"entity": "name", "value": "ella"}
+    - Hai it's [Hari](name)
+    - Hello [Chanchal]{"entity": "name", "value": "chanchal"} here.
+    - This is me [sara](name)
 - intent: goodbye
   examples: |
     - cu
@@ -400,7 +400,6 @@ nlu:
     - How can you ensure the safety of these vaccines?
     - Are vaccines safe?
     - I’m not sure that vaccines are safe
-    - How can I know that vaccines are safe?
     - Can you tell me if it is safe to vaccinate?
 - intent: faq/vaccine_followup
   examples: |
@@ -451,7 +450,7 @@ nlu:
     - Am I obligated to vaccinate?
 - intent: faq/covid
   examples: |
-    - What is a corona virus? 
+    - What is a corona virus?
     - What is covid?
     - What is Covid-19
     - Corona virus?
@@ -475,7 +474,6 @@ nlu:
     - Can humans become infected with a novel coronavirus of animal source?
     - How coronavirus transmitted from animals to humans?
     - Can somebody get infected with a novel coronavirus of animal source?
-    - Can humans become infected with a novel coronavirus of animal source?
     - Human and animals coronavirus?
     - Do animals coronaviruses transmit to humans?
 - intent: faq/symptoms
@@ -483,7 +481,6 @@ nlu:
     - How can corona virus affect our health?
     - What are the symptoms of someone infected with a coronavirus?
     - What are the common signs of infection?
-    - What are the symptoms of someone infected with a coronavirus?
     - Signs of infection?
     - symptoms?
     - Symptoms
@@ -515,7 +512,7 @@ nlu:
 - intent: faq/permissible_islam
   examples: |
     - Is COVID-19 vaccine permissible in Islam?
-    - Is vaccination allowed in Islam? 
+    - Is vaccination allowed in Islam?
     - Is COVID-19 vaccine allowed in Islam?
     - Is vaccination allowed in chariaa?
     - Can we be Muslim and have the vaccine?
@@ -585,7 +582,6 @@ nlu:
     - Why should I take precausions after taking vaccine?
     - What are the precautions after vaccination?
     - Should I wear a mask after vaccination?
-    - Is it ok to avoid masks after getting vaccinated?
     - Precautions after vaccination
     - Any precautions after vaccination?
     - What should I do after vaccination?
@@ -594,7 +590,6 @@ nlu:
     - What are the benefits of getting vaccinated?
     - How will vaccines protect us?
     - Will vaccine protect us from Covid-19?
-    - What are the benefits of getting vaccinated?
     - What will I get from being vaccinated?
     - What are the benefits of vaccination?
     - Vaccination benefits
@@ -767,82 +762,44 @@ nlu:
     - What could be my name
 - intent: give_name
   examples: |
-    - [vincent]{"entity":"name","value":"vincent"}
-    - [rachael]{"entity":"name","value":"rachael"}
-    - I'm [emma]{"entity":"name","value":"emma"}
-    - My name is [juste]{"entity":"name","value":"juste"}
-    - You can call me [sree]{"entity":"name","value":"sree"}
-    - People call me [sam]{"entity":"name","value":"sam"}
-    - [jenny]{"entity":"name","value":"jenny"}
-    - [sukanya]{"entity":"name","value":"sukanya"} is my name
-    - [Sharon]{"entity":"name","value":"Sharon"}
-    - [Richa]{"entity":"name","value":"Richa"}
-    - I'm [Tazni]{"entity":"name","value":"Tazni"}
-    - My name is [Fathima]{"entity":"name","value":"Fathima"}
-    - You can call me [John]{"entity":"name","value":"John"}
-    - People call me [Emmanuel]{"entity":"name","value":"Emmanuel"}
-    - [kashi]{"entity":"name","value":"kashi"}
-    - [Mini]{"entity":"name","value":"Mini"} is my name
-    - [Nabil]{"entity":"name","value":"Nabil"}
-    - [Randa]{"entity":"name","value":"Randa"} is my name
-    - [Youness]{"entity":"name","value":"Youness"}
-    - [Leigh]{"entity":"name","value":"Leigh"} is my name
-    - [tarek]{"entity":"name","value":"tarek"}
-    - [fatima]{"entity":"name","value":"fatima"}
-    - I'm [mohamed]{"entity":"name","value":"mohamed"}
-    - My name is [ayoub]{"entity":"name","value":"ayoub"}
-    - [mostafa]{"entity":"name","value":"mostafa"}
-    - [abdesalam]{"entity":"name","value":"abdesalam"} is my name
-    - [mehdi]{"entity":"name","value":"mehdi"}
-    - [khadija]{"entity":"name","value":"khadija"} is my name
-    - [said]{"entity":"name","value":"said"}
-    - [ahmed]{"entity":"name","value":"ahmed"} is my name
-    - [lina]{"entity":"name","value":"lina"}
-    - [mhamed]{"entity":"name","value":"mhamed"} is my name
-    - [sirine]{"entity":"name","value":"sirine"}
-    - [sijith]{"entity":"name","value":"sijith"}
-    - My name is [jalal]{"entity":"name","value":"jalal"}
-    - [mubarak]{"entity":"name","value":"mubarak"}
-    - [karima]{"entity":"name","value":"karima"} is my name
+    - [vincent](name)
+    - [rachael](name)
+    - I'm [emma](name)
+    - My name is [juste](name)
+    - You can call me [sree](name)
+    - People call me [sam](name)
+    - [jenny](name)
+    - [sukanya](name) is my name
+    - [Sharon](name)
+    - [Richa](name)
+    - I'm [Tazni](name)
+    - My name is [Fathima](name)
+    - You can call me [John](name)
+    - People call me [Emmanuel](name)
+    - [kashi](name)
+    - [Mini](name) is my name
+    - [Nabil](name)
+    - [Randa](name) is my name
+    - [Youness](name)
+    - [Leigh](name) is my name
+    - [tarek](name)
+    - [fatima](name)
+    - I'm [mohamed](name)
+    - My name is [ayoub](name)
+    - [mostafa](name)
+    - [abdesalam](name) is my name
+    - [mehdi](name)
+    - [khadija](name) is my name
+    - [said](name)
+    - [ahmed](name) is my name
+    - [lina](name)
+    - [mhamed](name) is my name
+    - [sirine](name)
+    - [sijith](name)
+    - My name is [jalal](name)
+    - [mubarak](name)
+    - [karima](name) is my name
     - [hanaa]{"entity":"name","value":"hanaa"
-# - intent: give_age
-#   examples: |
-#     - [40]{"entity":"age","value":"40"}
-#     - [76]{"entity":"age","value":"76"}
-#     - [90]{"entity":"age","value":"90"} is my age
-#     - My age is [30]({"entity":"age","value":"30"}
-#     - I'm [86]{"entity":"age","value":"86"}
-#     - age is [23]{"entity":"age","value":"23"}
-#     - [60]{"entity":"age","value":"60"}
-#     - [96]{"entity":"age","value":"96"}
-#     - [41]{"entity":"age","value":"41"} is my age
-#     - My age is [31]({"entity":"age","value":"31"}
-#     - I'm [67]{"entity":"age","value":"67"}
-#     - age is [27]{"entity":"age","value":"27"}
-#     - I'm just [57]{"entity":"age","value":"57"}
-# - intent: give_country
-#   examples: |
-#     - [India]{"entity":"country","value":"India"} is my country
-#     - My native place is [Srilanka]{"entity":"country","value":"Srilanka"}
-#     - My country is [Pakistan]{"entity":"country","value":"Pakistan"}
-#     - I recide in [Morocco]{"entity":"country","value":"Morocco"}
-#     - [United Arab Emirates]{"entity":"country","value":"United Arab Emirates"} is my place
-#     - I'm from [UAE]{"entity":"country","value":"UAE"}
-#     - [China]{"entity":"country","value":"China"} is my country
-#     - My native place is [Bhutan]{"entity":"country","value":"Bhutan"}
-#     - My country is [USA]{"entity":"country","value":"USA"}
-#     - I recide in [United States of America]{"entity":"country","value":"United States of America"}
-#     - [Nepal]{"entity":"country","value":"Nepal"} is my place
-#     - I'm from [Brazil]{"entity":"country","value":"Brazil"}
-
-# - intent: rating_value
-#   examples: |
-#     - I'm giving a rating of [3]{"entity":"rating","value":"3"}
-#     - I will give you [4]{"entity":"rating","value":"4"}
-#     - It's just [2]{"entity":"rating","value":"2"}
-#     - You are not efficient, I'm givig you just [1]{"entity":"rating","value":"1"}
-#     - [4]{"entity":"rating","value":"4"}
-#     - [2]{"entity":"rating","value":"2"}
 - intent: restart
   examples: |
     - Restart the conversation
@@ -895,27 +852,27 @@ nlu:
     - 1
 - intent: give_recogniseinputs
   examples: |
-    - 4 
+    - 4
     - 1
 - intent: give_appropriateresponses
   examples: |
-    - 3 
+    - 3
     - 2
 - intent: give_irrelevant
   examples: |
-    - 1 
+    - 1
     - 4
 - intent: give_copeerrors
   examples: |
-    - 4 
+    - 4
     - 5
 - intent: give_unablehandle
   examples: |
-    - 4 
+    - 4
     - 3
 - intent: give_easytouse
   examples: |
-    - 4 
+    - 4
     - 1
 - intent: give_complex
   examples: |
@@ -944,3 +901,9 @@ nlu:
     - TYopn76JKJ
     - q7lL2SfoHf
     - YIT43bdM61
+- synonym: ella
+  examples: |
+    - Susan
+- synonym: chanchal
+  examples: |
+    - Chanchal
