@@ -11,8 +11,8 @@ USER root
 
 #RUN pip install --upgrade pip==20.2
 
-#RUN pip install -U spacy
-#RUN python -m spacy download en_core_web_md
+RUN pip install -U spacy
+RUN python -m spacy download en_core_web_md
 
 RUN pip install -r requirements.txt
 

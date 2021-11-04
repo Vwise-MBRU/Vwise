@@ -97,34 +97,40 @@
                 </p>
             </div>
 
-            <div>
-                <form id="cform" name="consent" action="/pre" method="POST" onsubmit="return validateForm()">
-                    <div style="font-size:12px">
-                        <input type="radio" id="choice1" name="choice" value="Agreed">
-                        <label for="choice1"> I am currently over 18 years of age and my data can be used for research purposes. </label>
-                    </div>
-
-                    <div style="margin-left: 20%;margin-top: 2%;">
-                        <button class="submit" onclick="document.getElementById('cform').style.display='none'"> Continue </button>
-                    </div>
-                </form>
-            </div>
-	
+            <form id="cform" name="consent" action="/pre" method="POST" >
+                <div style="font-size:12px">
+                    <input type="radio" id="choice1" required name="choice" value="Agreed" >
+                    <label for="choice1"> I am currently over 18 years of age and my data can be used for research purposes. </label>
+                </div>
+<!-- <p id="errormsg" style="color: white; visibility:hidden;"> If you agree to the consent, please click on the Agree button to continue</p> -->
+                <!-- <span role="alert" id="nameError" aria-hidden="true">
+                    If you agree to the consent, please click on the Agree button to continue
+                </span> -->
 
 
+                <div style="margin-left: 20%;margin-top: 2%;">
+                    <button class="submit" > Continue </button>
+                </div>
+            </form>
+        </div>
 
-		<script>
-                function validateForm() {
-                let a = document.forms["consent"]["choice"].value;
-                
-                if (a == "") {
-                  alert("If you agree to the consent, please click on the Agree button to continue");
-                  return false;
-                }
-                else
-                  return true;
-              
-              }
-              </script>
+        <!-- onclick="document.getElementById('cform').style.display='none'" -->
+        <!-- onsubmit="return validateForm()" -->
+
+    <!-- <script>
+            function validatetheForm() {
+            let a = document.forms["consent"]["choice"].value;
+            // var a=document.consent.choice.value ;
+            if (a == "") {
+            // alert("If you agree to the consent, please click on the Agree button to continue");
+            // errormsg.setAttribute("visibility", visible);
+            // errormsg.setAttribute("color", red);
+              return false;
+            }
+            
+          
+          }
+    </script> -->
+
     </body>
 </html> 

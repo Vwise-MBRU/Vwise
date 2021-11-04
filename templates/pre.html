@@ -12,23 +12,23 @@
     <body>
       
       <h1 class="heading">
-        Welcome to the Survey! Please go ahead and answer the questions!
+        Getting to know more about you! Please go ahead and answer the questions!
       </h1>
       <h6> * All fields are mandatory! *</h6>
       <div class="form1">
-      <form id="form2" name="survey" action="/ca" method="POST" onsubmit="return validateForm()">
+      <form id="form2" name="survey" action="/ca" method="POST" >
         <div id=form3>
         <div class="formelement" >  
           <!-- <label for="name">Enter your name</label> -->
           <label>Gender</label>
 
-          <input type="radio" id="gender" name="gendergroup" value="Female">
+          <input type="radio" id="gender" required name="gendergroup" value="Female">
           <label for="gender" >Male</label>
 
-          <input type="radio" id="gender1" name="gendergroup" value="Male">
+          <input type="radio" id="gender1" required name="gendergroup" value="Male">
           <label for="gender1" >Female</label>
 
-          <input type="radio" id="gender2" name="gendergroup" value="others">
+          <input type="radio" id="gender2" required name="gendergroup" value="others">
           <label for="gender2" >Others</label>
           
           <!-- <input type="text" id="name" name="name1"><br> -->
@@ -37,36 +37,36 @@
         <div  class="formelement">
           <label>Choose your age group</label>
 
-          <input type="radio" id="age0" name="agegroup" value="Below 18">
+          <input type="radio" id="age0" required name="agegroup" value="Below 18">
           <label for="age0" name="agegroup">Below 18</label>
 
 
-          <input type="radio" id="age1" name="agegroup" value="18-25">
+          <input type="radio" id="age1" required name="agegroup" value="18-25">
           <label for="age1" name="agegroup">18-25</label>
 
-          <input type="radio" id="age2" name="agegroup" value="26-35">
+          <input type="radio" id="age2" required name="agegroup" value="26-35">
           <label for="age2" name="agegroup">26-35</label>
 
-          <input type="radio" id="age3" name="agegroup" value="36-45">
+          <input type="radio" id="age3" required name="agegroup" value="36-45">
           <label for="age3" name="agegroup">36-45</label>
 
-          <input type="radio" id="age4" name="agegroup" value="46-55">
+          <input type="radio" id="age4" required name="agegroup" value="46-55">
           <label for="age4" name="agegroup">46-55</label>
 
-          <input type="radio" id="age5" name="agegroup" value="56-65">
+          <input type="radio" id="age5" required name="agegroup" value="56-65">
           <label for="age5" name="agegroup">56-65</label>
 
-          <input type="radio" id="age6" name="agegroup" value="66-75">
+          <input type="radio" id="age6" required name="agegroup" value="66-75">
           <label for="age6" name="agegroup">66-75</label>
 
-          <input type="radio" id="age7" name="agegroup" value="75 and above">
+          <input type="radio" id="age7" required name="agegroup" value="75 and above">
           <label for="age7" name="agegroup">75 and above</label>
         </div>
 
         <div class="formelement">
           <label for="country">Choose your country</label>
 
-          <select id="country" name="country">
+          <select id="country" required name="country">
             <option value=""> </option>
             <option value="Afganistan">Afghanistan</option>
             <option value="Albania">Albania</option>
@@ -320,10 +320,10 @@
         <div  class="formelement" >
           <label>Is English your native language (i.e., mother tongue)?</label>
 
-          <input type="radio" id="lang" name="langgroup" value="Yes">
+          <input type="radio" id="lang" required name="langgroup" value="Yes">
           <label for="lang" >Yes</label>
 
-          <input type="radio" id="lang1" name="langgroup" value="No">
+          <input type="radio" id="lang1" required name="langgroup" value="No">
           <label for="lang1" >No</label>
 
         </div>
@@ -347,23 +347,23 @@
             <label class="statement">Vaccines are important for my health</label>
               <ul class='likert'>
                 <li>
-                  <input type="radio" name="likert1" value="strong_disagree">
+                  <input type="radio" required name="likert1" value="strong_disagree"> 
                   <label>Strongly disagree</label>
                 </li>
                 <li>
-                  <input type="radio" name="likert1" value="disagree">
+                  <input type="radio" required name="likert1" value="disagree">
                   <label>Disagree</label>
                 </li>
                 <li>
-                  <input type="radio" name="likert1" value="neutral">
+                  <input type="radio" required name="likert1" value="neutral">
                   <label>Neutral</label>
                 </li>
                 <li>
-                  <input type="radio" name="likert1" value="agree">
+                  <input type="radio" required name="likert1" value="agree">
                   <label>Agree</label>
                 </li>
                 <li>
-                  <input type="radio" name="likert1" value="strong_agree">
+                  <input type="radio" required name="likert1" value="strong_agree">
                   <label>Strongly agree</label>
                 </li>
               </ul>
@@ -374,23 +374,23 @@
             <label class="statement">Vaccines are effective</label>
               <ul class='likert'>
                 <li>
-                  <input type="radio" name="likert2" value="strong_disagree">
+                  <input type="radio" required name="likert2" value="strong_disagree">
                   <label>Strongly disagree</label>
                 </li>
                 <li>
-                  <input type="radio" name="likert2" value="disagree">
+                  <input type="radio" required name="likert2" value="disagree">
                   <label>Disagree</label>
                 </li>
                 <li>
-                  <input type="radio" name="likert2" value="neutral">
+                  <input type="radio" required name="likert2" value="neutral">
                   <label>Neutral</label>
                 </li>
                 <li>
-                  <input type="radio" name="likert2" value="agree">
+                  <input type="radio" required name="likert2" value="agree">
                   <label>Agree</label>
                 </li>
                 <li>
-                  <input type="radio" name="likert2" value="strong_agree">
+                  <input type="radio" required name="likert2" value="strong_agree">
                   <label>Strongly agree</label>
                 </li>
               </ul>
@@ -401,23 +401,23 @@
             <label class="statement">Being vaccinated is important for the health of others in my community</label>
               <ul class='likert'>
                 <li>
-                  <input type="radio" name="likert3" value="strong_disagree">
+                  <input type="radio" required name="likert3" value="strong_disagree">
                   <label>Strongly disagree</label>
                 </li>
                 <li>
-                  <input type="radio" name="likert3" value="disagree">
+                  <input type="radio" required name="likert3" value="disagree">
                   <label>Disagree</label>
                 </li>
                 <li>
-                  <input type="radio" name="likert3" value="neutral">
+                  <input type="radio" required name="likert3" value="neutral">
                   <label>Neutral</label>
                 </li>
                 <li>
-                  <input type="radio" name="likert3" value="agree">
+                  <input type="radio" required name="likert3" value="agree">
                   <label>Agree</label>
                 </li>
                 <li>
-                  <input type="radio" name="likert3" value="strong_agree">
+                  <input type="radio" required name="likert3" value="strong_agree">
                   <label>Strongly agree</label>
                 </li>
               </ul>
@@ -428,23 +428,23 @@
             <label class="statement">All routine vaccinations recommended by the government are beneficial</label>
               <ul class='likert'>
                 <li>
-                  <input type="radio" name="likert4" value="strong_disagree">
+                  <input type="radio" required name="likert4" value="strong_disagree">
                   <label>Strongly disagree</label>
                 </li>
                 <li>
-                  <input type="radio" name="likert4" value="disagree">
+                  <input type="radio" required name="likert4" value="disagree">
                   <label>Disagree</label>
                 </li>
                 <li>
-                  <input type="radio" name="likert4" value="neutral">
+                  <input type="radio" required name="likert4" value="neutral">
                   <label>Neutral</label>
                 </li>
                 <li>
-                  <input type="radio" name="likert4" value="agree">
+                  <input type="radio" required name="likert4" value="agree">
                   <label>Agree</label>
                 </li>
                 <li>
-                  <input type="radio" name="likert4" value="strong_agree">
+                  <input type="radio" required name="likert4" value="strong_agree">
                   <label>Strongly agree</label>
                 </li>
               </ul>
@@ -455,23 +455,23 @@
             <label class="statement">New vaccines carry more risks than older vaccines</label>
               <ul class='likert'>
                 <li>
-                  <input type="radio" name="likert5" value="strong_disagree">
+                  <input type="radio" required name="likert5" value="strong_disagree">
                   <label>Strongly disagree</label>
                 </li>
                 <li>
-                  <input type="radio" name="likert5" value="disagree">
+                  <input type="radio" required name="likert5" value="disagree">
                   <label>Disagree</label>
                 </li>
                 <li>
-                  <input type="radio" name="likert5" value="neutral">
+                  <input type="radio" required name="likert5" value="neutral">
                   <label>Neutral</label>
                 </li>
                 <li>
-                  <input type="radio" name="likert5" value="agree">
+                  <input type="radio" required name="likert5" value="agree">
                   <label>Agree</label>
                 </li>
                 <li>
-                  <input type="radio" name="likert5" value="strong_agree">
+                  <input type="radio" required name="likert5" value="strong_agree">
                   <label>Strongly agree</label>
                 </li>
               </ul>
@@ -482,23 +482,23 @@
             <label class="statement">The information I receive about vaccines from the government is reliable and trustworthy</label>
               <ul class='likert'>
                 <li>
-                  <input type="radio" name="likert6" value="strong_disagree">
+                  <input type="radio" required name="likert6" value="strong_disagree">
                   <label>Strongly disagree</label>
                 </li>
                 <li>
-                  <input type="radio" name="likert6" value="disagree">
+                  <input type="radio" required name="likert6" value="disagree">
                   <label>Disagree</label>
                 </li>
                 <li>
-                  <input type="radio" name="likert6" value="neutral">
+                  <input type="radio" required name="likert6" value="neutral">
                   <label>Neutral</label>
                 </li>
                 <li>
-                  <input type="radio" name="likert6" value="agree">
+                  <input type="radio" required name="likert6" value="agree">
                   <label>Agree</label>
                 </li>
                 <li>
-                  <input type="radio" name="likert6" value="strong_agree">
+                  <input type="radio" required name="likert6" value="strong_agree">
                   <label>Strongly agree</label>
                 </li>
               </ul>
@@ -509,23 +509,23 @@
             <label class="statement">Getting vaccines is a good way to protect me from disease</label>
               <ul class='likert'>
                 <li>
-                  <input type="radio" name="likert7" value="strong_disagree">
+                  <input type="radio" required name="likert7" value="strong_disagree">
                   <label>Strongly disagree</label>
                 </li>
                 <li>
-                  <input type="radio" name="likert7" value="disagree">
+                  <input type="radio" required name="likert7" value="disagree">
                   <label>Disagree</label>
                 </li>
                 <li>
-                  <input type="radio" name="likert7" value="neutral">
+                  <input type="radio" required name="likert7" value="neutral">
                   <label>Neutral</label>
                 </li>
                 <li>
-                  <input type="radio" name="likert7" value="agree">
+                  <input type="radio" required name="likert7" value="agree">
                   <label>Agree</label>
                 </li>
                 <li>
-                  <input type="radio" name="likert7" value="strong_agree">
+                  <input type="radio" required name="likert7" value="strong_agree">
                   <label>Strongly agree</label>
                 </li>
               </ul>
@@ -536,23 +536,23 @@
             <label class="statement">Generally, I do what my doctor or healthcare provider recommends about vaccines for me</label>
               <ul class='likert'>
                 <li>
-                  <input type="radio" name="likert8" value="strong_disagree">
+                  <input type="radio" required name="likert8" value="strong_disagree">
                   <label>Strongly disagree</label>
                 </li>
                 <li>
-                  <input type="radio" name="likert8" value="disagree">
+                  <input type="radio" required name="likert8" value="disagree">
                   <label>Disagree</label>
                 </li>
                 <li>
-                  <input type="radio" name="likert8" value="neutral">
+                  <input type="radio" required name="likert8" value="neutral">
                   <label>Neutral</label>
                 </li>
                 <li>
-                  <input type="radio" name="likert8" value="agree">
+                  <input type="radio" required name="likert8" value="agree">
                   <label>Agree</label>
                 </li>
                 <li>
-                  <input type="radio" name="likert8" value="strong_agree">
+                  <input type="radio" required name="likert8" value="strong_agree">
                   <label>Strongly agree</label>
                 </li>
               </ul>
@@ -563,23 +563,23 @@
             <label class="statement">I am concerned about serious adverse effects of vaccines</label>
               <ul class='likert'>
                 <li>
-                  <input type="radio" name="likert9" value="strong_disagree">
+                  <input type="radio" required name="likert9" value="strong_disagree">
                   <label>Strongly disagree</label>
                 </li>
                 <li>
-                  <input type="radio" name="likert9" value="disagree">
+                  <input type="radio" required name="likert9" value="disagree">
                   <label>Disagree</label>
                 </li>
                 <li>
-                  <input type="radio" name="likert9" value="neutral">
+                  <input type="radio" required name="likert9" value="neutral">
                   <label>Neutral</label>
                 </li>
                 <li>
-                  <input type="radio" name="likert9" value="agree">
+                  <input type="radio" required name="likert9" value="agree">
                   <label>Agree</label>
                 </li>
                 <li>
-                  <input type="radio" name="likert9" value="strong_agree">
+                  <input type="radio" required name="likert9" value="strong_agree">
                   <label>Strongly agree</label>
                 </li>
               </ul>
@@ -590,23 +590,23 @@
             <label class="statement">I do not need vaccines for diseases that are not common anymore</label>
               <ul class='likert'>
                 <li>
-                  <input type="radio" name="likert10" value="strong_disagree">
+                  <input type="radio" required name="likert10" value="strong_disagree">
                   <label>Strongly disagree</label>
                 </li>
                 <li>
-                  <input type="radio" name="likert10" value="disagree">
+                  <input type="radio" required name="likert10" value="disagree">
                   <label>Disgree</label>
                 </li>
                 <li>
-                  <input type="radio" name="likert10" value="neutral">
+                  <input type="radio" required name="likert10" value="neutral">
                   <label>Neutral</label>
                 </li>
                 <li>
-                  <input type="radio" name="likert10" value="agree">
+                  <input type="radio" required name="likert10" value="agree">
                   <label>Agree</label>
                 </li>
                 <li>
-                  <input type="radio" name="likert10" value="strong_agree">
+                  <input type="radio" required name="likert10" value="strong_agree">
                   <label>Strongly agree</label>
                 </li>
               </ul>
@@ -616,13 +616,13 @@
       <!-- <div>
         <label style="width:300px;height:100px;border:1px solid;" onclick=generateUniqueID()>Generate code</label>
       </div> -->
-          <button class="submit" onclick="document.getElementById('form2').style.display='none'">Submit the Survey</button>
+          <button class="submit" >Submit</button>
 
       </form>
       </div>
-
+      <!-- onclick="document.getElementById('form2').style.display='none'" -->
 <!-- <img src="https://i.pinimg.com/originals/dd/7a/f3/dd7af32e837d47be5c8d8e8a65b140c2.gif"/> -->
-<script>
+<!-- <script>
   function validateForm() {
   let a = document.forms["survey"]["gendergroup"].value;
   let b = document.forms["survey"]["agegroup"].value;
@@ -644,7 +644,7 @@
     
 
 }
-</script>
+</script> -->
 <!-- <script>
   function generateUniqueID(){
     let randomstr=(Math.random() + 1).toString(36).substring(2)

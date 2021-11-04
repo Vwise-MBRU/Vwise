@@ -73,33 +73,31 @@ def index():
 
 @app.route('/pre',methods=["POST","GET"])
 def pre():
+    if request.method=="POST":
+        con=sqlite3.connect("/home/rasaadmin/Vwise/consent.db")
+        cursor=con.cursor()
+        status=request.form['choice']
+        signedTime=str(datetime.now())
+        try:
+            sql="""INSERT INTO consent VALUES(?,?)"""
+            result=cursor.execute(sql,(status,signedTime))
+            if result==0:
+                print("Error in database")
+            else:
+                print("Success")
+            con.commit()
+            cursor.close()
+            con.close()
+            return render_template('pre.html')
+        except Exception as e:
+            print(str(e))
+            return redirect('/')
+    else:
+        return render_template("index.html")
+
     # create a randomstring, pass it to post page
     # randomstr = ''.join(random.choices(string.ascii_letters+string.digits,k=10))
-	# if request.method=="POST":
-    #     con=sqlite3.connect("/home/rasaadmin/Vwise/consent.db")
-    #     cursor=con.cursor()
-	# 	status=request.form['choice']
-	# 	signedTime=datetime.datetime.utcnow()
-    #     try:
-    #         sql="""INSERT INTO consent VALUES(?,?)"""
-           
-    #         result=cursor.execute(sql,(status,signedTime))
-            
-    #         if result==0:
-    #             print("Error in database")
-    #         else:
-    #             print("Success")
-    #         con.commit()
-    #         cursor.close()
-    #         con.close()
-    #         return render_template('pre.html')
-    #     except Exception as e:
-    #         print(str(e))
-    #         return redirect('/')
-	# else:
-	return render_template("pre.html")
-
-
+	
 @app.route('/post')
 def post():
     return render_template("post.html")

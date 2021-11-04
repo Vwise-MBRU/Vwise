@@ -282,7 +282,7 @@ responses:
       - Sinopharm’s COVID-19 vaccine 
       - Sputnik V COVID-19 vaccine
   utter_feedback_ack:
-  - text: "Thank you {name} for your time and feedback. Please click on the link https://vwise.mbru.ac.ae.me/post and fill up the form. Passcode {unique_id} "
+  - text: "Thank you {name} for your time and feedback. Please click on the link https://vwise.mbru.ac.ae/post and fill up the form. Passcode {unique_id} "
   utter_slot_booking:
   - text: Sorry {name}!. We are not providing the requested service. You may download the apps from play store or app store to do it
   utter_faq/vaccine_safety:

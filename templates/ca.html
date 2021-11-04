@@ -10,8 +10,23 @@
 
     <h1> Hi!! Please click on the widget to access the bot.</h1>
     <h5>Please don't refresh the page</h5><br><br><br><br><br><br>
-    <h3> {{randomstr}} </h3>
-    <p>Pass the code to the bot when prompted</p>
+    <h3> Passcode: {{randomstr}} </h3>
+    <!-- <p>Pass the code to the bot when prompted</p> -->
+
+    <p>
+      <b> Instructions: </b>  <br />
+      <ul>
+        <li>
+          Copy paste the passcode(shown above) in the bot when prompted.
+        </li>
+        <li>
+          End the conversation by saying "Bye/Thank you".
+        </li>
+
+      </ul>
+    </p>
+
+    
     <script>!(function () {
         let e = document.createElement("script"),
           t = document.head || document.getElementsByTagName("head")[0];
@@ -25,6 +40,7 @@
                 customData: { language: "en" },
                 socketUrl: "http://localhost:5005",
                 initPayload:'/greet',
+                socketPath:"/socket.io/",
                 title: "VWise Bot",
                 subtitle: "Get started!!",
                 //onSocketEvent: function(){onChatClose:'/greet'; storage: localStorage.clear()},
